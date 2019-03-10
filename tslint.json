@@ -6,7 +6,9 @@
     "tslint-react",
     "tslint-config-prettier"
   ],
-  "jsRules": {},
+  "jsRules": {
+    "object-literal-sort-keys": false,
+  },
   "rules": {
     "ordered-imports": false,
     "object-literal-sort-keys": false,
@@ -14,7 +16,7 @@
     "jsx-no-lamda": false,
     "jsx-boolean-value": false,
     "no-console": false,
-    "interface-name": false
+    "interface-name": false,
   },
   "rulesDirectory": []
 }
