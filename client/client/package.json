@@ -1,19 +1,20 @@
 {
-  "name": "May The 4th Be Russo",
+  "name": "MayThe4thBeRussov2",
   "version": "2.0.0",
-  "description": "Wedding website for Megan Bailey & Randy Russo",
-  "keywords": [
-    "wedding",
-    "TypeScript",
-    "React"
-  ],
-  "homepage": "https://www.maythe4thberusso.com",
-  "bugs": {
-    "email": "admin@maythe4thberusso.com"
-  },
-  "license": "MIT",
-  "author": "Tony Greeley",
+  "description": "The original MayThe4thBeRusso repository is for a project for my class which, I have now completed and graduated from. MayThe4thBeRussov2 is now the real development of the actual wedding website that I am making for my best friend, Randy Russo and his beautiful and amazing fiance, Megan Bailey. I couldn't be prouder or happier to be able to create this site for them as their wedding gift.",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "build:clean": "rm -rf build/",
+    "eject": "react-scripts eject",
+    "test": "react-scripts test",
+    "test:watch": "jest --watch",
+    "type-check": "tsc",
+    "lint": "tslint 'src/**/*.{ts,tsx}' && remark .",
+    "lint:fix": "tslint 'src/**/*.{ts,tsx}' --fix",
+    "lint-md": "remark ."
+  },
   "dependencies": {
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
@@ -41,31 +42,25 @@
     "tslint-react": "^3.6.0",
     "typescript": "3.3.3333"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "build:clean": "rm -rf build/",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "test:watch": "jest --watch",
-    "type-check": "tsc",
-    "lint": "tslint 'src/**/*.{ts,tsx}' && remark .",
-    "lint:fix": "tslint 'src/**/*.{ts,tsx}' --fix",
-    "lint-md": "remark ."
-  },
   "remarkConfig": {
     "plugins": [
       "remark-preset-lint-recommended"
     ]
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:tonythetiger323/MayThe4thBeRussov2.git"
-  }
+    "url": "git+https://github.com/tonythetiger323/MayThe4thBeRussov2.git"
+  },
+  "keywords": [
+    "wedding",
+    "TypeScript",
+    "React"
+  ],
+  "author": "Tony Greeley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tonythetiger323/MayThe4thBeRussov2/issues",
+    "email": "admin@maythe4thberusso.com"
+  },
+  "homepage": "https://github.com/tonythetiger323/MayThe4thBeRussov2#readme"
 }
