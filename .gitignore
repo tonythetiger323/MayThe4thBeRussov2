@@ -14,6 +14,9 @@
 # workspace file
 MayThe4thBeRussov2.code-workspace
 
+# ssl certificate
+www.maythe4thberusso.com/
+
 # misc
 .DS_Store
 .env.local
