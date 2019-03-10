@@ -13,7 +13,8 @@
     "member-ordering": false,
     "jsx-no-lamda": false,
     "jsx-boolean-value": false,
-    "no-console": false
+    "no-console": false,
+    "interface-name": false
   },
   "rulesDirectory": []
 }
