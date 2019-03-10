@@ -4,10 +4,6 @@ import './index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
 
-// tslint:disable no-var-requires
-require('newrelic')
-// tslint:enable no-var-requires
-
 ReactDOM.render(<App />, document.getElementById('root'))
 
 // If you want your app to work offline and load faster, you can change
