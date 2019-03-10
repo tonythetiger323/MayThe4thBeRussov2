@@ -16,6 +16,8 @@
     "lint-md": "remark ."
   },
   "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "@material-ui/icons": "^3.0.2",
     "dotenv": "^6.2.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
