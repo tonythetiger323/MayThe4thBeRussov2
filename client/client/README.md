@@ -8,4 +8,10 @@ The original MayThe4thBeRusso repository is for a project for my class which, I 
 
 ## Tech Used
 
-[HTML](https://www.w3.org/html), [CSS](https://www.w3.org/Style/CSS), [JavaScript (es6)](https://www.ecma-international.org/ecma-262/6.0/), [JSX](https://jsx.github.io), [TypeScript](https://www.typescriptlang.org), [React](https://reactjs.org), [Jest](https://jestjs.io/), [Enzyme](https://airbnb.io/enzyme/), [Circle-CI](https://circleci.com/), [CodeClimate Quality](https://codeclimate.com/), [git](https://git-scm.com/), [GitHub](https://github.com), [WorkingCopy](https://workingcopyapp.com/), & [Editorial](https://omz-software.com/editorial/).
+[HTML](https://www.w3.org/html), [CSS](https://www.w3.org/Style/CSS),
+[JavaScript (es6)](https://www.ecma-international.org/ecma-262/6.0/), [JSX](https://jsx.github.io),
+[TypeScript](https://www.typescriptlang.org), [React](https://reactjs.org),
+[Jest](https://jestjs.io/), [Enzyme](https://airbnb.io/enzyme/),
+[Circle-CI](https://circleci.com/), [CodeClimate Quality](https://codeclimate.com/),
+[git](https://git-scm.com/), [GitHub](https://github.com),
+[WorkingCopy](https://workingcopyapp.com/), & [Editorial](https://omz-software.com/editorial/).
