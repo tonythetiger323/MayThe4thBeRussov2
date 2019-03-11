@@ -14,7 +14,8 @@
     "type-check": "tsc",
     "lint": "tslint 'src/**/*.{ts,tsx}' && remark .",
     "lint:fix": "tslint 'src/**/*.{ts,tsx}' --fix",
-    "lint-md": "remark ."
+    "lint-md": "remark .",
+    "heroku-postbuild": "npm run start"
   },
   "dependencies": {
     "@material-ui/core": "^3.9.2",
