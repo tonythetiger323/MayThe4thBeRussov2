@@ -5,10 +5,10 @@ import MenuItem from '@material-ui/core/MenuItem'
 import NavbarLink from '../NavbarLink'
 import PopupState, {
   bindTrigger,
-  bindMenu,
-} from 'material-ui-popup-state/index';
+  bindMenu
+} from 'material-ui-popup-state/index'
 
-const NavbarLinkMenu: React.SFC = () => {
+const NavbarLinkMenu: React.FunctionComponent = () => {
   return (
     <PopupState variant='popover' popupId='NavbarLink-popup-menu'>
       {(popupState: any) => (
@@ -28,7 +28,7 @@ const NavbarLinkMenu: React.SFC = () => {
         </React.Fragment>
       )}
     </PopupState>
-  );
-};
+  )
+}
 
-export default NavbarLinkMenu;
+export default NavbarLinkMenu
