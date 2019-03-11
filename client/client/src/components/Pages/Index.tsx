@@ -1,7 +1,6 @@
 import * as React from 'react'
 import Page from '../Layouts/Page'
 import Typography from '@material-ui/core/Typography'
-import PhotoStepper from '../PhotoStepper'
 import { withStyles, Theme } from '@material-ui/core/styles'
 
 const styles = (theme: Theme) => ({
@@ -12,30 +11,17 @@ const styles = (theme: Theme) => ({
   }
 })
 
-interface IndexProps {
-  classes: {
-    stepper: string
-  }
-
-  propTypes: any
-}
-class Index extends React.Component<IndexProps, any> {
-  constructor(props: IndexProps) {
-    super(props)
-  }
-
+class Index extends React.Component {
   render() {
     const style = {
       fontFamily: 'Arvo'
     }
-    const { classes } = this.props
     return (
       <div>
         <Page>
           <Typography style={style} variant='h2'>
             May the 4th be Russo
           </Typography>
-          <PhotoStepper className={classes.stepper} />
         </Page>
       </div>
     )
