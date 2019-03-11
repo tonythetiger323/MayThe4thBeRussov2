@@ -8,19 +8,19 @@ import { History } from 'history'
 // react-router-dom link passed to it
 
 interface NavbarLinkProps extends ButtonProps {
-  readonly to: History.LocationDescriptor;
-  readonly children: any;
+  readonly to: History.LocationDescriptor
+  readonly children: any
 }
 
-const NavbarLink: React.SFC<NavbarLinkProps> = props => {
-  const renderLink: React.SFC<any> = itemProps => (
+const NavbarLink: React.FunctionComponent<NavbarLinkProps> = props => {
+  const renderLink: React.FunctionComponent<any> = itemProps => (
     <Link to={props.to} {...itemProps} />
-  );
+  )
 
   return (
     <Button component={renderLink} {...props}>
       {props.children}
     </Button>
-  );
-};
-export default NavbarLink;
+  )
+}
+export default NavbarLink
