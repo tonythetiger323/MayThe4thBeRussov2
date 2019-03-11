@@ -3,6 +3,10 @@
   "version": "2.0.0",
   "description": "The original MayThe4thBeRusso repository is for a project for my class which, I have now completed and graduated from. MayThe4thBeRussov2 is now the real development of the actual wedding website that I am making for my best friend, Randy Russo and his beautiful and amazing fiance, Megan Bailey. I couldn't be prouder or happier to be able to create this site for them as their wedding gift.",
   "private": false,
+  "engines": {
+    "node": "10.15.0",
+    "npm": "6.9.0"
+  },
   "scripts": {
     "start:dev": "react-scripts start",
     "start": "serve -s build",
