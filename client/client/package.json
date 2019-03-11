@@ -18,8 +18,7 @@
     "type-check": "tsc",
     "lint": "tslint 'src/**/*.{ts,tsx}' && remark .",
     "lint:fix": "tslint 'src/**/*.{ts,tsx}' --fix",
-    "lint-md": "remark .",
-    "heroku-postbuild": "npm run start"
+    "lint-md": "remark ."
   },
   "dependencies": {
     "@material-ui/core": "^3.9.2",
@@ -77,7 +76,8 @@
   "keywords": [
     "wedding",
     "TypeScript",
-    "React"
+    "React",
+    "Material-UI"
   ],
   "author": "Tony Greeley",
   "license": "MIT",
