@@ -22,7 +22,8 @@
     "arrow-parens": false,
     "object-literal-sort-keys": false,
     "no-console": false,
-    "only-arrow-functions": false
+    "only-arrow-functions": false,
+    "jsx-no-lambda": false
   },
   "linterOptions": {
     "exclude": [
