@@ -4,8 +4,8 @@
   "description": "The original MayThe4thBeRusso repository is for a project for my class which, I have now completed and graduated from. MayThe4thBeRussov2 is now the real development of the actual wedding website that I am making for my best friend, Randy Russo and his beautiful and amazing fiance, Megan Bailey. I couldn't be prouder or happier to be able to create this site for them as their wedding gift.",
   "private": false,
   "engines": {
-    "node": "10.15.0",
-    "npm": "6.9.0"
+    "node": "10.15.1",
+    "yarn": "1.15.2"
   },
   "scripts": {
     "start:dev": "react-scripts start",
@@ -13,7 +13,7 @@
     "build": "react-scripts build",
     "build:clean": "rm -rf build/",
     "eject": "react-scripts eject",
-    "test": "react-scripts test",
+    "test": "snyk test && react-scripts test",
     "test:watch": "jest --watch",
     "type-check": "tsc",
     "lint": "tslint 'src/**/*.{ts,tsx}' && remark .",
@@ -32,8 +32,7 @@
     "react-scripts": "^2.1.8",
     "react-swipeable-views": "^0.13.1",
     "react-swipeable-views-utils": "^0.13.1",
-    "redux": "^4.0.1",
-    "serve": "^10.1.2"
+    "redux": "^4.0.1"
   },
   "devDependencies": {
     "@types/enzyme": "^3.9.0",
@@ -55,7 +54,9 @@
     "remark-cli": "^6.0.1",
     "remark-lint": "^6.0.4",
     "remark-preset-lint-recommended": "^3.0.2",
+    "snyk": "^1.136.3",
     "ts-jest": "^24.0.0",
+    "ts-node": "^8.0.3",
     "tslib": "^1.9.3",
     "tslint": "^5.13.1",
     "tslint-config-prettier": "^1.18.0",
@@ -91,5 +92,8 @@
     "email": "admin@maythe4thberusso.com"
   },
   "homepage": "http://www.maythe4thberusso.com",
-  "heroku-run-build-script": true
+  "heroku-run-build-script": true,
+  "peerDependencies": {
+    "jest": "^24.5.0"
+  }
 }
