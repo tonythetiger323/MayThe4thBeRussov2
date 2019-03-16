@@ -1,32 +1,51 @@
 import * as React from 'react'
-import * as ReactDOM from 'react-dom'
-import { BrowserRouter as Router } from 'react-router-dom'
 import { shallow } from 'enzyme'
 import App from '../App'
+import Routes from '../routes'
+import { createShallow } from '@material-ui/core/test-utils/index'
+import { MuiThemeProvider } from '@material-ui/core'
+import CssBaseline from '@material-ui/core/CssBaseline'
+import theme from '../theme/theme'
+import SomethingCrispy from '../__mocks__/SomethingCrispy'
+
+let wrapper: any
+let shallowMui: any
 
 describe('App', () => {
-  let wrapper: any
-  beforeEach(
-    () =>
-      (wrapper = shallow(
-        <Router>
-          <App />
-        </Router>
-      ))
-  )
+  beforeEach(() => (wrapper = shallow(<App />)))
+  it('should render a <div />', () => {
+    expect(wrapper.find('div').length).toEqual(1)
+  })
 
-  it('should render without crashing', () => {
-    const div = document.createElement('div')
-    ReactDOM.render(
-      <Router>
-        <App />
-      </Router>,
-      div
-    )
-    ReactDOM.unmountComponentAtNode(div)
+  it('should render the Routes Component', () => {
+    expect(wrapper.containsMatchingElement(<Routes />)).toEqual(true)
   })
 
   it('should render correctly', () => {
     expect(wrapper).toMatchSnapshot()
+  })
+})
+
+describe('<MuiThemeProvider />', () => {
+  beforeAll(() => {
+    shallowMui = createShallow()
+  })
+
+  it('should work', () => {
+    wrapper = shallowMui(
+      <MuiThemeProvider theme={theme}>
+        <SomethingCrispy />
+      </MuiThemeProvider>
+    )
+  })
+})
+
+describe('<CssBaseline />', () => {
+  beforeAll(() => {
+    shallowMui = createShallow()
+  })
+
+  it('should work', () => {
+    wrapper = shallowMui(<CssBaseline />)
   })
 })
