@@ -3,10 +3,7 @@ import Button from '@material-ui/core/Button'
 import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
 import NavbarLink from '../NavbarLink'
-import PopupState, {
-  bindTrigger,
-  bindMenu
-} from 'material-ui-popup-state/index'
+import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state'
 
 const NavbarLinkMenu: React.FunctionComponent = () => {
   return (
