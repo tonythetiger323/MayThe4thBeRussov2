@@ -1,12 +1,17 @@
 {
+    "cacheDirectory": "/tmp/<path>",
+    "clearMocks": true,
     "preset": "react",
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
+    "collectCoverage": true,
     "collectCoverageFrom": [
       "**/*.{ts.tsx",
       "!**/node_modules/**"
-    ]
+    ],
+    "coverageDirectory": "coverage/",
+    "coverageReporters": ["json", "lcov", "text", "clover"],
     "transform": {
       "^.+\\.js$": "<rootDir>/node_modules/react/jest/preprocessor.js",
       "^.+\\.tsx?$": "ts-jest"
