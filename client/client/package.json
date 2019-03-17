@@ -4,7 +4,7 @@
   "description": "The original MayThe4thBeRusso repository is for a project for my class which, I have now completed and graduated from. MayThe4thBeRussov2 is now the real development of the actual wedding website that I am making for my best friend, Randy Russo and his beautiful and amazing fiance, Megan Bailey. I couldn't be prouder or happier to be able to create this site for them as their wedding gift.",
   "private": false,
   "engines": {
-    "node": "10.15.1"
+    "node": "10.x"
   },
   "scripts": {
     "start:dev": "react-scripts start",
@@ -55,6 +55,8 @@
     "remark-cli": "^6.0.1",
     "remark-lint": "^6.0.4",
     "remark-preset-lint-recommended": "^3.0.2",
+    "semantic-release": "^15.13.3",
+    "semantic-release-cli": "^4.1.1",
     "snyk": "^1.136.3",
     "ts-jest": "^24.0.0",
     "ts-node": "^8.0.3",

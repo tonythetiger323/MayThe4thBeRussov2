@@ -1,43 +1,34 @@
 version: 2
 jobs:
   build:
-    work_directory: ~/MayThe4thBeRussov2
     docker:
-      - image: circleci/node:10.15.1
+      - image: circleci/node:10
     steps:
       - checkout
       - restore_cache: # special step to restore the dependency cache
-          name: Restore Yarn Package Cache
           keys:
-            - yarn-packages-{{ checksum "yarn.lock" }}
-            - yarn-packages-
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
       - run:
-          name: Install Dependencies
-          command: yarn install --frozen-lockfile
+          name: Setup Dependencies
+          command: npm install
       - run:
           name: Setup Code Climate test-reporter
           command: |
             curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
             chmod +x ./cc-test-reporter
       - save_cache:
-          name: Save Yarn Package Cache
-          key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
-            - ~/.cache/yarn
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
       - run: # run tests
           name: Run Test and Coverage
           command: |
             ./cc-test-reporter before-build
             npm test -- -u --coverage
             ./cc-test-reporter after-build --exit-code $?
-      - store_artifacts:
-          path: test-results.xml
-          prefix: tests
-      - store_artifacts:
-          path: coverage
-          prefix: coverage
       - store_test_results:
-          path: test-results.xml
+          path: test-results
       - run:
           name: Compile react build
           command: npm run build
