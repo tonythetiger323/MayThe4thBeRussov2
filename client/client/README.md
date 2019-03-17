@@ -2,7 +2,7 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/1faab12bb5b0dce5fde1/maintainability)](https://codeclimate.com/github/tonythetiger323/MayThe4thBeRussov2/maintainability)
 
-[![Test Coverage](https://api.codeclimate.com/v1/badges/1faab12bb5b0dce5fde1/test_coverage)](https://codeclimate.com/github/tonythetiger323/MayThe4thBeRussov2/test_coverage)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/1faab12bb5b0dce5fde1/test_coverage)](https://codeclimate.com/github/tonythetiger323/MayThe4thBeRussov2/test_coverage) [![Greenkeeper badge](https://badges.greenkeeper.io/tonythetiger323/MayThe4thBeRussov2.svg)](https://greenkeeper.io/)
 
 The original MayThe4thBeRusso repository is for a project for my class which, I have now completed and graduated from. MayThe4thBeRussov2 is now the real development of the actual wedding website that I am making for my best friend, Randy Russo and his beautiful and amazing fiance, Megan Bailey. I couldn't be prouder or happier to be able to create this site for them as their wedding gift.
 
