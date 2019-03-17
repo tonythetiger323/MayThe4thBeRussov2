@@ -12,10 +12,6 @@ jobs:
             - yarn-packages-{{ checksum "yarn.lock" }}
             - yarn-packages-
       - run:
-          name: Install ci-yarn-upgrade Globally
-          command: yarn add ci-yarn-upgrade -G
-      - run: ci-yarn-upgrade --execute --latest --verbose;
-      - run:
           name: Install Dependencies
           command: yarn install --frozen-lockfile
       - run:
@@ -34,7 +30,7 @@ jobs:
             ./cc-test-reporter before-build
             npm test -- -u --coverage
             ./cc-test-reporter after-build --exit-code $?
-      - store_artifacts: 
+      - store_artifacts:
           path: test-results.xml
           prefix: tests
       - store_artifacts:
