@@ -90,8 +90,7 @@
   "author": "Tony Greeley",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tonythetiger323/MayThe4thBeRussov2/issues",
-    "email": "admin@maythe4thberusso.com"
+    "url": "https://github.com/tonythetiger323/MayThe4thBeRussov2/issues"
   },
   "homepage": "http://www.maythe4thberusso.com",
   "heroku-run-build-script": true,
