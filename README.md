@@ -1,7 +1,5 @@
 # MayThe4thBeRusso v 2.0
 
-[![CircleCI](https://circleci.com/gh/tonythetiger323/MayThe4thBeRussov2.svg?style=svg)](https://circleci.com/gh/tonythetiger323/MayThe4thBeRussov2)
-
 [![Maintainability](https://api.codeclimate.com/v1/badges/1faab12bb5b0dce5fde1/maintainability)](https://codeclimate.com/github/tonythetiger323/MayThe4thBeRussov2/maintainability)
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/1faab12bb5b0dce5fde1/test_coverage)](https://codeclimate.com/github/tonythetiger323/MayThe4thBeRussov2/test_coverage)
