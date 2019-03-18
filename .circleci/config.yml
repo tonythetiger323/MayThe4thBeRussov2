@@ -13,9 +13,6 @@ jobs:
           name: Setup Dependencies
           command: cd client && npm install
       - run:
-          name: Make folder for test reporter
-          command: cd client && mkdir cc-test-reporter
-      - run:
           name: Setup Code Climate test-reporter
           command: |
             curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./client/cc-test-reporter
