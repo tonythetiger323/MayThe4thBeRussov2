@@ -12,6 +12,7 @@
 /client/.nyc_output
 /server/coverage
 /server/.nyc_output
+/client/cc-test-reporter
 
 # production
 /client/build
