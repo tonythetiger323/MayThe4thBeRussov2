@@ -1,8 +1,4 @@
 {
-  "name": "may-the-4th-be-russo",
-  "version": "0.0.0",
-  "description": "The original MayThe4thBeRusso repository is for a project for my class which, I have now completed and graduated from. MayThe4thBeRussov2 is now the real development of the actual wedding website that I am making for my best friend, Randy Russo and his beautiful and amazing fiance, Megan Bailey. I couldn't be prouder or happier to be able to create this site for them as their wedding gift.",
-  "private": false,
   "engines": {
     "node": "10.x",
     "npm": "6.x"
@@ -66,17 +62,6 @@
     "typescript": "^3.3.3333"
   },
   "proxy": "http://localhost:3001",
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "remarkConfig": {
-    "plugins": [
-      "remark-preset-lint-recommended"
-    ]
-  },
   "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
@@ -86,23 +71,6 @@
       "!**/node_modules/**"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tonythetiger323/MayThe4thBeRussov2.git"
-  },
-  "keywords": [
-    "wedding",
-    "TypeScript",
-    "React",
-    "Material-UI"
-  ],
-  "author": "Tony Greeley",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/tonythetiger323/MayThe4thBeRussov2/issues",
-    "email": "admin@maythe4thberusso.com"
-  },
-  "homepage": "http://www.maythe4thberusso.com",
   "heroku-run-build-script": true,
   "peerDependencies": {
     "jest": "^24.5.0"
