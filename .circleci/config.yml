@@ -1,34 +1,52 @@
 version: 2
 jobs:
-  build:
-    docker:
-      - image: circleci/node:8
-    steps:
-      - checkout
-      - restore_cache: # special step to restore the dependency cache
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
-      - run:
-          name: Upgrade npm pacakge installer
-          command: npm install -g npm@next
-      - run:
-          name: Setup Code Climate test-reporter
-          command: |
-            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-            chmod +x ./cc-test-reporter
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-      - run: # run tests
-          name: Run Test and Coverage
-          command: |
-            ./cc-test-reporter before-build
-            npm test -- -u --coverage
-            ./cc-test-reporter after-build --exit-code $?
-      - store_test_results:
-          path: test-results
-      - run:
-          name: Compile react build
-          command: npm run build
+build:
+  docker:
+    - image: circleci/node:8
+  steps:
+    - run:
+        name: Decrypt key
+        command: openssl aes-256-cbc -d -K $REPO_ENC_KEY -iv $REPO_ENC_IV -in git_deploy_key.enc -out /tmp/git_deploy_key
+    - run:
+        name: Change key permissions
+        command: chmod 600 /tmp/git_deploy_key
+    - run:
+        name: Add passphrase
+        command: echo 'echo ${SSL_PASSPHRASE}' > /tmp/askpass && chmod +x /tmp/askpass
+    - run:
+        name: Start ssh auth agent
+        command: eval "$(ssh-agent -s)"
+    - run:
+        name: Add key to agent
+        command: DISPLAY=":0.0" SSH_ASKPASS="/tmp/askpass" setsid ssh-add /tmp/git_deploy_key </dev/null
+    - checkout
+    - restore_cache: # special step to restore the dependency cache
+        keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
+    - run:
+        name: Upgrade npm pacakge installer
+        command: sudo npm install -g npm@next
+    - run:
+        name: Install v1-dependencies
+        command: npm install
+    - run:
+        name: Setup Code Climate test-reporter
+        command: |
+          curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+          chmod +x ./cc-test-reporter
+    - save_cache:
+        paths:
+          - node_modules
+        key: v1-dependencies-{{ checksum "package.json" }}
+    - run: # run tests
+        name: Run Test and Coverage
+        command: |
+          ./cc-test-reporter before-build
+          npm test -- -u --coverage
+          ./cc-test-reporter after-build --exit-code $?
+    - store_test_results:
+        path: test-results
+    - run:
+        name: Compile react build
+        command: npm run build
