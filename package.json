@@ -27,5 +27,8 @@
     "clean:build": "cd client && rm -rf build/ && cd ../server rm -rf dist/",
     "build": "npm run clean:build && cd client && npm run build && cd ../server && npm run build"
   },
-  "heroku-run-build-script": true
+  "heroku-run-build-script": true,
+  "devDependencies": {
+    "husky": "^1.3.1"
+  }
 }
