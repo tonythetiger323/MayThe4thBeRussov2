@@ -3,7 +3,7 @@ module.exports = {
   collectCoverageFrom: ['src/**/*.{ts,tsx,js,jsx,mjs}'],
   coverageDirectory: 'coverage',
   moduleFileExtensions: ['js', 'json', 'jsx', 'ts', 'tsx'],
-  setupFiles: ['<rootDir>/src/enzyme.config.ts'],
+  setupFiles: ['<rootDir>/client/src/enzyme.config.ts'],
   snapshotSerialers: 'enzyme-to-json/serializer',
   testEnvironment: 'jsdom',
   testMatch: [
