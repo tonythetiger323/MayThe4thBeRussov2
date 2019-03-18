@@ -25,7 +25,7 @@
   "homepage": "http://www.maythe4thberusso.com",
   "scripts": {
     "clean:build": "cd client && rm -rf build/ && cd ../server rm -rf dist/",
-    "build": "cd client && npm run build && cd ../server && npm run build",
+    "build": "cd server && npm run clean:dist && npm run build",
     "lint": "cd client && npm run lint && cd ../server && npm run lint",
     "type-check": "cd client && tsc && cd ../server && tsc",
     "start:dev": "cd server && npm run start:dev"
