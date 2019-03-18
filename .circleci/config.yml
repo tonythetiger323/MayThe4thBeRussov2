@@ -24,7 +24,7 @@ jobs:
           paths:
             - client/node_modules
           keys:
-            - v1-dependencies-client-{{ checksum "client/package.json" }
+            - v1-dependencies-client-{{ checksum "client/package.json" }}
       - run: # run tests
           name: Run Test and Coverage
           command: |
