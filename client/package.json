@@ -8,7 +8,7 @@
     "build": "react-scripts build",
     "build:clean": "rm -rf build/",
     "eject": "react-scripts eject",
-    "test": "nyc react-scripts test -u --coverage",
+    "test": "nyc react-scripts test --coverage",
     "test:local": "nyc npm snyk test && react-scripts test -u --coverage",
     "test:watch": "nyc jest --watch",
     "type-check": "tsc",
