@@ -6,6 +6,7 @@ import Routes from '../routes'
 import { MuiThemeProvider } from '@material-ui/core'
 import theme from '../theme/theme'
 import SomethingCrispy from '../__mocks__/SomethingCrispy'
+import CssBaseline from '@material-ui/core/CssBaseline'
 
 let wrapper: any
 
@@ -33,5 +34,15 @@ describe('<MuiThemeProvider />', () => {
         <SomethingCrispy />
       </MuiThemeProvider>
     )
+  })
+})
+
+describe('<CssBaseline />', () => {
+  beforeAll(() => {
+    shallowMui = createShallow()
+  })
+
+  it('should work', () => {
+    wrapper = shallowMui(<CssBaseline />)
   })
 })
