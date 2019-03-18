@@ -8,7 +8,10 @@
 .pnp.js
 
 # testing
-/coverage
+/client/coverage
+/client/.nyc_output
+/server/coverage
+/server/.nyc_output
 
 # production
 /client/build
