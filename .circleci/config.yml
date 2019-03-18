@@ -20,7 +20,7 @@ jobs:
             chmod +x ./cc-test-reporter
       - save_cache:
           paths:
-            - node_modules
+            - /client/node_modules
           key: v1-dependencies-{{ checksum "client/package.json" }}
       - run: # run tests
           name: Run Test and Coverage
