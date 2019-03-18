@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/server/node_modules
+/client/node_modules
 /.pnp
 .pnp.js
 
@@ -9,7 +11,8 @@
 /coverage
 
 # production
-/build
+/client/build
+/server/dist
 
 # workspace file
 MayThe4thBeRussov2.code-workspace
@@ -24,5 +27,7 @@ www.maythe4thberusso.com/
 .env.development.local
 .env.test.local
 .env.production.local
+development.env
+ormconfig.json
 
 npm-debug.log*
