@@ -7,11 +7,11 @@ jobs:
       - checkout
       - restore_cache: # special step to restore the dependency cache
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-{{ checksum "client/package.json" }}
             - v1-dependencies-
       - run:
           name: Setup Dependencies
-          command: npm install
+          command: cd client && npm install
       - run:
           name: Setup Code Climate test-reporter
           command: |
@@ -20,15 +20,15 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: v1-dependencies-{{ checksum "client/package.json" }}
       - run: # run tests
           name: Run Test and Coverage
           command: |
             ./cc-test-reporter before-build
-            npm test -u --coverage
+            cd client && npm test -u --coverage
             ./cc-test-reporter after-build --exit-code $?
       - store_test_results:
           path: test-results
       - run:
           name: Compile react build
-          command: npm run build
+          command: cd client && npm run build
