@@ -8,7 +8,7 @@ class PageLayout extends React.Component {
     return (
       <div className='app-container'>
         <header>
-          <Typography variant='h3'>May The 4th Be Russo</Typography>
+          <Typography variant='h3' align='center'>May The 4th Be Russo</Typography>
         </header>
         <nav>
           <Navbar />
