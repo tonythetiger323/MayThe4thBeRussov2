@@ -9,6 +9,7 @@
     "build:clean": "rm -rf build/",
     "eject": "react-scripts eject",
     "test": "nyc react-scripts test --coverage",
+    "test:ci": "nyc react-scripts test --coverage -u",
     "test:local": "nyc npm snyk test && react-scripts test -u --coverage",
     "test:watch": "nyc jest --watch",
     "type-check": "tsc",

@@ -27,7 +27,7 @@ jobs:
           command: |
             cd client
             ./cc-test-reporter before-build
-            npm test -u --coverage
+            npm test:ci
             ./cc-test-reporter after-build --exit-code $?
       - store_test_results:
           path: /client/test-results
