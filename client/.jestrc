@@ -3,7 +3,7 @@
   "collectCoverageFrom": "["src/**/*.{ts,tsx,js,jsx,mjs}"]",
   "coverageDirectory": "coverage",
   "moduleFileExtensions": "["js", "json", "jsx", "ts", "tsx"]",
-  "setupFiles": ["./enzyme.config.ts"],
+  "setupFiles": ["/src/setupTests.ts"],
   "snapshotSerialers": "enzyme-to-json/serializer",
   "testEnvironment": "jsdom",
   "testMatch": [

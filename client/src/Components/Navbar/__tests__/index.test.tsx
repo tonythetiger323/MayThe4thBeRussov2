@@ -20,7 +20,7 @@ describe('<Grid/>', () => {
     shallowMui = createShallow()
   })
 
-  it('shoule work', () => {
+  it('should work', () => {
     wrapper = shallowMui(<Grid />)
   })
 })

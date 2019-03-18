@@ -36,7 +36,7 @@
     "acceptance-tests",
     "webpack",
     "jest",
-    "src/enzyme.config.ts"
+    "src/setupTests.ts"
   ],
   "include": [
     "src",
