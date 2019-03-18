@@ -30,7 +30,7 @@ jobs:
             npm test -u --coverage
             ./cc-test-reporter after-build --exit-code $?
       - store_test_results:
-          path: test-results
+          path: /client/test-results
       - run:
           name: Compile react build
           command: cd client && npm run build
