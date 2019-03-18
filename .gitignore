@@ -12,6 +12,8 @@
 /client/.nyc_output
 /server/coverage
 /server/.nyc_output
+/client/src/__tests__/App.test.tsx.old
+/client/src/__tests__/index.test.tsx.old
 
 # production
 /client/build
