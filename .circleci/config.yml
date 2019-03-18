@@ -3,28 +3,18 @@ jobs:
   build:
     docker:
       - image: circleci/node:10
-      - image: mysql
     steps:
       - checkout
-      - run:
-          name: Start Database
-          command: --default-authentication-plugin=mysql_native_password
-          retart: always
       - restore_cache: # special step to restore the dependency cache
           keys:
             - v1-dependencies-client-{{ checksum "client/package.json" }}
             - v1-dependencies-client-
-            - v1-dependencies-server-{{ checksum "server/package.json" }}
-            - v1-dependencies-server-
       - run:
           name: Upgrade npm pacakge installer
           command: sudo npm install -g npm@next
       - run:
           name: Install v1-dependencies for client
           command: cd client && npm install
-      - run:
-          name: Install v1-dependencies for server
-          command: cd ../server && npm install
       - run:
           name: Setup Code Climate test-reporter
           command: |
@@ -33,10 +23,8 @@ jobs:
       - save_cache:
           paths:
             - client/node_modules
-            - server/node_modules
           keys:
-            - v1-dependencies-client-{{ checksum "client/package.json" }}
-            - v1-dependencies-server-{{ checksum "server/package.json" }}
+            - v1-dependencies-client-{{ checksum "client/package.json" }
       - run: # run tests
           name: Run Test and Coverage
           command: |
