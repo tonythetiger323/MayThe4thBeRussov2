@@ -28,7 +28,7 @@
     "build": "npm run clean:build && cd client && npm run build && cd ../server && npm run build",
     "lint": "cd client && npm run lint && cd ../server && npm run lint",
     "type-check": "cd client && tsc && cd ../server && tsc",
-    "start:dev": "cd server && npm run start:dev && cd ../client && npm run start"
+    "start:dev": "cd server && npm run start:dev"
   },
   "heroku-run-build-script": true,
   "browserslist": [
