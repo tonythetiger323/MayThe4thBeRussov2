@@ -24,7 +24,7 @@
   },
   "homepage": "http://www.maythe4thberusso.com",
   "scripts": {
-    "test": "cross-env NODE_ENV=test PORT=8080 MYSQL_URL=mysql://localhost:33065/may_the_4th_be_russo_test",
+    "test": "cross-env NODE_ENV=test PORT=8080 MYSQL_URL=mysql://localhost:33065/may_the_4th_be_russo_test node_modules/.bin/nyc node node_modules/jest/bin/jest.js",
     "watch:test": "npm run test -- --watch",
     "cover": "nyc npm run test",
     "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
@@ -64,6 +64,7 @@
     "@types/react-router-dom": "^4.3.1",
     "@types/react-swipeable-views": "^0.13.0",
     "@types/supertest": "^2.0.7",
+    "coveralls": "^3.0.3",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
     "enzyme-to-json": "^3.3.5",

@@ -2,16 +2,16 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:8
+      - image: circleci/node:10
     steps:
       - checkout
       - restore_cache: # special step to restore the dependency cache
           keys:
-            - v1-dependencies-{{ checksum "client/package.json" }}
+            - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies-
       - run:
           name: Setup Dependencies
-          command: cd client && npm install
+          command: npm install
       - run:
           name: Setup Code Climate test-reporter
           command: |
@@ -21,13 +21,13 @@ jobs:
       - save_cache:
           paths:
             - /client/node_modules
-          key: v1-dependencies-{{ checksum "client/package.json" }}
+          key: v1-dependencies-{{ checksum "package.json" }}
       - run: # run tests
           name: Run Test and Coverage
           command: |
             cd client
             ./cc-test-reporter before-build
-            npm run test:ci
+            './node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls'
             ./cc-test-reporter after-build --exit-code $?
       - store_test_results:
           path: /client/test-results
