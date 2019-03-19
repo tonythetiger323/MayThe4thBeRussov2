@@ -84,6 +84,7 @@
     "remark-lint": "^6.0.4",
     "remark-preset-lint-recommended": "^3.0.2",
     "snyk": "^1.137.0",
+    "stylelint-config-recommended": "^2.1.0",
     "supertest": "^4.0.2",
     "ts-jest": "^24.0.0",
     "ts-node": "^8.0.3",
