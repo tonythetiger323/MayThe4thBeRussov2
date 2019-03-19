@@ -6,6 +6,7 @@
 .pnp.js
 
 # testing
+/.nyc_output/
 /client/coverage
 /client/.nyc_output
 /server/coverage
