@@ -7,7 +7,7 @@ module.exports = {
       collectCoverageFrom: ['src/**/*.{ts,tsx,js,jsx,mjs}'],
       coverageDirectory: 'coverage',
       moduleFileExtensions: ['js', 'json', 'jsx', 'ts', 'tsx'],
-      setupFiles: ['<rootDir>/client/src/setupTests.ts'],
+      setupFilesAfterEnv: ['./rtl.setup.js'],
       snapshotSerializers: ['enzyme-to-json'],
       testEnvironment: 'jsdom',
       testMatch: [
