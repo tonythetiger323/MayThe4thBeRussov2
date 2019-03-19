@@ -1,0 +1,8 @@
+{
+  "linters":{
+    "*.{ts,tsx}": ["lint:fix", "git add"],
+    "*.css": ["lint-css:fix", "git add"],
+    "*.md": ["lint-md:fix", "git add"]
+  },
+  "ignore": ["node_modules", "**/build", "**/dist"]
+}
