@@ -2,14 +2,29 @@
 
 # dependencies
 /node_modules
+/client/node_modules
+/server/node_modules
+
 /.pnp
 .pnp.js
 
 # testing
-/coverage
+/.nyc_output/
+/coverage/
+/client/coverage
+/client/.nyc_output
+/server/coverage
+/server/.nyc_output
+/test-results/
+/client/test-results/
+/server/test-results/
+
+
+*.old
 
 # production
-/build
+/client/build
+/server/dist
 
 # workspace file
 MayThe4thBeRussov2.code-workspace
@@ -24,7 +39,8 @@ www.maythe4thberusso.com/
 .env.development.local
 .env.test.local
 .env.production.local
+development.env
+ormconfig.json
 
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+

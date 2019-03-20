@@ -1,0 +1,35 @@
+{
+"defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended",
+    "tslint-config-standard",
+    "tslint-react",
+    "tslint-config-prettier"
+  ],
+  "jsRules": {
+    "object-literal-sort-keys": false
+  },
+  "rules": {
+    "no-var-requires": [false],
+    "no-unused-expression": [false],
+    "jsx-boolean-value": [false],
+    "quotemark": [true, "single"],
+    "member-access": [false],
+    "ordered-imports": [false],
+    "max-line-length": [false, 150],
+    "member-ordering": [false],
+    "interface-name": [false],
+    "arrow-parens": false,
+    "object-literal-sort-keys": false,
+    "no-console": false,
+    "only-arrow-functions": false,
+    "jsx-no-lambda": false
+  },
+  "linterOptions": {
+    "exclude": [
+      "config/**/*.js",
+      "node_modules/**/*.ts",
+      "coverage/lcov-report/*.js"
+    ]
+  }
+}
