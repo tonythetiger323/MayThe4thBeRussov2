@@ -11,7 +11,7 @@ jobs:
             - v1-dependencies-
       - run:
           name: Setup Dependencies
-          command: npm install
+          command: cd client && npm install
       - run:
           name: Setup Code Climate test-reporter
           command: |
@@ -27,7 +27,7 @@ jobs:
           command: |
             cd client
             ./cc-test-reporter before-build
-            './node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls'
+            npm run test:ci
             ./cc-test-reporter after-build --exit-code $?
       - store_test_results:
           path: /client/test-results

@@ -2,15 +2,24 @@
 
 # dependencies
 /node_modules
+/client/node_modules
+/server/node_modules
+
 /.pnp
 .pnp.js
 
 # testing
 /.nyc_output/
+/coverage/
 /client/coverage
 /client/.nyc_output
 /server/coverage
 /server/.nyc_output
+/test-results/
+/client/test-results/
+/server/test-results/
+
+
 *.old
 
 # production
