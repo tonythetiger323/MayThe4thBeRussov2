@@ -8,7 +8,7 @@ import theme from './theme/theme'
 class App extends Component {
   public render() {
     return (
-      <div className='app-container'>
+      <div>
         <MuiThemeProvider theme={theme}>
           <CssBaseline>
             <Routes />
