@@ -7,14 +7,14 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          keys: -v1api-dependencies-{{ checksum "package.json" }}
-            -v1api-dependencies-
+          keys: -v1-dependencies-{{ checksum "package.json" }}
+            -v1-dependencies-
       - run:
           name: Install latest npm
-          command: npm install -g npm
+          command: sudo npm install -g npm
       - run:
           name: Installing dependencies
-          command: sudo npm install
+          command: npm install
       - run:
           name: Setup Code Climate test-reporter
           command: |
@@ -22,7 +22,7 @@ jobs:
             curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
             chmod +x ./cc-test-reporter
       - save_cache:
-          key: v1api-dependencies-{{ checksum "package.json" }}
+          key: v1-dependencies-{{ checksum "package.json" }}
           paths:
             - ./node_modules
       - run:
@@ -48,8 +48,8 @@ jobs:
       - checkout
       - restore_cache: # special step to restore the dependency cache
           keys:
-            - v1ui-dependencies-{{ checksum "package.json" }}
-            - v1ui-dependencies-
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
       - run:
           name: Installing dependencies
           command: npm install
@@ -61,7 +61,7 @@ jobs:
       - save_cache:
           paths:
             - /client/node_modules
-          key: v1ui-dependencies-{{ checksum "package.json" }}
+          key: v1-dependencies-{{ checksum "package.json" }}
       - run: # run tests
           name: Run Test and Coverage
           command: |
