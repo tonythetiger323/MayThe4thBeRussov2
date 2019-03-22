@@ -1,46 +1,49 @@
 version: 2
 jobs:
   test-api-and-build:
-    working_directory: ~/server
+    working_directory: ~/
     docker:
       - image: circleci/node:10.15.3
     steps:
       - checkout
       - restore_cache: #restore dependancy cache
-          keys: -v1-dependencies-{{ checksum "package.json" }}
+          keys: 
+            -v1-dependencies-{{ checksum "server/package.json" }}
             -v1-dependencies-
       - run:
           name: Install latest npm
-          command: sudo npm install -g npm
+          command: cd server && sudo npm install -g npm
       - run:
           name: Installing dependencies
-          command: npm install
+          command: cd server && npm install
       - run:
           name: Setup Code Climate test-reporter
           command: |
+            cd server
             curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
             chmod +x ./cc-test-reporter
       - save_cache:
           paths:
-            - ./node_modules
+            - ./server/node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run:
           name: Running tests with coverage
           command: |
+            cd server
             ./cc-test-reporter before-build
             npm run test:cov
             ./cc-test-reporter after-build --exit-code $?
       - store_test_results:
-          path: ./test-results/jest
+          path: ./server/test-results/jest
       - run:
           name: Clean dist
-          command: npm run clean:dist
+          command: cd server && npm run clean:dist
       - run:
           name: Compile server build
-          command: npm run build
+          command: cd server && npm run build
 
   test-ui-and-build:
-    working_directory: ./client
+    working_directory: ~/
     docker:
       - image: circleci/node:10.15.3
     steps:
@@ -51,27 +54,29 @@ jobs:
             - v1-dependencies-
       - run:
           name: Installing dependencies
-          command: npm install
+          command: cd client && npm install
       - run:
           name: Setup Code Climate test-reporter
           command: |
+            cd client
             curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
             chmod +x ./cc-test-reporter
       - save_cache:
           paths:
-            - ./node_modules
+            - ./client/node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: # run tests
           name: Run Test and Coverage
           command: |
+            cd client
             ./cc-test-reporter before-build
             npm run test:ci
             ./cc-test-reporter after-build --exit-code $?
       - store_test_results:
-          path: ./test-results/jest
+          path: ./client/test-results/jest
       - run:
           name: Compile react build
-          command: npm run build
+          command: cd client && npm run build
 
   deploy:
     machine:
