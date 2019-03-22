@@ -41,7 +41,6 @@ www.maythe4thberusso.com/
 .env.production.local
 development.env
 production.env
-test.env
 ormconfig.json
 
 npm-debug.log*
