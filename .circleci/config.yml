@@ -1,7 +1,7 @@
 version: 2
 jobs:
   test-api-and-build:
-   docker:
+    docker:
       - image: circleci/node:10.15.3
     steps:
       - checkout
