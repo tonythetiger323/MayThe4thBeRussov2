@@ -1,49 +1,8 @@
 version: 2
 jobs:
-  test-api-and-build:
+  build:
     docker:
-      - image: circleci/node:10.15.3
-    steps:
-      - checkout
-      - restore_cache: #restore dependancy cache
-          keys: 
-            -v1-dependencies-{{ checksum "server/package.json" }}
-            -v1-dependencies-
-      - run:
-          name: Install latest npm
-          command: cd server && sudo npm install -g npm
-      - run:
-          name: Installing dependencies
-          command: cd server && npm install
-      - run:
-          name: Setup Code Climate test-reporter
-          command: |
-            cd server
-            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-            chmod +x ./cc-test-reporter
-      - save_cache:
-          paths:
-            - ./server/node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-      - run:
-          name: Running tests with coverage
-          command: |
-            cd server
-            ./cc-test-reporter before-build
-            npm run test:cov
-            ./cc-test-reporter after-build --exit-code $?
-      - store_test_results:
-          path: ./server/test-results/jest
-      - run:
-          name: Clean dist
-          command: cd server && npm run clean:dist
-      - run:
-          name: Compile server build
-          command: cd server && npm run build
-
-  test-ui-and-build:
-    docker:
-      - image: circleci/node:10.15.3
+      - image: circleci/node:10
     steps:
       - checkout
       - restore_cache: # special step to restore the dependency cache
@@ -51,7 +10,7 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies-
       - run:
-          name: Installing dependencies
+          name: Setup Dependencies
           command: cd client && npm install
       - run:
           name: Setup Code Climate test-reporter
@@ -61,7 +20,7 @@ jobs:
             chmod +x ./cc-test-reporter
       - save_cache:
           paths:
-            - ./client/node_modules
+            - /client/node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: # run tests
           name: Run Test and Coverage
@@ -71,39 +30,7 @@ jobs:
             npm run test:ci
             ./cc-test-reporter after-build --exit-code $?
       - store_test_results:
-          path: ./client/test-results/jest
+          path: /client/test-results
       - run:
           name: Compile react build
           command: cd client && npm run build
-
-  deploy:
-    machine:
-      enabled: true
-    working_directory: ~/
-    steps:
-      - checkout
-      - run:
-          - name: Setup heroku
-          - command: bash .circleci/setup-heroku.sh
-      - run:
-          - name: Push master branch to heroku
-          - command: |
-              git push heroku sequential-branch-filter:master
-              sleep 5 # sleep for 5 seconds to wait for dynos
-              heroku restart
-
-workflows:
-  version: 2
-  test-app-and-build-and-deploy:
-    jobs:
-      - test-api-and-build
-      - test-ui-and-build:
-          requires:
-            - test-api-and-build
-      - deploy:
-          requires:
-            - test-api-and-build
-            - test-ui-and-build
-          filters:
-            branches:
-              only: sequential-branch-filter
