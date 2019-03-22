@@ -9,7 +9,7 @@ jobs:
       - run:
           name: Install MySQL CLI
           command: |
-            apt-get install mysql-client
+            sudo apt-get install mysql-shell
             mysql -h 127.0.0.1 -u $MYSQL_USER -$MYSQL_PASSWORD $MYSQL_DATABASE < sql-data/test.sql
             mysql -h 127.0.0.1 -u $MYSQL_USER -$MYSQL_PASSWORD --execute="SELECT * FROM $MYSQL_DATABASE.User"
 
