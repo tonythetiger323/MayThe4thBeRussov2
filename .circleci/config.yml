@@ -6,8 +6,9 @@ jobs:
       - image: circleci/node:10.15.3
     steps:
       - checkout
-      - restore_cache:
-          keys: -v1-dependencies-{{ checksum "package.json" }}
+      - restore_cache: #restore dependancy cache
+          keys: 
+            -v1-dependencies-{{ checksum "package.json" }}
             -v1-dependencies-
       - run:
           name: Install latest npm
@@ -21,7 +22,8 @@ jobs:
             curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
             chmod +x ./cc-test-reporter
       - save_cache:
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key:
+            - v1-dependencies-{{ checksum "package.json" }}
           paths:
             - ./node_modules
       - run:
@@ -59,7 +61,7 @@ jobs:
             chmod +x ./cc-test-reporter
       - save_cache:
           paths:
-            - /client/node_modules
+            - ./node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: # run tests
           name: Run Test and Coverage
