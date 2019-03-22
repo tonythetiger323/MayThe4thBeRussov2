@@ -3,17 +3,9 @@ jobs:
   test-database:
     working_directory: ~/server
     docker:
-      - image: tkuchiki/delayed-mysql
+      - image: circleci/mysql:8.0.15
     steps:
       - checkout
-      - run:
-          name: install dockerize
-          command: sudo apt-get https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz && sudo tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
-          environment:
-            DOCKERIZE_VERSION: v0.3.0
-      - run:
-          name: Waiting for MySQL to be ready
-          command: dockerize -wait tcp://127.0.0.1:3306 -timeout 120s
       - run:
           name: Install MySQL CLI
           command: |
