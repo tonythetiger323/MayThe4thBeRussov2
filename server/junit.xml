@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="1" failures="0" time="6.583">
+  <testsuite name="AppController (e2e)" errors="0" failures="0" skipped="0" timestamp="2019-03-22T06:13:52" time="5.965" tests="1">
+    <testcase classname="AppController (e2e) / (GET)" name="AppController (e2e) / (GET)" time="0.621">
+    </testcase>
+  </testsuite>
+</testsuites>

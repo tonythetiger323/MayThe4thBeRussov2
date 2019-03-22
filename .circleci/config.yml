@@ -1,21 +1,84 @@
 version: 2
 jobs:
-  build:
+  database-test:
+    working_directory: ~/server
     docker:
-      - image: circleci/node:10
+      - image: circleci/mysql:8.0.15
     steps:
       - checkout
-      - restore_cache: # special step to restore the dependency cache
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
       - run:
-          name: Setup Dependencies
-          command: cd client && npm install
+          name: Waiting for MySQL to be ready
+          command: |
+            for i in `seq 1 30`;
+            do
+              nc -z 127.0.0.1 3306 && echo Success && exit 0
+              echo -n
+              sleep 1
+            done
+            echo Failed waiting from MySQL && exit 1
+      - run:
+          name: Install MySQL CLI
+          command: |
+            sudo apt-get install mysql-client
+            mysql -h 127.0.0.1 -u $MYSQL_USER -$MYSQL_PASSWORD $MYSQL_DATABASE < sql-data/test.sql
+            mysql -h 127.0.0.1 -u $MYSQL_USER -$MYSQL_PASSWORD --execute="SELECT * FROM $MYSQL_DATABASE.User"
+
+  test-api-and-build:
+    working_directory: ~/server
+    docker:
+      - image: circleci/node:10.15.3
+    steps:
+      - checkout
+      - restore_cache:
+          keys: -v1-api-dependencies-{{ checksum "package.json" }}
+            -v1-api-dependencies-
+      - run:
+          name: Install latest npm
+          command: npm install -g npm
+      - run:
+          name: Installing dependencies
+          command: npm install
       - run:
           name: Setup Code Climate test-reporter
           command: |
             cd client
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+      - save_cache:
+          key: v1-api-dependencies-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: Running tests with coverage
+          command: |
+            ./cc-test-reporter before-build
+            npm run test:cov
+            ./cc-test-reporter after-build --exit-code $?
+      - store_test_results:
+          path: ./test-results/jest
+      - run:
+          name: Clean dist
+          command: npm run clean:dist
+      - run:
+          name: Compile server build
+          command: npm run build
+
+  test-ui-and-build:
+    working_directory: ./client
+    docker:
+      - image: circleci/node:10.15.3
+    steps:
+      - checkout
+      - restore_cache: # special step to restore the dependency cache
+          keys:
+            - v1-ui-dependencies-{{ checksum "package.json" }}
+            - v1-ui-dependencies-
+      - run:
+          name: Installing dependencies
+          command: npm install
+      - run:
+          name: Setup Code Climate test-reporter
+          command: |
             curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
             chmod +x ./cc-test-reporter
       - save_cache:
@@ -25,12 +88,45 @@ jobs:
       - run: # run tests
           name: Run Test and Coverage
           command: |
-            cd client
             ./cc-test-reporter before-build
             npm run test:ci
             ./cc-test-reporter after-build --exit-code $?
       - store_test_results:
-          path: /client/test-results
+          path: ./test-results/jest
       - run:
           name: Compile react build
-          command: cd client && npm run build
+          command: npm run build
+
+  deploy:
+    machine:
+      enabled: true
+    working_directory: ~/
+    steps:
+      - checkout
+      - run:
+          - name: Setup heroku
+          - command: bash .circleci/setup-heroku.sh
+      - run:
+          - name: Push master branch to heroku
+          - command: |
+              git push heroku sequential-branch-filter:master
+              sleep 5 # sleep for 5 seconds to wait for dynos
+              heroku restart
+
+workflows:
+  version: 2
+  test-database-and-build:
+    jobs:
+      - test-database
+      - test-api-and-build:
+          requires:
+            - test-database
+      - test-ui-and-build:
+          requires:
+            - test-api-and-build
+      - deploy:
+          requires:
+            - test-ui-and-build
+          filters:
+            branches:
+              only: sequential-branch-filter
