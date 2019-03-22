@@ -7,8 +7,7 @@ jobs:
     steps:
       - checkout
       - restore_cache: #restore dependancy cache
-          keys: 
-            -v1-dependencies-{{ checksum "package.json" }}
+          keys: -v1-dependencies-{{ checksum "package.json" }}
             -v1-dependencies-
       - run:
           name: Install latest npm
@@ -22,10 +21,9 @@ jobs:
             curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
             chmod +x ./cc-test-reporter
       - save_cache:
-          key:
-            - v1-dependencies-{{ checksum "package.json" }}
           paths:
             - ./node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
       - run:
           name: Running tests with coverage
           command: |
