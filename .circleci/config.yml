@@ -92,9 +92,9 @@ jobs:
 
 workflows:
   version: 2
-  test-api-and-build:
+  test-app-and-build-and-deploy:
     jobs:
-      - test-api-and-build:
+      - test-api-and-build
       - test-ui-and-build:
           requires:
             - test-api-and-build
