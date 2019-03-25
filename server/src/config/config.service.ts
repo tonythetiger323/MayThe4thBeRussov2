@@ -22,7 +22,7 @@ export class ConfigService {
       NODE_ENV: Joi.string()
         .valid(['development', 'production', 'test', 'provision'])
         .default('development')
-    })
+      })
 
     const { error, value: validatedEnvConfig } = Joi.validate(
       envConfig,
@@ -33,7 +33,8 @@ export class ConfigService {
     }
     return validatedEnvConfig
   }
+
   get nodeEnv(): string {
-    return this.envConfig.NODE_ENV
+    return String(this.envConfig.NODE_ENV)
   }
 }
