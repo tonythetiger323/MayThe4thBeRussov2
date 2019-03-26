@@ -2,11 +2,13 @@ module.exports = {
   rootDir: './',
   projects: [
     {
+      rootDir: './',
       displayName: 'client',
       clearMocks: true,
       collectCoverageFrom: ['src/**/*.{ts,tsx,js,jsx,mjs}'],
       coverageDirectory: 'coverage',
       moduleFileExtensions: ['js', 'json', 'jsx', 'ts', 'tsx'],
+      reporters: ['default', 'jest-junit'],
       setupFiles: ['./client/src/setupTests.ts'],
       snapshotSerializers: ['enzyme-to-json'],
       testEnvironment: 'jsdom',

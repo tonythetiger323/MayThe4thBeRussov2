@@ -15,7 +15,8 @@
     "arrow-parens": false,
     "object-literal-sort-keys": false,
     "no-var-requires": false,
-    "trailing-comma": false
+    "trailing-comma": false,
+    "semicolon": false
   },
   "rulesDirectory": []
 }
