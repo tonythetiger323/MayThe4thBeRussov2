@@ -1,0 +1,1537 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginDialog Component should render correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <LoginDialog
+    userHasAuthenticated={true}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <WithStyles(Button)
+          onClick={[Function]}
+        >
+          Login
+        </WithStyles(Button)>,
+        <WithStyles(Dialog)
+          aria-labelledby="login-form-dialog-title"
+          onClose={[Function]}
+          open={false}
+        >
+          <WithStyles(DialogTitle)
+            id="login-form-dialog-title"
+          >
+            Login to Your Account
+          </WithStyles(DialogTitle)>
+          <WithStyles(DialogContent)>
+            <WithStyles(DialogContentText)>
+              Enter Your Email & Password to Login!
+            </WithStyles(DialogContentText)>
+            <Formik
+              enableReinitialize={false}
+              initialValues={
+                Object {
+                  "email": "",
+                  "password": "",
+                }
+              }
+              isInitialValid={false}
+              onSubmit={[Function]}
+              validateOnBlur={true}
+              validateOnChange={true}
+              validationSchema={
+                ObjectSchema {
+                  "_blacklist": RefSet {
+                    "list": Set {},
+                    "refs": Map {},
+                  },
+                  "_conditions": Array [],
+                  "_defaultDefault": [Function],
+                  "_deps": Array [],
+                  "_excludedEdges": Array [],
+                  "_exclusive": Object {},
+                  "_mutate": undefined,
+                  "_nodes": Array [
+                    "password",
+                    "email",
+                  ],
+                  "_options": Object {
+                    "abortEarly": true,
+                    "recursive": true,
+                  },
+                  "_type": "object",
+                  "_typeError": [Function],
+                  "_whitelist": RefSet {
+                    "list": Set {},
+                    "refs": Map {},
+                  },
+                  "fields": Object {
+                    "email": StringSchema {
+                      "_blacklist": RefSet {
+                        "list": Set {},
+                        "refs": Map {},
+                      },
+                      "_conditions": Array [],
+                      "_deps": Array [],
+                      "_exclusive": Object {
+                        "required": true,
+                        "undefined": false,
+                      },
+                      "_mutate": undefined,
+                      "_options": Object {
+                        "abortEarly": true,
+                        "recursive": true,
+                      },
+                      "_type": "string",
+                      "_typeError": [Function],
+                      "_whitelist": RefSet {
+                        "list": Set {},
+                        "refs": Map {},
+                      },
+                      "tests": Array [
+                        [Function],
+                        [Function],
+                      ],
+                      "transforms": Array [
+                        [Function],
+                      ],
+                    },
+                    "password": StringSchema {
+                      "_blacklist": RefSet {
+                        "list": Set {},
+                        "refs": Map {},
+                      },
+                      "_conditions": Array [],
+                      "_deps": Array [],
+                      "_exclusive": Object {
+                        "required": true,
+                        "undefined": false,
+                      },
+                      "_mutate": undefined,
+                      "_options": Object {
+                        "abortEarly": true,
+                        "recursive": true,
+                      },
+                      "_type": "string",
+                      "_typeError": [Function],
+                      "_whitelist": RefSet {
+                        "list": Set {},
+                        "refs": Map {},
+                      },
+                      "tests": Array [
+                        [Function],
+                        [Function],
+                      ],
+                      "transforms": Array [
+                        [Function],
+                      ],
+                    },
+                  },
+                  "tests": Array [],
+                  "transforms": Array [
+                    [Function],
+                  ],
+                }
+              }
+            >
+              <Form>
+                <FormikConnect(FieldInner)
+                  component={[Function]}
+                  label="Email"
+                  name="email"
+                  required={true}
+                  type="email"
+                />
+                <FormikConnect(FieldInner)
+                  component={[Function]}
+                  label="Password"
+                  name="password"
+                  required={true}
+                  type="password"
+                />
+                <WithStyles(Button)
+                  onClick={[Function]}
+                >
+                  Cancel
+                </WithStyles(Button)>
+                <WithStyles(Button)
+                  onClick={[Function]}
+                  type="submit"
+                >
+                  Login
+                </WithStyles(Button)>
+              </Form>
+            </Formik>
+          </WithStyles(DialogContent)>
+        </WithStyles(Dialog)>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "Login",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Login",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "aria-labelledby": "login-form-dialog-title",
+          "children": Array [
+            <WithStyles(DialogTitle)
+              id="login-form-dialog-title"
+            >
+              Login to Your Account
+            </WithStyles(DialogTitle)>,
+            <WithStyles(DialogContent)>
+              <WithStyles(DialogContentText)>
+                Enter Your Email & Password to Login!
+              </WithStyles(DialogContentText)>
+              <Formik
+                enableReinitialize={false}
+                initialValues={
+                  Object {
+                    "email": "",
+                    "password": "",
+                  }
+                }
+                isInitialValid={false}
+                onSubmit={[Function]}
+                validateOnBlur={true}
+                validateOnChange={true}
+                validationSchema={
+                  ObjectSchema {
+                    "_blacklist": RefSet {
+                      "list": Set {},
+                      "refs": Map {},
+                    },
+                    "_conditions": Array [],
+                    "_defaultDefault": [Function],
+                    "_deps": Array [],
+                    "_excludedEdges": Array [],
+                    "_exclusive": Object {},
+                    "_mutate": undefined,
+                    "_nodes": Array [
+                      "password",
+                      "email",
+                    ],
+                    "_options": Object {
+                      "abortEarly": true,
+                      "recursive": true,
+                    },
+                    "_type": "object",
+                    "_typeError": [Function],
+                    "_whitelist": RefSet {
+                      "list": Set {},
+                      "refs": Map {},
+                    },
+                    "fields": Object {
+                      "email": StringSchema {
+                        "_blacklist": RefSet {
+                          "list": Set {},
+                          "refs": Map {},
+                        },
+                        "_conditions": Array [],
+                        "_deps": Array [],
+                        "_exclusive": Object {
+                          "required": true,
+                          "undefined": false,
+                        },
+                        "_mutate": undefined,
+                        "_options": Object {
+                          "abortEarly": true,
+                          "recursive": true,
+                        },
+                        "_type": "string",
+                        "_typeError": [Function],
+                        "_whitelist": RefSet {
+                          "list": Set {},
+                          "refs": Map {},
+                        },
+                        "tests": Array [
+                          [Function],
+                          [Function],
+                        ],
+                        "transforms": Array [
+                          [Function],
+                        ],
+                      },
+                      "password": StringSchema {
+                        "_blacklist": RefSet {
+                          "list": Set {},
+                          "refs": Map {},
+                        },
+                        "_conditions": Array [],
+                        "_deps": Array [],
+                        "_exclusive": Object {
+                          "required": true,
+                          "undefined": false,
+                        },
+                        "_mutate": undefined,
+                        "_options": Object {
+                          "abortEarly": true,
+                          "recursive": true,
+                        },
+                        "_type": "string",
+                        "_typeError": [Function],
+                        "_whitelist": RefSet {
+                          "list": Set {},
+                          "refs": Map {},
+                        },
+                        "tests": Array [
+                          [Function],
+                          [Function],
+                        ],
+                        "transforms": Array [
+                          [Function],
+                        ],
+                      },
+                    },
+                    "tests": Array [],
+                    "transforms": Array [
+                      [Function],
+                    ],
+                  }
+                }
+              >
+                <Form>
+                  <FormikConnect(FieldInner)
+                    component={[Function]}
+                    label="Email"
+                    name="email"
+                    required={true}
+                    type="email"
+                  />
+                  <FormikConnect(FieldInner)
+                    component={[Function]}
+                    label="Password"
+                    name="password"
+                    required={true}
+                    type="password"
+                  />
+                  <WithStyles(Button)
+                    onClick={[Function]}
+                  >
+                    Cancel
+                  </WithStyles(Button)>
+                  <WithStyles(Button)
+                    onClick={[Function]}
+                    type="submit"
+                  >
+                    Login
+                  </WithStyles(Button)>
+                </Form>
+              </Formik>
+            </WithStyles(DialogContent)>,
+          ],
+          "onClose": [Function],
+          "open": false,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Login to Your Account",
+              "id": "login-form-dialog-title",
+            },
+            "ref": null,
+            "rendered": "Login to Your Account",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <WithStyles(DialogContentText)>
+                  Enter Your Email & Password to Login!
+                </WithStyles(DialogContentText)>,
+                <Formik
+                  enableReinitialize={false}
+                  initialValues={
+                    Object {
+                      "email": "",
+                      "password": "",
+                    }
+                  }
+                  isInitialValid={false}
+                  onSubmit={[Function]}
+                  validateOnBlur={true}
+                  validateOnChange={true}
+                  validationSchema={
+                    ObjectSchema {
+                      "_blacklist": RefSet {
+                        "list": Set {},
+                        "refs": Map {},
+                      },
+                      "_conditions": Array [],
+                      "_defaultDefault": [Function],
+                      "_deps": Array [],
+                      "_excludedEdges": Array [],
+                      "_exclusive": Object {},
+                      "_mutate": undefined,
+                      "_nodes": Array [
+                        "password",
+                        "email",
+                      ],
+                      "_options": Object {
+                        "abortEarly": true,
+                        "recursive": true,
+                      },
+                      "_type": "object",
+                      "_typeError": [Function],
+                      "_whitelist": RefSet {
+                        "list": Set {},
+                        "refs": Map {},
+                      },
+                      "fields": Object {
+                        "email": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": true,
+                            "undefined": false,
+                          },
+                          "_mutate": undefined,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "password": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": true,
+                            "undefined": false,
+                          },
+                          "_mutate": undefined,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                      },
+                      "tests": Array [],
+                      "transforms": Array [
+                        [Function],
+                      ],
+                    }
+                  }
+                >
+                  <Form>
+                    <FormikConnect(FieldInner)
+                      component={[Function]}
+                      label="Email"
+                      name="email"
+                      required={true}
+                      type="email"
+                    />
+                    <FormikConnect(FieldInner)
+                      component={[Function]}
+                      label="Password"
+                      name="password"
+                      required={true}
+                      type="password"
+                    />
+                    <WithStyles(Button)
+                      onClick={[Function]}
+                    >
+                      Cancel
+                    </WithStyles(Button)>
+                    <WithStyles(Button)
+                      onClick={[Function]}
+                      type="submit"
+                    >
+                      Login
+                    </WithStyles(Button)>
+                  </Form>
+                </Formik>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Enter Your Email & Password to Login!",
+                },
+                "ref": null,
+                "rendered": "Enter Your Email & Password to Login!",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <Form>
+                    <FormikConnect(FieldInner)
+                      component={[Function]}
+                      label="Email"
+                      name="email"
+                      required={true}
+                      type="email"
+                    />
+                    <FormikConnect(FieldInner)
+                      component={[Function]}
+                      label="Password"
+                      name="password"
+                      required={true}
+                      type="password"
+                    />
+                    <WithStyles(Button)
+                      onClick={[Function]}
+                    >
+                      Cancel
+                    </WithStyles(Button)>
+                    <WithStyles(Button)
+                      onClick={[Function]}
+                      type="submit"
+                    >
+                      Login
+                    </WithStyles(Button)>
+                  </Form>,
+                  "enableReinitialize": false,
+                  "initialValues": Object {
+                    "email": "",
+                    "password": "",
+                  },
+                  "isInitialValid": false,
+                  "onSubmit": [Function],
+                  "validateOnBlur": true,
+                  "validateOnChange": true,
+                  "validationSchema": ObjectSchema {
+                    "_blacklist": RefSet {
+                      "list": Set {},
+                      "refs": Map {},
+                    },
+                    "_conditions": Array [],
+                    "_defaultDefault": [Function],
+                    "_deps": Array [],
+                    "_excludedEdges": Array [],
+                    "_exclusive": Object {},
+                    "_mutate": undefined,
+                    "_nodes": Array [
+                      "password",
+                      "email",
+                    ],
+                    "_options": Object {
+                      "abortEarly": true,
+                      "recursive": true,
+                    },
+                    "_type": "object",
+                    "_typeError": [Function],
+                    "_whitelist": RefSet {
+                      "list": Set {},
+                      "refs": Map {},
+                    },
+                    "fields": Object {
+                      "email": StringSchema {
+                        "_blacklist": RefSet {
+                          "list": Set {},
+                          "refs": Map {},
+                        },
+                        "_conditions": Array [],
+                        "_deps": Array [],
+                        "_exclusive": Object {
+                          "required": true,
+                          "undefined": false,
+                        },
+                        "_mutate": undefined,
+                        "_options": Object {
+                          "abortEarly": true,
+                          "recursive": true,
+                        },
+                        "_type": "string",
+                        "_typeError": [Function],
+                        "_whitelist": RefSet {
+                          "list": Set {},
+                          "refs": Map {},
+                        },
+                        "tests": Array [
+                          [Function],
+                          [Function],
+                        ],
+                        "transforms": Array [
+                          [Function],
+                        ],
+                      },
+                      "password": StringSchema {
+                        "_blacklist": RefSet {
+                          "list": Set {},
+                          "refs": Map {},
+                        },
+                        "_conditions": Array [],
+                        "_deps": Array [],
+                        "_exclusive": Object {
+                          "required": true,
+                          "undefined": false,
+                        },
+                        "_mutate": undefined,
+                        "_options": Object {
+                          "abortEarly": true,
+                          "recursive": true,
+                        },
+                        "_type": "string",
+                        "_typeError": [Function],
+                        "_whitelist": RefSet {
+                          "list": Set {},
+                          "refs": Map {},
+                        },
+                        "tests": Array [
+                          [Function],
+                          [Function],
+                        ],
+                        "transforms": Array [
+                          [Function],
+                        ],
+                      },
+                    },
+                    "tests": Array [],
+                    "transforms": Array [
+                      [Function],
+                    ],
+                  },
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": Array [
+                      <FormikConnect(FieldInner)
+                        component={[Function]}
+                        label="Email"
+                        name="email"
+                        required={true}
+                        type="email"
+                      />,
+                      <FormikConnect(FieldInner)
+                        component={[Function]}
+                        label="Password"
+                        name="password"
+                        required={true}
+                        type="password"
+                      />,
+                      <WithStyles(Button)
+                        onClick={[Function]}
+                      >
+                        Cancel
+                      </WithStyles(Button)>,
+                      <WithStyles(Button)
+                        onClick={[Function]}
+                        type="submit"
+                      >
+                        Login
+                      </WithStyles(Button)>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "component": [Function],
+                        "label": "Email",
+                        "name": "email",
+                        "required": true,
+                        "type": "email",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "component": [Function],
+                        "label": "Password",
+                        "name": "password",
+                        "required": true,
+                        "type": "password",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": "Cancel",
+                        "onClick": [Function],
+                      },
+                      "ref": null,
+                      "rendered": "Cancel",
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": "Login",
+                        "onClick": [Function],
+                        "type": "submit",
+                      },
+                      "ref": null,
+                      "rendered": "Login",
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <WithStyles(Button)
+            onClick={[Function]}
+          >
+            Login
+          </WithStyles(Button)>,
+          <WithStyles(Dialog)
+            aria-labelledby="login-form-dialog-title"
+            onClose={[Function]}
+            open={false}
+          >
+            <WithStyles(DialogTitle)
+              id="login-form-dialog-title"
+            >
+              Login to Your Account
+            </WithStyles(DialogTitle)>
+            <WithStyles(DialogContent)>
+              <WithStyles(DialogContentText)>
+                Enter Your Email & Password to Login!
+              </WithStyles(DialogContentText)>
+              <Formik
+                enableReinitialize={false}
+                initialValues={
+                  Object {
+                    "email": "",
+                    "password": "",
+                  }
+                }
+                isInitialValid={false}
+                onSubmit={[Function]}
+                validateOnBlur={true}
+                validateOnChange={true}
+                validationSchema={
+                  ObjectSchema {
+                    "_blacklist": RefSet {
+                      "list": Set {},
+                      "refs": Map {},
+                    },
+                    "_conditions": Array [],
+                    "_defaultDefault": [Function],
+                    "_deps": Array [],
+                    "_excludedEdges": Array [],
+                    "_exclusive": Object {},
+                    "_mutate": undefined,
+                    "_nodes": Array [
+                      "password",
+                      "email",
+                    ],
+                    "_options": Object {
+                      "abortEarly": true,
+                      "recursive": true,
+                    },
+                    "_type": "object",
+                    "_typeError": [Function],
+                    "_whitelist": RefSet {
+                      "list": Set {},
+                      "refs": Map {},
+                    },
+                    "fields": Object {
+                      "email": StringSchema {
+                        "_blacklist": RefSet {
+                          "list": Set {},
+                          "refs": Map {},
+                        },
+                        "_conditions": Array [],
+                        "_deps": Array [],
+                        "_exclusive": Object {
+                          "required": true,
+                          "undefined": false,
+                        },
+                        "_mutate": undefined,
+                        "_options": Object {
+                          "abortEarly": true,
+                          "recursive": true,
+                        },
+                        "_type": "string",
+                        "_typeError": [Function],
+                        "_whitelist": RefSet {
+                          "list": Set {},
+                          "refs": Map {},
+                        },
+                        "tests": Array [
+                          [Function],
+                          [Function],
+                        ],
+                        "transforms": Array [
+                          [Function],
+                        ],
+                      },
+                      "password": StringSchema {
+                        "_blacklist": RefSet {
+                          "list": Set {},
+                          "refs": Map {},
+                        },
+                        "_conditions": Array [],
+                        "_deps": Array [],
+                        "_exclusive": Object {
+                          "required": true,
+                          "undefined": false,
+                        },
+                        "_mutate": undefined,
+                        "_options": Object {
+                          "abortEarly": true,
+                          "recursive": true,
+                        },
+                        "_type": "string",
+                        "_typeError": [Function],
+                        "_whitelist": RefSet {
+                          "list": Set {},
+                          "refs": Map {},
+                        },
+                        "tests": Array [
+                          [Function],
+                          [Function],
+                        ],
+                        "transforms": Array [
+                          [Function],
+                        ],
+                      },
+                    },
+                    "tests": Array [],
+                    "transforms": Array [
+                      [Function],
+                    ],
+                  }
+                }
+              >
+                <Form>
+                  <FormikConnect(FieldInner)
+                    component={[Function]}
+                    label="Email"
+                    name="email"
+                    required={true}
+                    type="email"
+                  />
+                  <FormikConnect(FieldInner)
+                    component={[Function]}
+                    label="Password"
+                    name="password"
+                    required={true}
+                    type="password"
+                  />
+                  <WithStyles(Button)
+                    onClick={[Function]}
+                  >
+                    Cancel
+                  </WithStyles(Button)>
+                  <WithStyles(Button)
+                    onClick={[Function]}
+                    type="submit"
+                  >
+                    Login
+                  </WithStyles(Button)>
+                </Form>
+              </Formik>
+            </WithStyles(DialogContent)>
+          </WithStyles(Dialog)>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "Login",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Login",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "aria-labelledby": "login-form-dialog-title",
+            "children": Array [
+              <WithStyles(DialogTitle)
+                id="login-form-dialog-title"
+              >
+                Login to Your Account
+              </WithStyles(DialogTitle)>,
+              <WithStyles(DialogContent)>
+                <WithStyles(DialogContentText)>
+                  Enter Your Email & Password to Login!
+                </WithStyles(DialogContentText)>
+                <Formik
+                  enableReinitialize={false}
+                  initialValues={
+                    Object {
+                      "email": "",
+                      "password": "",
+                    }
+                  }
+                  isInitialValid={false}
+                  onSubmit={[Function]}
+                  validateOnBlur={true}
+                  validateOnChange={true}
+                  validationSchema={
+                    ObjectSchema {
+                      "_blacklist": RefSet {
+                        "list": Set {},
+                        "refs": Map {},
+                      },
+                      "_conditions": Array [],
+                      "_defaultDefault": [Function],
+                      "_deps": Array [],
+                      "_excludedEdges": Array [],
+                      "_exclusive": Object {},
+                      "_mutate": undefined,
+                      "_nodes": Array [
+                        "password",
+                        "email",
+                      ],
+                      "_options": Object {
+                        "abortEarly": true,
+                        "recursive": true,
+                      },
+                      "_type": "object",
+                      "_typeError": [Function],
+                      "_whitelist": RefSet {
+                        "list": Set {},
+                        "refs": Map {},
+                      },
+                      "fields": Object {
+                        "email": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": true,
+                            "undefined": false,
+                          },
+                          "_mutate": undefined,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "password": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": true,
+                            "undefined": false,
+                          },
+                          "_mutate": undefined,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                      },
+                      "tests": Array [],
+                      "transforms": Array [
+                        [Function],
+                      ],
+                    }
+                  }
+                >
+                  <Form>
+                    <FormikConnect(FieldInner)
+                      component={[Function]}
+                      label="Email"
+                      name="email"
+                      required={true}
+                      type="email"
+                    />
+                    <FormikConnect(FieldInner)
+                      component={[Function]}
+                      label="Password"
+                      name="password"
+                      required={true}
+                      type="password"
+                    />
+                    <WithStyles(Button)
+                      onClick={[Function]}
+                    >
+                      Cancel
+                    </WithStyles(Button)>
+                    <WithStyles(Button)
+                      onClick={[Function]}
+                      type="submit"
+                    >
+                      Login
+                    </WithStyles(Button)>
+                  </Form>
+                </Formik>
+              </WithStyles(DialogContent)>,
+            ],
+            "onClose": [Function],
+            "open": false,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Login to Your Account",
+                "id": "login-form-dialog-title",
+              },
+              "ref": null,
+              "rendered": "Login to Your Account",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <WithStyles(DialogContentText)>
+                    Enter Your Email & Password to Login!
+                  </WithStyles(DialogContentText)>,
+                  <Formik
+                    enableReinitialize={false}
+                    initialValues={
+                      Object {
+                        "email": "",
+                        "password": "",
+                      }
+                    }
+                    isInitialValid={false}
+                    onSubmit={[Function]}
+                    validateOnBlur={true}
+                    validateOnChange={true}
+                    validationSchema={
+                      ObjectSchema {
+                        "_blacklist": RefSet {
+                          "list": Set {},
+                          "refs": Map {},
+                        },
+                        "_conditions": Array [],
+                        "_defaultDefault": [Function],
+                        "_deps": Array [],
+                        "_excludedEdges": Array [],
+                        "_exclusive": Object {},
+                        "_mutate": undefined,
+                        "_nodes": Array [
+                          "password",
+                          "email",
+                        ],
+                        "_options": Object {
+                          "abortEarly": true,
+                          "recursive": true,
+                        },
+                        "_type": "object",
+                        "_typeError": [Function],
+                        "_whitelist": RefSet {
+                          "list": Set {},
+                          "refs": Map {},
+                        },
+                        "fields": Object {
+                          "email": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": true,
+                              "undefined": false,
+                            },
+                            "_mutate": undefined,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "password": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": true,
+                              "undefined": false,
+                            },
+                            "_mutate": undefined,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                        },
+                        "tests": Array [],
+                        "transforms": Array [
+                          [Function],
+                        ],
+                      }
+                    }
+                  >
+                    <Form>
+                      <FormikConnect(FieldInner)
+                        component={[Function]}
+                        label="Email"
+                        name="email"
+                        required={true}
+                        type="email"
+                      />
+                      <FormikConnect(FieldInner)
+                        component={[Function]}
+                        label="Password"
+                        name="password"
+                        required={true}
+                        type="password"
+                      />
+                      <WithStyles(Button)
+                        onClick={[Function]}
+                      >
+                        Cancel
+                      </WithStyles(Button)>
+                      <WithStyles(Button)
+                        onClick={[Function]}
+                        type="submit"
+                      >
+                        Login
+                      </WithStyles(Button)>
+                    </Form>
+                  </Formik>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "Enter Your Email & Password to Login!",
+                  },
+                  "ref": null,
+                  "rendered": "Enter Your Email & Password to Login!",
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": <Form>
+                      <FormikConnect(FieldInner)
+                        component={[Function]}
+                        label="Email"
+                        name="email"
+                        required={true}
+                        type="email"
+                      />
+                      <FormikConnect(FieldInner)
+                        component={[Function]}
+                        label="Password"
+                        name="password"
+                        required={true}
+                        type="password"
+                      />
+                      <WithStyles(Button)
+                        onClick={[Function]}
+                      >
+                        Cancel
+                      </WithStyles(Button)>
+                      <WithStyles(Button)
+                        onClick={[Function]}
+                        type="submit"
+                      >
+                        Login
+                      </WithStyles(Button)>
+                    </Form>,
+                    "enableReinitialize": false,
+                    "initialValues": Object {
+                      "email": "",
+                      "password": "",
+                    },
+                    "isInitialValid": false,
+                    "onSubmit": [Function],
+                    "validateOnBlur": true,
+                    "validateOnChange": true,
+                    "validationSchema": ObjectSchema {
+                      "_blacklist": RefSet {
+                        "list": Set {},
+                        "refs": Map {},
+                      },
+                      "_conditions": Array [],
+                      "_defaultDefault": [Function],
+                      "_deps": Array [],
+                      "_excludedEdges": Array [],
+                      "_exclusive": Object {},
+                      "_mutate": undefined,
+                      "_nodes": Array [
+                        "password",
+                        "email",
+                      ],
+                      "_options": Object {
+                        "abortEarly": true,
+                        "recursive": true,
+                      },
+                      "_type": "object",
+                      "_typeError": [Function],
+                      "_whitelist": RefSet {
+                        "list": Set {},
+                        "refs": Map {},
+                      },
+                      "fields": Object {
+                        "email": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": true,
+                            "undefined": false,
+                          },
+                          "_mutate": undefined,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "password": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": true,
+                            "undefined": false,
+                          },
+                          "_mutate": undefined,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                      },
+                      "tests": Array [],
+                      "transforms": Array [
+                        [Function],
+                      ],
+                    },
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": Array [
+                        <FormikConnect(FieldInner)
+                          component={[Function]}
+                          label="Email"
+                          name="email"
+                          required={true}
+                          type="email"
+                        />,
+                        <FormikConnect(FieldInner)
+                          component={[Function]}
+                          label="Password"
+                          name="password"
+                          required={true}
+                          type="password"
+                        />,
+                        <WithStyles(Button)
+                          onClick={[Function]}
+                        >
+                          Cancel
+                        </WithStyles(Button)>,
+                        <WithStyles(Button)
+                          onClick={[Function]}
+                          type="submit"
+                        >
+                          Login
+                        </WithStyles(Button)>,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {
+                          "component": [Function],
+                          "label": "Email",
+                          "name": "email",
+                          "required": true,
+                          "type": "email",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {
+                          "component": [Function],
+                          "label": "Password",
+                          "name": "password",
+                          "required": true,
+                          "type": "password",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "children": "Cancel",
+                          "onClick": [Function],
+                        },
+                        "ref": null,
+                        "rendered": "Cancel",
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "children": "Login",
+                          "onClick": [Function],
+                          "type": "submit",
+                        },
+                        "ref": null,
+                        "rendered": "Login",
+                        "type": [Function],
+                      },
+                    ],
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
