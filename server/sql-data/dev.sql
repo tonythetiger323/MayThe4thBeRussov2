@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS may_the_4th_be_russo_dev;
+CREATE DATABASE may_the_4th_be_russo_dev;

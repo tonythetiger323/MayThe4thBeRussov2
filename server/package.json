@@ -24,28 +24,32 @@
   },
   "homepage": "http://www.maythe4thberusso.com",
   "scripts": {
-    "build": "tsc -p tsconfig.build.json && cd client && npm run build",
+    "build": "tsc -p tsconfig.build.json",
     "clean:dist": "rm -rf dist/",
     "format": "prettier --write \"src/**/*.ts\"",
     "start": "ts-node -r tsconfig-paths/register src/main.ts",
     "start:dev": "nodemon",
     "start:debug": "nodemon --config nodemon-debug.json",
     "prestart:prod": "rimraf dist && npm run build",
-    "start:prod": "node dist/main.js",
+    "start:prod": "nodemon --config nodemon-prod.json dist/main.js",
     "lint": "tslint -p tsconfig.json -c tslint.json",
     "test": "nyc jest",
     "test:watch": "nyc jest --watch",
-    "test:cov": "nyc jest --coverage",
+    "test:cov": "nyc jest --coverage --detectOpenHandles",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "nyc jest --config ./test/jest-e2e.json"
   },
   "heroku-run-build-script": true,
+  "jest-junit": {
+    "JEST_JUNIT_OUTPUT": "./test-results/jest"
+  },
   "dependencies": {
     "@nestjs/common": "^6.0.0",
     "@nestjs/core": "^6.0.0",
     "@nestjs/platform-express": "^6.0.0",
     "@nestjs/platform-fastify": "^6.0.0",
     "@nestjs/typeorm": "^6.0.0",
+    "bcrypt": "^3.0.5",
     "body-parser": "^1.18.3",
     "class-validator": "^0.9.1",
     "dotenv": "^7.0.0",
@@ -66,6 +70,7 @@
     "@types/node": "^10.12.18",
     "@types/supertest": "^2.0.7",
     "jest": "^23.6.0",
+    "jest-junit": "^6.3.0",
     "nodemon": "^1.18.9",
     "nyc": "^13.3.0",
     "prettier": "^1.15.3",
@@ -73,6 +78,7 @@
     "ts-jest": "^23.10.5",
     "ts-node": "^7.0.1",
     "tsconfig-paths": "^3.7.0",
+    "tslib": "^1.9.3",
     "tslint": "5.12.1",
     "typescript": "^3.2.4"
   }
