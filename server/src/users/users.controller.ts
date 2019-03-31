@@ -1,6 +1,7 @@
-import { Controller, Get, Post, Body, Put, Param, Delete, HttpStatus, Response } from '@nestjs/common';
+import { Controller, Get, Post, Body, Put, Param, Delete, HttpStatus, Res } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { User } from './user.entity';
+import { Response } from 'express';
 
 @Controller('api/users')
 export class UsersController {
@@ -8,24 +9,24 @@ export class UsersController {
 
   @Get()
   index(): Promise<User[]> {
-    return this.usersService.findAll();
+    return this.usersService.findAll()
   }
 
   @Post()
-  async create(@Response() res: any, @Body() userData: User): Promise<any> {
-    console.log(`Request made to '/api/auth/register'`);
+  async create(@Res() res: Response, @Body() userData: User): Promise<any> {
+    console.log(`Request made to '/api/user/'`);
     if (!(userData && userData.email && userData.password)) {
-      return await res.status(HttpStatus.FORBIDDEN).json({ message: 'Email and password are required'});
-    }
+      return res.status(HttpStatus.FORBIDDEN).json({ message: 'Email and password are required' });
+    };
 
     let user = await this.usersService.getUserByEmail(userData.email);
 
-    if(user) {
-      return await res.status(HttpStatus.FORBIDDEN).json({ message: 'Email exists'});
+    if (user) {
+      return res.status(HttpStatus.FORBIDDEN).json({ message: 'Email exists' });
     } else {
       user = await this.usersService.create(userData);
-      return await res.status(HttpStatus.OK).json(user);
-    }
+      return res.status(HttpStatus.OK).json(user);
+    };
   }
 
   @Put(':id/update')

@@ -1,9 +1,9 @@
 
 import { Module } from '@nestjs/common'
 import { TypeOrmModule } from '@nestjs/typeorm'
-import { UsersModule } from './database/users/users.module'
+import { UsersModule } from './users/users.module'
 import { AppController } from './app.controller'
-import { UsersService } from './database/users/users.service'
+import { UsersService } from './users/users.service'
 import { Connection } from 'typeorm'
 
 
