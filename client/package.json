@@ -80,8 +80,7 @@
     "tslint": "^5.13.1",
     "tslint-config-prettier": "^1.18.0",
     "tslint-config-standard": "^8.0.1",
-    "tslint-react": "^3.6.0",
-    "typescript": "^3.3.3333"
+    "tslint-react": "^3.6.0"
   },
   "dependencies": {
     "@material-ui/core": "^3.9.2",
@@ -103,6 +102,7 @@
     "react-swipeable-views-utils": "^0.13.1",
     "redux": "^4.0.1",
     "redux-saga": "^1.0.2",
+    "typescript": "^3.4.1",
     "yup": "^0.27.0"
   }
 }
