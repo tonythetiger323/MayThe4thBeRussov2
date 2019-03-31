@@ -1,0 +1,24 @@
+import { Test, TestingModule } from '@nestjs/testing'
+import { AppController } from '../app.controller'
+import * as request from 'supertest'
+
+describe('AppController', () => {
+  let appController: AppController
+  let app: TestingModule
+
+  beforeEach(async () => {
+    app = await Test.createTestingModule({
+      controllers: [AppController]
+    }).compile()
+
+    appController = app.get<AppController>(AppController)
+  })
+
+  it('should respond with status 200 and json', async () => {
+    request(app)
+      .get('/')
+      .set('Accept', 'application/json')
+      .expect(await 'Content-Type', /json/)
+      .expect(await 200)
+  })
+})
