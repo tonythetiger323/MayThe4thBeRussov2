@@ -12,10 +12,11 @@ export class UsersController {
   }
 
   @Get(':email')
-  async getUserByEmail(@Param() params): Promise<User> {
-    return this.usersService.getUserByEmail(params.email)
+  async getUserByEmail(@Param('email') email, @Body() userData: User): Promise<User> {
+    userData.email = String(email);
+    return this.usersService.getUserByEmail(userData.email)
   }
-  
+
   @Post('register')
   async create(@Response() res: any, @Body() userData: User): Promise<any> {
     console.log(`Request made to '/api/user/register'`);
