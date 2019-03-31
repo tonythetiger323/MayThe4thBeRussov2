@@ -10,3 +10,4 @@ describe('CeremonyCard Component', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
+
