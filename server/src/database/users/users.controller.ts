@@ -11,16 +11,26 @@ export class UsersController {
     return this.usersService.findAll()
   }
 
+  @Get(':email')
+  async getUserByEmail(@Param() params): Promise<User> {
+    return this.usersService.getUserByEmail(params.email)
+  }
+  
   @Post('register')
   async create(@Response() res: any, @Body() userData: User): Promise<any> {
-    console.log(`Request made to '/api/auth/register'`);
+    console.log(`Request made to '/api/user/register'`);
     if (!(userData && userData.email && userData.password)) {
-      return await res.status(HttpStatus.FORBIDDEN);
+      return res.status(HttpStatus.FORBIDDEN).json({ message: 'Email and password are required' });
     };
 
-    const user = await this.usersService.create(userData);
+    let user = await this.usersService.getUserByEmail(userData.email);
 
-    return await res.status(HttpStatus.OK)
+    if (user) {
+      return res.status(HttpStatus.FORBIDDEN).json({ message: 'Email exists' });
+    } else {
+      user = await this.usersService.create(userData);
+      return res.status(HttpStatus.OK).json(user);
+    };
   }
 
   @Put(':id/update')
