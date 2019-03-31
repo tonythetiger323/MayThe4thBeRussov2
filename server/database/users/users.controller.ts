@@ -11,7 +11,7 @@ export class UsersController {
     return this.usersService.findAll();
   }
 
-  @Post('register')
+  @Post()
   async create(@Response() res: any, @Body() userData: User): Promise<any> {
     console.log(`Request made to '/api/auth/register'`);
     if (!(userData && userData.email && userData.password)) {
