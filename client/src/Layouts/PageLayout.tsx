@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
-import AuthLinkList from '../Components/AuthLinkList'
+import AuthNavBar from '../Components/AuthNavBar'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
 
@@ -16,13 +16,11 @@ class PageLayout extends React.Component {
         </header>
         <nav>
           <Grid container>
-            <Grid item xs={12}>
+            <Grid item xs={10}>
               <Navbar />
             </Grid>
-          </Grid>
-          <Grid container spacing={8}>
-            <Grid item xs={1}>
-              <AuthLinkList/>
+            <Grid item xs={2}>
+              <AuthNavBar/>
             </Grid>
           </Grid>
         </nav>
