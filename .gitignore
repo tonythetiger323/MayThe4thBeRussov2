@@ -20,8 +20,6 @@
 /server/test-results/
 
 
-*.old
-
 # production
 /client/build
 /server/dist
@@ -35,14 +33,5 @@ www.maythe4thberusso.com/
 # misc
 .DS_Store
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-development.env
-test.env
-production.env
-ormconfig.json
 
-npm-debug.log*
 
