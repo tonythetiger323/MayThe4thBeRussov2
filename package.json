@@ -28,7 +28,9 @@
     "clean": "rimraf dist",
     "slate": "rimraf node_modules && npm install",
     "type-check": "cd client && tsc && cd ../server && tsc",
-    "build": "cd client && npm install && npm run build && cd ../server && npm install && npm run build",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "cd client && npm install && npm run build && npm prune && cd ..",
+    "build:server": "cd server && npm install && npm run build && npm prune",
     "start:prod": "node dist/main.js"
 
   },
