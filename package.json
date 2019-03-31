@@ -27,7 +27,10 @@
     "bs": "npm run clean && npm run build && npm run build:server && npm run start:prod",
     "clean": "rimraf dist",
     "slate": "rimraf node_modules && npm install",
-    "type-check": "cd client && tsc && cd ../server && tsc"
+    "type-check": "cd client && tsc && cd ../server && tsc",
+    "build": "cd client && npm run build && cd ../server && npm run build",
+    "start:prod": "node dist/main.js"
+
   },
   "heroku-run-build-script": true,
   "browserslist": [
