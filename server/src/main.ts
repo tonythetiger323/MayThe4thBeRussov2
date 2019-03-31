@@ -6,7 +6,7 @@ import * as bodyParser from 'body-parser';
 import * as express from 'express';
 
 const { PORT, PUBLIC_DIR, NODE_ENV } = process.env
-const PUBLIC_DIR_PATH = PUBLIC_DIR || 'client/public'
+const PUBLIC_DIR_PATH = PUBLIC_DIR || 'client/build' || 'client/public'
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule)

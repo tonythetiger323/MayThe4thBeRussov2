@@ -26,7 +26,7 @@ const Footer: React.FunctionComponent<FooterProps> = (props: FooterProps) => {
           <Paper elevation={1}>
             <span>
               &copy; {new Date().getFullYear()} Copyright:{' '}
-              <a href='https://wwww.tonygreeley.com'>Tony Greeley</a>
+              <a href='https://www.tonygreeley.com'>Tony Greeley</a>
             </span>
           </Paper>
         </Grid>

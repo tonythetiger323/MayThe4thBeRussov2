@@ -2,7 +2,7 @@ import { Controller, Get, Res } from '@nestjs/common'
 import * as path from 'path'
 
 const { PUBLIC_DIR, NODE_ENV } = process.env
-const PUBLIC_DIR_PATH = PUBLIC_DIR || 'client/public'
+const PUBLIC_DIR_PATH = PUBLIC_DIR || 'client/build' || 'client/public'
 
 @Controller()
 export class AppController {

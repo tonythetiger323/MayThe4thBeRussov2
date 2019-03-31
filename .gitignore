@@ -11,10 +11,10 @@
 # testing
 /.nyc_output/
 /coverage/
-/client/coverage
-/client/.nyc_output
-/server/coverage
-/server/.nyc_output
+/client/coverage/
+/client/.nyc_output/
+/server/coverage/
+/server/.nyc_output/
 /test-results/
 /client/test-results/
 /server/test-results/
