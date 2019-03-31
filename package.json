@@ -28,9 +28,10 @@
     "clean": "rimraf dist",
     "slate": "rimraf node_modules && npm install",
     "type-check": "cd client && tsc && cd ../server && tsc",
+    "install:dev": "npm install --only=dev",
     "build": "npm run build:client && npm run build:server",
-    "build:client": "cd client && npm install && npm run build && npm prune && cd ..",
-    "build:server": "cd server && npm install && npm run build && npm prune",
+    "build:client": "cd client && npm install && npm run install:dev && npm run build && npm prune && cd ..",
+    "build:server": "cd server && npm install && npm run install:dev && npm run build && npm prune",
     "start:prod": "node dist/main.js"
 
   },
