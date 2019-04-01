@@ -45,6 +45,7 @@ const styles: any = (theme: Theme) => ({
     flexDirection: 'row'
   },
   img: {
+    borderRadius: '25px',
     maxHeight: 500,
     width: '100%',
     position: 'relative',
