@@ -46,6 +46,7 @@
   "dependencies": {
     "@nestjs/common": "^6.0.0",
     "@nestjs/core": "^6.0.0",
+    "@nestjs/passport": "^6.0.0",
     "@nestjs/platform-express": "^6.0.0",
     "@nestjs/platform-fastify": "^6.0.0",
     "@nestjs/typeorm": "^6.0.0",
@@ -56,6 +57,8 @@
     "express": "^4.16.4",
     "joi": "^14.3.1",
     "mysql": "^2.16.0",
+    "passport": "^0.4.0",
+    "passport-http-bearer": "^1.0.1",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
     "rxjs": "^6.3.3",
