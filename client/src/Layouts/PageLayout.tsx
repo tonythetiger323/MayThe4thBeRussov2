@@ -16,10 +16,10 @@ class PageLayout extends React.Component {
         </header>
         <nav>
           <Grid container>
-            <Grid item xs={10}>
+            <Grid item xs={9}>
               <Navbar />
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={3}>
               <AuthNavBar/>
             </Grid>
           </Grid>

@@ -6,7 +6,7 @@ const theme = createMuiTheme({
     secondary: { main: '#e49d94', contrastText: '#fdfdfd' },
   },
   typography: {
-    fontFamily: ['Architects Daughter', 'Roboto'].join(','),
+    fontFamily: ['Oxygen', 'Oswald'].join(','),
     useNextVariants: true,
   },
 });
