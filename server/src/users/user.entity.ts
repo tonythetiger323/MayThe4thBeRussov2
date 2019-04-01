@@ -1,6 +1,6 @@
-import { Entity, Column, PrimaryGeneratedColumn, BeforeInsert } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, BeforeInsert, JoinColumn } from 'typeorm';
 import { IsEmail, Matches, IsUUID } from 'class-validator';
-import { hashSync, genSaltSync } from 'bcrypt'
+
 @Entity()
 export class User {
   @PrimaryGeneratedColumn('uuid')
@@ -15,11 +15,4 @@ export class User {
   @Matches((/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}$/))
   password: string
 
-  @BeforeInsert()
-  hashPassword() {
-    this.password = hashSync(this.password,
-      genSaltSync(10),
-      null);
-  }
-
-  }
+}
