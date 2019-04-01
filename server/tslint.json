@@ -16,7 +16,8 @@
     "object-literal-sort-keys": false,
     "no-var-requires": false,
     "trailing-comma": false,
-    "semicolon": false
+    "semicolon": false,
+    "no-conditional-assignment": false
   },
   "rulesDirectory": []
 }
