@@ -1,14 +1,22 @@
-import * as types from '../actions';
+import * as types from '../actions'
+import { RegisterState, RegisterAction } from '../../types'
 
-export default function(state = [], action: { response: any; type: any; }) {
-  const response = action.response;
+const defaultState: RegisterState = {
+  user: undefined
+}
 
-  switch(action.type) {
+export default function(
+  state: RegisterState = defaultState,
+  action: RegisterAction<any>
+) {
+  const response = action.response
+
+  switch (action.type) {
     case types.REGISTER_USER_SUCCESS:
-      return { ...state, response };
+      return { ...state, response }
     case types.REGISTER_USER_ERROR:
-      return { ...state, response };
+      return { ...state, response }
     default:
-      return state;
+      return state
   }
 }
