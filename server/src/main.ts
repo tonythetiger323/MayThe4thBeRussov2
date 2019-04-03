@@ -8,7 +8,6 @@ import passport = require('passport');
 import express = require('express');
 import session = require('express-session');
 
-
 const { PORT, PUBLIC_DIR, NODE_ENV } = process.env
 const PUBLIC_DIR_PATH = (process.env.NODE_ENV = 'development') ? 'client/public' : (process.env.NODE_ENV = 'production') ? 'client/build' : PUBLIC_DIR
 
@@ -29,7 +28,11 @@ async function bootstrap() {
   );
   app.use(bodyParser.json());
   app.use(cookieParser());
-  app.use(express.static(path.join(__dirname, '..', '..', PUBLIC_DIR_PATH)));
+  app.use(express.static(path.join(
+    __dirname,
+    '..',
+    '..',
+    PUBLIC_DIR_PATH)));
   app.use(session({
     secret: 'the force',
     resave: true,

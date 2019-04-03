@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid'
 
 const styles = (theme: any) => ({
   root: {
-    fontFamily: 'BioRhyme',
+    fontFamily: 'Oswald',
     ...theme.mixins.gutters(),
     paddingTop: theme.spacing.unit * 2,
     paddingBottom: theme.spacing.unit * 2
