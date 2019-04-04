@@ -16,7 +16,15 @@
     "wedding",
     "TypeScript",
     "React",
-    "Material-UI"
+    "Material-UI",
+    "NestJS",
+    "CircleCI",
+    "Codeclimate",
+    "Jest",
+    "Enzyme",
+    "MySQL",
+    "TypeORM",
+    "Heroku"
   ],
   "bugs": {
     "url": "https://github.com/tonythetiger323/MayThe4thBeRussov2/issues",
@@ -28,11 +36,15 @@
     "clean": "rimraf dist",
     "slate": "rimraf node_modules && npm install",
     "type-check": "cd client && tsc && cd ../server && tsc",
-    "install:dev": "npm install --only=dev",
+    "install": "npm run install:client && npm run install:server",
+    "install:client": "(cd ./client && npm install)",
+    "install:server": "(cd ./server && npm install)",
+    "postinstall": "npm run build",
     "build": "npm run build:client && npm run build:server",
-    "build:client": "cd client && npm install && npm run install:dev && npm run build && npm prune && cd ..",
-    "build:server": "cd server && npm install && npm run install:dev && npm run build && npm prune",
-    "start:prod": "node dist/main.js"
+    "build:client": "(cd ./client && npm run build)",
+    "build:server": "(cd ./server && npm run build)",
+    "start:prod": "node dist/main.js",
+    "heroku-prebuild": "cd client"
   },
   "heroku-run-build-script": true,
   "browserslist": [
@@ -41,7 +53,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "devDependencies": {
-    "lerna": "^3.13.1"
+  "cacheDirectories": ["client/node_modules", "server/node_modules"]
   }
-}
