@@ -17,7 +17,7 @@ export class LocalStrategy extends PassportStrategy(Strategy) {
       done(null, user);
     });
 
-    passport.deserialUser((user, done) => {
+    passport.deserializeUser((user, done) => {
       done(null, user);
     });
 

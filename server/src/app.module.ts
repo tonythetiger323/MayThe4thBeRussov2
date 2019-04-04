@@ -7,10 +7,12 @@ import { UsersService } from './users/users.service'
 import { Connection } from 'typeorm'
 import { RsvpsModule } from './rsvps/rsvps.module';
 import { RsvpsService } from './rsvps/rsvps.service';
+import { AuthModule } from './auth/auth.module'
+import { AuthService } from './auth/auth.service'
 
 
 @Module({
-  imports: [UsersModule, RsvpsModule, TypeOrmModule.forRoot({
+  imports: [UsersModule, RsvpsModule, AuthModule, TypeOrmModule.forRoot({
     type: 'mysql',
     host: process.env.TYPEORM_HOST,
     port: 3306,
@@ -21,7 +23,7 @@ import { RsvpsService } from './rsvps/rsvps.service';
     synchronize: true
   })],
   controllers: [AppController],
-  providers: [UsersService, RsvpsService]
+  providers: [UsersService, RsvpsService, AuthService]
 })
 
 export class AppModule {

@@ -8,7 +8,7 @@ export class AuthService {
 
   async validateUser(email, password) {
     const user = await this.usersService.getUserByEmail(email);
-    if(!user || (!(await comparePassword(password, user.password)))) { throw new Error ('Incorrect Password'); }
+    if (!user || (!(await comparePassword(password, user.password)))) { throw new Error ('Incorrect Password'); }
     delete user.password;
     return user;
   }
