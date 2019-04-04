@@ -37,12 +37,12 @@
     "slate": "rimraf node_modules && npm install",
     "type-check": "cd client && tsc && cd ../server && tsc",
     "install": "npm run install:client && npm run install:server",
-    "install:client": "(cd ./client && npm install)",
-    "install:server": "(cd ./server && npm install)",
+    "install:client": "cd client && npm install",
+    "install:server": "cd server && npm install",
     "postinstall": "npm run build",
-    "build": "npm run build:client",
-    "build:client": "(cd ./client && npm run build)",
-    "start:prod": "node dist/main.js"
+    "build": "cd server && npm install",
+    "start:prod": "cd server && npm run start:prod",
+    "heroku-prebuild": "cd client && npm install"
     },
   "heroku-run-build-script": true,
   "browserslist": [

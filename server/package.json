@@ -38,7 +38,7 @@
     "test:cov": "nyc jest --coverage --detectOpenHandles",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "nyc jest --config ./test/jest-e2e.json",
-    "postinstall": "npm run build"
+    "postinstall": "npm run prestart:prod"
   },
   "heroku-run-build-script": true,
   "jest-junit": {
@@ -58,6 +58,7 @@
     "express": "^4.16.4",
     "express-session": "^1.15.6",
     "mysql": "^2.16.0",
+    "nodemon": "^1.18.10",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "reflect-metadata": "^0.1.12",
@@ -75,7 +76,6 @@
     "@types/supertest": "^2.0.7",
     "jest": "^23.6.0",
     "jest-junit": "^6.3.0",
-    "nodemon": "^1.18.9",
     "nyc": "^13.3.0",
     "prettier": "^1.15.3",
     "supertest": "^3.4.1",
