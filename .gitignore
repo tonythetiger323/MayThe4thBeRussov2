@@ -22,7 +22,6 @@
 
 # production
 /client/build
-/server/dist
 
 # workspace file
 MayThe4thBeRussov2.code-workspace
