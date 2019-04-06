@@ -4,6 +4,7 @@ import PageLayout from '../Layouts/PageLayout'
 import Index from '../Pages/Index'
 import UnderConstruction from '../Pages/UnderConstruction'
 import NotFound from '../Pages/NotFound'
+import Rsvp from '../Pages/Rsvp'
 import { createShallow } from '@material-ui/core/test-utils/index'
 
 let wrapper: any
@@ -71,6 +72,18 @@ describe('<Index/>', () => {
       it('should work', () => {
         wrapper = shallowMui(<NotFound />)
       })
+    })
+  })
+
+  describe('<Rsvp/>', () => {
+    beforeEach(() => {
+      beforeAll(() => {
+        shallowMui = createShallow()
+      })
+    })
+
+    it('should work', () => {
+      wrapper = shallowMui(<Rsvp />)
     })
   })
 })

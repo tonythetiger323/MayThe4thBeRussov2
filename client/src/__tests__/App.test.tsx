@@ -6,7 +6,6 @@ import { createShallow } from '@material-ui/core/test-utils/index'
 import { MuiThemeProvider } from '@material-ui/core'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../theme/theme'
-import SomethingCrispy from '../__mocks__/SomethingCrispy'
 
 let wrapper: any
 let shallowMui: any
@@ -23,20 +22,6 @@ describe('App', () => {
 
   it('should render correctly', () => {
     expect(wrapper).toMatchSnapshot()
-  })
-})
-
-describe('<MuiThemeProvider />', () => {
-  beforeAll(() => {
-    shallowMui = createShallow()
-  })
-
-  it('should work', () => {
-    wrapper = shallowMui(
-      <MuiThemeProvider theme={theme}>
-        <SomethingCrispy />
-      </MuiThemeProvider>
-    )
   })
 })
 
