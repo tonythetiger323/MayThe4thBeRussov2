@@ -18,72 +18,62 @@ describe('routes', () => {
 
 describe('<AppliedRoute/>', () => {
   beforeEach(() => {
-    beforeAll(() => {
-      shallowMui = createShallow()
-    })
+    shallowMui = createShallow()
+  })
 
-    it('should work', () => {
-      wrapper = shallowMui(<AppliedRoute />)
-    })
+  it('should work', () => {
+    wrapper = shallowMui(<AppliedRoute />)
   })
 })
 
 describe('<PageLayout/>', () => {
   beforeEach(() => {
-    beforeAll(() => {
-      shallowMui = createShallow()
-    })
+    shallowMui = createShallow()
+  })
 
-    it('should work', () => {
-      wrapper = shallowMui(<PageLayout />)
-    })
+  it('should work', () => {
+    wrapper = shallowMui(<PageLayout />)
   })
 })
+
 
 describe('<Index/>', () => {
   beforeEach(() => {
-    beforeAll(() => {
-      shallowMui = createShallow()
-    })
+    shallowMui = createShallow()
+  })
 
-    it('should work', () => {
+  it('should work', () => {
       wrapper = shallowMui(<Index />)
-    })
-  })
-
-  describe('<UnderConstruction/>', () => {
-    beforeEach(() => {
-      beforeAll(() => {
-        shallowMui = createShallow()
-      })
-
-      it('should work', () => {
-        wrapper = shallowMui(<UnderConstruction />)
-      })
-    })
-  })
-
-  describe('<NotFound/>', () => {
-    beforeEach(() => {
-      beforeAll(() => {
-        shallowMui = createShallow()
-      })
-
-      it('should work', () => {
-        wrapper = shallowMui(<NotFound />)
-      })
-    })
-  })
-
-  describe('<Rsvp/>', () => {
-    beforeEach(() => {
-      beforeAll(() => {
-        shallowMui = createShallow()
-      })
-    })
-
-    it('should work', () => {
-      wrapper = shallowMui(<Rsvp />)
-    })
   })
 })
+
+describe('<UnderConstruction/>', () => {
+  beforeEach(() => {
+    shallowMui = createShallow()
+  })    
+
+  it('should work', () => {
+    wrapper = shallowMui(<UnderConstruction />)
+  })
+})
+
+describe('<NotFound/>', () => {
+  beforeEach(() => {
+    shallowMui = createShallow()
+  })
+
+  it('should work', () => {
+    wrapper = shallowMui(<NotFound />)
+  })
+})
+
+describe('<Rsvp/>', () => {
+  beforeEach(() => {
+    shallowMui = createShallow()
+  })
+
+  it('should work', () => {
+    wrapper = shallowMui(<Rsvp />)
+    })
+})
+
