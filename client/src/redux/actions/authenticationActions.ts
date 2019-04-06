@@ -6,3 +6,10 @@ export const registerUserAction = (user: any) => {
     user
   }
 };
+
+export const loginUserAction = (user: any) => {
+  return {
+    type: types.LOGIN_USER,
+    user
+  }
+}

@@ -12,3 +12,16 @@ export function* registerSaga(payload: any) {
     yield put({ type: types.REGISTER_USER_ERROR, error })
   }
 }
+
+export function* loginSaga(payload: any) {
+  try {
+    /* tslint:disable one-variable-per-declaration */
+    const response: AxiosResponse = yield call(API.loginUser, payload);
+    /* tslint:enable one-variable-per-declaration */
+    yield [
+      put({ type: types.LOGIN_USER_SUCESS, response })
+    ];
+  } catch(error) {
+    yield put({ type: types.LOGIN_USER_ERROR, error})
+  }
+}

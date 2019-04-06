@@ -9,6 +9,8 @@ import DialogTitle from '@material-ui/core/DialogTitle'
 import { Formik, Form, Field } from 'formik'
 import { TextField } from 'material-ui-formik-components'
 import API from '../../utils/API'
+import { connect } from 'react-redux'
+import { loginUserAction } from '../../redux/actions/authenticationActions'
 
 const loginValidationSchema = Yup.object({
   email: Yup.string()
@@ -24,30 +26,21 @@ const loginValidationSchema = Yup.object({
 
 const initialValues = {
   email: '',
-  password: '',
+  password: ''
 };
 
 interface LoginDialogState {
   open: boolean;
-  isAuthenticated: boolean;
-}
-
-interface LoginDialogProps {
-  userHasAuthenticated: boolean;
-}
-
-class LoginDialog extends React.Component<LoginDialogProps, LoginDialogState> {
-  constructor(props: LoginDialogProps) {
-    super(props);
-    this.state = {
-      open: false,
-      isAuthenticated: false,
-    };
   }
 
-  userHasAuthenticated = (authenticated: any) => {
-    this.setState({ isAuthenticated: true });
-  };
+
+class LoginDialog extends React.Component<any, LoginDialogState> {
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      open: false
+      };
+  }
 
   handleClickOpen = () => {
     this.setState({ open: true });
@@ -80,11 +73,8 @@ class LoginDialog extends React.Component<LoginDialogProps, LoginDialogState> {
               onSubmit={async values => {
                 const res = await API.loginUser(values);
                 console.log(res);
-                if (res.status === 200) {
-                  this.userHasAuthenticated(true);
-                  document.cookie = `id=${res.data.id}`;
-                }
-              }}
+                this.props.dispacth(loginUserAction(values))
+                }}
 
               /* tslint:enable jsx-no-lambda */
             >
@@ -116,4 +106,6 @@ class LoginDialog extends React.Component<LoginDialogProps, LoginDialogState> {
   }
 }
 
-export default LoginDialog;
+const mapStateToProps = (response: any) => ({ response })
+
+export default connect(mapStateToProps)(LoginDialog);

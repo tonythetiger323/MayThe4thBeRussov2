@@ -9,6 +9,8 @@ import DialogTitle from '@material-ui/core/DialogTitle'
 import { Formik, Form, Field } from 'formik'
 import { TextField } from 'material-ui-formik-components'
 import API from '../../utils/API'
+import { connect } from 'react-redux';
+import { registerUserAction } from '../../redux/actions/authenticationActions';
 // import readCookie from '../../../scripts/readCookie'
 
 const registerValidationSchema = Yup.object({
@@ -55,6 +57,8 @@ class RegisterDialog extends React.Component<
     this.setState({ open: false });
   };
 
+  
+
   render() {
     return (
       <ListItem>
@@ -77,7 +81,8 @@ class RegisterDialog extends React.Component<
               validationSchema={registerValidationSchema}
               validateOnChange
               onSubmit={async values => {
-                await API.registerUser(values)
+                await API.registerUser(values);
+                this.props.dispatch(registerUserAction(values))
                 }
               }
               /* tslint:enable jsx-no-lambda */
@@ -117,4 +122,8 @@ class RegisterDialog extends React.Component<
   }
 }
 
-export default RegisterDialog;
+const mapStateToProps = (response: any) => ({
+  response
+})
+
+export default connect(mapStateToProps)(RegisterDialog);
