@@ -15,13 +15,13 @@ describe('NavbarLinkMenu Component', () => {
   })
 })
 
-  describe('<MenuItem/>', () => {
-    beforeEach(() => {
-      shallowMui = createShallow()
-    })
+describe('<MenuItem/>', () => {
+  beforeEach(() => {
+    shallowMui = createShallow()
+  })
 
-    it('should work', () => {
-      wrapper = shallowMui(<MenuItem />)
-    })
+  it('should work', () => {
+    wrapper = shallowMui(<MenuItem />)
   })
 })
+
