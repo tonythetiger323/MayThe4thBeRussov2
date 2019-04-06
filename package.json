@@ -41,8 +41,7 @@
     "install:server": "cd server && npm install",
     "postinstall": "npm run build",
     "build": "cd server && npm install",
-    "start:prod": "cd server && npm run start:prod",
-    "heroku-prebuild": "cd client && npm install --only=dev && npm install"
+    "start:prod": "cd server && npm run start:prod"
     },
   "heroku-run-build-script": true,
   "browserslist": [
