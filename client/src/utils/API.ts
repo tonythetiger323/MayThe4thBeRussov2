@@ -10,5 +10,10 @@ export default {
   loginUser: (userData: any) => {
     console.log(`Axios is making a POST request to 'api/auth/login'`)
     return axios.post('/api/auth/login', userData)
+  },
+
+  submitRsvp: (rsvpData: any) => {
+    console.log(`Axios os making a POST request to 'api/rsvps/`)
+    return axios.post('/api/rsvps/:id', rsvpData)
   }
 }

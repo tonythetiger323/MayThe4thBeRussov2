@@ -5,6 +5,7 @@ import PageLayout from './Layouts/PageLayout'
 import Index from './Pages/Index'
 import NotFound from './Pages/NotFound'
 import UnderConstruction from './Pages/UnderConstruction'
+import Rsvp from './Pages/Rsvp'
 
 // component that will handle HTML routing
 export default () => {
@@ -20,6 +21,7 @@ export default () => {
         <AppliedRoute exact path='/registry' component={UnderConstruction} />
         <AppliedRoute exact path='/guestbook' component={UnderConstruction} />
         <AppliedRoute exact path='/contactus' component={UnderConstruction} />
+        <AppliedRoute exact path='/rsvp' component={Rsvp} />
         <Route component={NotFound} />
       </Switch>
     </PageLayout>

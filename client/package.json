@@ -37,7 +37,7 @@
     "lint:fix": "tslint 'src/**/*.{ts,tsx}' --fix",
     "lint-md": "remark .",
     "postinstall": "npm run build"
-    },
+  },
   "heroku-run-build-script": true,
   "browserslist": [
     ">0.2%",
