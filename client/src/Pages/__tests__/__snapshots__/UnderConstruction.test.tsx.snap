@@ -3,7 +3,7 @@
 exports[`UnderConstruction Page should render correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <UnderConstruction />,
+  Symbol(enzyme.__unrendered__): <WithStyles(UnderConstruction) />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],
@@ -16,26 +16,30 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "function",
     "props": Object {
-      "children": "Under Construction",
-      "variant": "h1",
+      "classes": Object {
+        "card": "UnderConstruction-card-1",
+        "media": "UnderConstruction-media-2",
+      },
     },
     "ref": null,
-    "rendered": "Under Construction",
+    "rendered": null,
     "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "function",
       "props": Object {
-        "children": "Under Construction",
-        "variant": "h1",
+        "classes": Object {
+          "card": "UnderConstruction-card-1",
+          "media": "UnderConstruction-media-2",
+        },
       },
       "ref": null,
-      "rendered": "Under Construction",
+      "rendered": null,
       "type": [Function],
     },
   ],
@@ -62,5 +66,6 @@ ShallowWrapper {
       },
     },
   },
+  Symbol(enzyme.__childContext__): null,
 }
 `;
