@@ -1,15 +1,12 @@
 import { Controller, Get, Res } from '@nestjs/common'
 import * as path from 'path'
 
-const { PUBLIC_DIR, NODE_ENV } = process.env
-const PUBLIC_DIR_PATH = PUBLIC_DIR || 'client/build' || 'client/public'
-
 @Controller()
 export class AppController {
   @Get()
   root(@Res() res) {
     res.sendFile(
-      path.join(__dirname, '..', '..', `${PUBLIC_DIR_PATH}`, 'index.html')
+      path.resolve(process.env.NODE_ENV === 'deveopment' ? '../../client/public' : process.env.NODE_ENV === 'production' ? '../../client/build' : '../../client/build')
 
     );
 
