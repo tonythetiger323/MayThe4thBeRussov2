@@ -37,9 +37,9 @@
     "slate": "rimraf node_modules && npm install",
     "type-check": "cd client && tsc && cd ../server && tsc",
     "install": "cd client && npm install && cd ../server && npm install",
-    "build": "cd client && npm run build && cd ../server && npm run build",
+    "build": "cd server && npm run build",
     "start:prod": "cd server && npm run start:prod"
-    },
+  },
   "heroku-run-build-script": true,
   "browserslist": [
     ">0.2%",
@@ -47,5 +47,8 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "cacheDirectories": ["client/node_modules", "server/node_modules"]
-  }
+  "cacheDirectories": [
+    "client/node_modules",
+    "server/node_modules"
+  ]
+}

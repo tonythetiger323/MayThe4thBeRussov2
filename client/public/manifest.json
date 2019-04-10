@@ -3,8 +3,63 @@
   "name": "May The 4th Be Russo",
   "icons": [
     {
-      "src": "./assets/favicon/favicon.ico",
-      "sizes": "260x260 152x152 144x144 120x120 114x114 72x72 64x64 57x57 48x48 32x32 24x24 16x16",
+      "src": "/assets/favicon/favicon.ico",
+      "sizes": "260x260",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/favicon/favicon.ico",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/favicon/favicon.ico",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/favicon/favicon.ico",
+      "sizes": "120x120",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/favicon/favicon.ico",
+      "sizes": "114x114",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/favicon/favicon.ico",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/favicon/favicon.ico",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/favicon/favicon.ico",
+      "sizes": "57x57",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/favicon/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/favicon/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/favicon/favicon.ico",
+      "sizes": "24x24",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/favicon/favicon.ico",
+      "sizes": "16x16",
       "type": "image/png"
     }
   ],
