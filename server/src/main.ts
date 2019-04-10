@@ -1,3 +1,4 @@
+require('dotenv').config();
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import path = require('path');
@@ -11,16 +12,10 @@ import fs = require('fs');
 
 const { PORT, PUBLIC_DIR, NODE_ENV } = process.env
 const PUBLIC_DIR_PATH = (process.env.NODE_ENV = 'development') ? 'client/public' : (process.env.NODE_ENV = 'production') ? 'client/build' : PUBLIC_DIR
-const httpsOptions = {
-  key: fs.readFileSync('./https/www_maythe4thberusso_com_key.pem'),
-  cert: fs.readFileSync('./https/www_maythe4thberusso_com.crt'),
-  ca: fs.readFileSync('./https/www_maythe4thberusso_com.ca-bundle')
-}
+
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule, {
-    httpsOptions
-  })
+  const app = await NestFactory.create(AppModule)
 
   app.use(
     favicon(

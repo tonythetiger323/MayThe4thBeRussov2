@@ -2,10 +2,13 @@ import * as React from 'react'
 import { withStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
+import  Link  from '@material-ui/core/Link'
+import  Button from '@material-ui/core/Button'
+import NavbarLink from '../NavbarLink'
 
 const styles = (theme: any) => ({
   root: {
-    fontFamily: 'Oswald',
+    fontFamily: 'Oxygen',
     ...theme.mixins.gutters(),
     paddingTop: theme.spacing.unit * 2,
     paddingBottom: theme.spacing.unit * 2
@@ -26,8 +29,9 @@ const Footer: React.FunctionComponent<FooterProps> = (props: FooterProps) => {
           <Paper elevation={1}>
             <span>
               &copy; {new Date().getFullYear()} Copyright:{' '}
-              <a href='https://www.tonygreeley.com'>Tony Greeley</a>
-            </span>
+              <Button href='https://www.tonygreeley.com' component={Link as any}>Tony Greeley</Button>
+              <NavbarLink to='/login'>Login</NavbarLink>
+              </span>
           </Paper>
         </Grid>
       </Grid>

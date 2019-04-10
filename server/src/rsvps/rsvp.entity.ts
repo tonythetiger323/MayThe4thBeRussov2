@@ -1,6 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToOne, JoinColumn} from 'typeorm';
-import { User } from '../users/user.entity'
-import { IsUUID, MaxLength, IsInt} from 'class-validator'
+import { IsUUID, MaxLength, IsInt, IsString, IsAlpha, IsEmail, IsNotEmpty, Max, Min} from 'class-validator'
 
 @Entity()
 export class Rsvp {
@@ -9,19 +8,38 @@ export class Rsvp {
   @IsUUID()
   id: string;
 
+  @Column('varchar', {length: 255})
+  @IsAlpha()
+  @IsNotEmpty()
+  firstName: string;
+
+  @Column('varchar', {length: 255})
+  @IsAlpha()
+  @IsNotEmpty()
+  lastName: string;
+
+  @Column('varchar', {length: 255})
+  @IsEmail()
+  @IsNotEmpty()
+  email: string;
+
   @Column('varchar', {length: 3})
   @MaxLength(3)
+  @IsNotEmpty()
   rsvp: string;
 
   @Column({type: 'int'})
   @IsInt()
+  @IsNotEmpty()
+  @Min(1)
+  @Max(6)
   guests: number;
 
   @Column({ type: 'int' })
   @IsInt()
+  @IsNotEmpty()
+  @Min(0)
+  @Max(2)
   cars: number;
 
-  @OneToOne(type => User, user => user.rsvp )
-  @JoinColumn()
-  user: User;
-}
+ }

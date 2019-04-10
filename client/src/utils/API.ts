@@ -14,6 +14,6 @@ export default {
 
   submitRsvp: (rsvpData: any) => {
     console.log(`Axios os making a POST request to 'api/rsvps/`)
-    return axios.post('/api/rsvps/:id', rsvpData)
+    return axios.post('/api/rsvps', rsvpData)
   }
 }
