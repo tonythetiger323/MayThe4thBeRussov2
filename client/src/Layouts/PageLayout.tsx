@@ -11,15 +11,16 @@ class PageLayout extends React.Component {
     return (
       <div className='app-container'>
         <Parallax
-          blur={4}
+          blur={3}
           bgImage={require('./images/MayThe4thBeRusso_Background Image_sean-o-406693-unsplash.jpg')}
           bgImageAlt={'Hawaiian Beach'}
           strength={100}
         >
         <header>
           <Typography variant='h3' align='center'>
-            May The 4th Be Russo
+            Megan &amp; Randy
           </Typography>
+          <Typography variant='h5' align='center'>May 14th 2019</Typography>
         </header>
         <nav>
           <Grid container alignItems='center' justify='space-around'>
