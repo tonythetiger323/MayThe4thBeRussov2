@@ -27,7 +27,7 @@ const ReceptionCard = (props: any) => {
         title='Sanborn Country Park'
       />
       <div style={{height: 352, width: '100%'}}>
-        <Map APIKey={process.env.REACT_APP_GOOGLE_API_KEY} center={{lat: 37.23, lng: -122.06}} zoom={11} lat={37.2354} lng={-122.0627} text={'🔘 Sanborn County Park'}
+        <Map APIKey={{key: process.env.REACT_APP_GOOGLE_API_KEY}} center={{lat: 37.23, lng: -122.06}} zoom={11} lat={37.2354} lng={-122.0627} text={'🔘 Sanborn County Park'}
         />
       </div>
       <CardContent>
