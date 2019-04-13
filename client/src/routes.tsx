@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 import AppliedRoute from './Components/AppliedRoute'
 import PageLayout from './Layouts/PageLayout'
 import Index from './Pages/Index'
+import TheirStory from './Pages/TheirStory'
 import NotFound from './Pages/NotFound'
 import UnderConstruction from './Pages/UnderConstruction'
 import Ceremony from './Pages/Ceremony'
@@ -17,9 +18,7 @@ export default () => {
     <PageLayout>
       <Switch>
         <AppliedRoute exact path='/' component={Index} />
-        <AppliedRoute exact path='/theirstory' component={UnderConstruction} />
-        <AppliedRoute exact path='/herstory' component={UnderConstruction} />
-        <AppliedRoute exact path='/hisstory' component={UnderConstruction} />
+        <AppliedRoute exact path='/theirstory' component={TheirStory} />
         <AppliedRoute exact path='/ceremony' component={Ceremony} />
         <AppliedRoute exact path='/reception' component={Reception} />
         <AppliedRoute exact path='/registry' component={Registry} />

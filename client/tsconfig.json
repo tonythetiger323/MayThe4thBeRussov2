@@ -1,6 +1,8 @@
 {
   "extends": "./configs/base.json",
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": { "*": ["types/*"] },
     "outDir": "build/dist",
     "module": "esnext",
     "target": "es6",
@@ -36,7 +38,8 @@
     "acceptance-tests",
     "webpack",
     "jest",
-    "src/setupTests.ts"
+    "src/setupTests.ts",
+    "types/react-star-wars-crawl.d.ts"
   ],
   "include": [
     "src",
