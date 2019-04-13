@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import * as Yup from 'yup';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 import { Formik, Form, Field } from 'formik';
 import { Select, TextField } from 'material-ui-formik-components';
 import API from '../../utils/API'
+import { useSnackbar } from 'notistack'
 
 const rsvpValidationSchema = Yup.object({
   firstName: Yup.string().required('First name is required'),
@@ -28,6 +29,7 @@ const initialValues = {
 }
 
 const RsvpCard = () => {
+  const { enqueueSnackbar } = useSnackbar();        
   return(
     <Card style={{opacity: 0.6}}>
       <CardHeader>RSVP</CardHeader>
@@ -35,9 +37,16 @@ const RsvpCard = () => {
           initialValues={initialValues}
           validationSchema={rsvpValidationSchema}
           validateOnChange
-          onSubmit={async values => {
+          onSubmit={async function(values, { resetForm }){
             console.log(`Axios is making request to 'api/rsvps'`)
-            await API.submitRsvp(values)
+            const res = await API.submitRsvp(values)
+            console.log(res);
+            if(res.status === 200){
+              enqueueSnackbar('Thank you, we have received your RSVP', { variant: 'success', preventDuplicate: true, autoHideDuration: 5000 })
+            } else {
+              enqueueSnackbar('Sorry, your RSVP was unsuccessful', { variant: 'error', preventDuplicate: true, autoHideDuration: 5000})
+            }
+            resetForm();
           }
         }
         >
@@ -105,5 +114,6 @@ const RsvpCard = () => {
       </Card>
   )
 }
+
 
 export default RsvpCard
