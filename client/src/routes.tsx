@@ -5,6 +5,8 @@ import PageLayout from './Layouts/PageLayout'
 import Index from './Pages/Index'
 import NotFound from './Pages/NotFound'
 import UnderConstruction from './Pages/UnderConstruction'
+import Ceremony from './Pages/Ceremony'
+import Reception from './Pages/Reception'
 import Rsvp from './Pages/Rsvp'
 import Login from './Pages/Login'
 
@@ -17,11 +19,10 @@ export default () => {
         <AppliedRoute exact path='/theirstory' component={UnderConstruction} />
         <AppliedRoute exact path='/herstory' component={UnderConstruction} />
         <AppliedRoute exact path='/hisstory' component={UnderConstruction} />
-        <AppliedRoute exact path='/ceremony' component={UnderConstruction} />
-        <AppliedRoute exact path='/reception' component={UnderConstruction} />
+        <AppliedRoute exact path='/ceremony' component={Ceremony} />
+        <AppliedRoute exact path='/reception' component={Reception} />
         <AppliedRoute exact path='/registry' component={UnderConstruction} />
         <AppliedRoute exact path='/guestbook' component={UnderConstruction} />
-        <AppliedRoute exact path='/contactus' component={UnderConstruction} />
         <AppliedRoute exact path='/rsvp' component={Rsvp} />
         <AppliedRoute exact path='/login' component={Login}/>
         <Route component={NotFound} />

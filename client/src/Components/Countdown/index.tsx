@@ -1,6 +1,5 @@
 import * as React from 'react'
-import Paper from '@material-ui/core/Paper'
-
+import Typography from '@material-ui/core/Typography'
 interface CountdownProps {
   readonly date: string;
 }
@@ -69,24 +68,24 @@ class Countdown extends React.Component<CountdownProps, CountdownState> {
 
     return (
       <div>
-        <Paper elevation={1}>
-          <span>
-            <strong>{this.addLeadingZeros(countDown.days)}</strong>
-            <span>{countDown.days === 1 ? 'Day' : 'Days'}</span>
-          </span>
-          <span>
-            <strong>{this.addLeadingZeros(countDown.hours)}</strong>
-            <span>Hours</span>
-          </span>
-          <span>
-            <strong>{this.addLeadingZeros(countDown.minutes)}</strong>
-            <span>Minutes</span>
-          </span>
-          <span>
-            <strong>{this.addLeadingZeros(countDown.seconds)}</strong>
-            <span>Seconds</span>
-          </span>
-        </Paper>
+        <Typography variant='h5' align='center'>
+           <span>
+             <strong>{this.addLeadingZeros(countDown.days)}</strong>&nbsp;
+             <span>{countDown.days === 1 ? 'Day' : 'Days'}</span>
+           </span>&nbsp;
+           <span>
+             <strong>{this.addLeadingZeros(countDown.hours)}</strong>&nbsp;
+             <span>Hours</span>
+           </span>&nbsp;
+           <span>
+             <strong>{this.addLeadingZeros(countDown.minutes)}</strong>&nbsp;
+             <span>Minutes</span>
+           </span>&nbsp;
+           <span>
+             <strong>{this.addLeadingZeros(countDown.seconds)}</strong>&nbsp;
+             <span>Seconds</span>
+           </span>
+        </Typography>
       </div>
     );
   }

@@ -29,7 +29,7 @@ const initialValues = {
 
 const RsvpCard = () => {
   return(
-    <Card>
+    <Card style={{opacity: 0.6}}>
       <CardHeader>RSVP</CardHeader>
         <Formik
           initialValues={initialValues}

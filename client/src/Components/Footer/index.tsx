@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { withStyles } from '@material-ui/core/styles'
-import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import  Link  from '@material-ui/core/Link'
 import  Button from '@material-ui/core/Button'
@@ -26,13 +25,11 @@ const Footer: React.FunctionComponent<FooterProps> = (props: FooterProps) => {
     <div className={classes.root}>
       <Grid container justify='center'>
         <Grid item>
-          <Paper elevation={1}>
-            <span>
+          <span style={{fontSize: 'small'}}>
               &copy; {new Date().getFullYear()} Copyright:{' '}
-              <Button href='https://www.tonygreeley.com' component={Link as any}>Tony Greeley</Button>
-              <NavbarLink to='/login'>Login</NavbarLink>
-              </span>
-          </Paper>
+              <Button style={{fontSize: 'x-small'}} href='https://www.tonygreeley.com' component={Link as any}>Tony Greeley</Button>
+              <NavbarLink style={{fontSize: 'x-small'}} to='/login'>Login</NavbarLink>
+          </span>
         </Grid>
       </Grid>
     </div>
