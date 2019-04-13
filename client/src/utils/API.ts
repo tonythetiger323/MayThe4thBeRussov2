@@ -17,8 +17,13 @@ export default {
     return axios.post('/api/rsvps', rsvpData)
   },
 
-  getComments: () => {
-    console.log(`Axios is making a get request to 'api/comments'`)
-    return axios.get('api/comments')
+  getMessages: () => {
+    console.log(`Axios is making a GET request to 'api/messages'`)
+    return axios.get('api/messages')
+  },
+
+  submitMessage: (messageData: any) => {
+    console.log(`Axios is make a POST request to 'api/messages'`)
+    return axios.post('/api/messages', messageData)
   }
 }

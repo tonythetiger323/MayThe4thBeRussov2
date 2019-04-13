@@ -2,7 +2,7 @@ import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 import { IsUUID, IsAlpha, IsNotEmpty, IsEmail, IsAlphanumeric } from 'class-validator';
 
 @Entity()
-export class Comment {
+export class Message {
 
   @PrimaryGeneratedColumn('uuid')
   @IsUUID()
@@ -21,6 +21,6 @@ export class Comment {
   @Column('varchar', { length: 255 })
   @IsAlphanumeric()
   @IsNotEmpty()
-  comment: string
+  message: string
 
 }

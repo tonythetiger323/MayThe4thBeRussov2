@@ -12,7 +12,7 @@ const Navbar = () => {
         <NavbarLink to='/reception'>Reception</NavbarLink>
         <NavbarLink to='/rsvp'>RSVP</NavbarLink>
         <NavbarLink to='/registry'>Registry</NavbarLink>
-        <NavbarLink to='/guestbook'>Guestbook</NavbarLink>
+        <NavbarLink to='/guestbook'>Guest Book</NavbarLink>
       </Grid>
     </Grid>
   )

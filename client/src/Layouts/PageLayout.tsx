@@ -21,6 +21,7 @@ class PageLayout extends React.Component {
           </Typography>
           <Typography variant='h5' align='center'>May 4th 2019</Typography>
         </header>
+        <br/>
         <nav>
           <Grid container alignItems='center' justify='space-around'>
             <Grid item>
