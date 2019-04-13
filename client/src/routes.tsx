@@ -8,6 +8,7 @@ import UnderConstruction from './Pages/UnderConstruction'
 import Ceremony from './Pages/Ceremony'
 import Reception from './Pages/Reception'
 import Rsvp from './Pages/Rsvp'
+import Registry from './Pages/Registry'
 import Login from './Pages/Login'
 
 // component that will handle HTML routing
@@ -21,7 +22,7 @@ export default () => {
         <AppliedRoute exact path='/hisstory' component={UnderConstruction} />
         <AppliedRoute exact path='/ceremony' component={Ceremony} />
         <AppliedRoute exact path='/reception' component={Reception} />
-        <AppliedRoute exact path='/registry' component={UnderConstruction} />
+        <AppliedRoute exact path='/registry' component={Registry} />
         <AppliedRoute exact path='/guestbook' component={UnderConstruction} />
         <AppliedRoute exact path='/rsvp' component={Rsvp} />
         <AppliedRoute exact path='/login' component={Login}/>

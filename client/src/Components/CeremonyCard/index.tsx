@@ -29,13 +29,14 @@ const CeremonyCard = (props: any) => {
         title='Waimãnalo Beach Park'
       />
       <div style={{height: 352, width: '100%'}}>
-        <Map APIKey={{key: process.env.REACT_APP_GOOGLE_API_KEY}} center={{lat: 21.33, lng: -157.70}} zoom={11} lat={21.336780} lng={-157.701000} text={'🔘 Waimãnalo Beach Park'}
+        <Map center={{lat: 21.33, lng: -157.70}} zoom={11} lat={21.336780} lng={-157.701000} text={'🔘 Waimãnalo Beach Park'}
         />
       </div>
       <CardContent className={classes.cardContent}>
         <Typography variant='h3' align='center'>Ceremony</Typography>
         <Typography variant='h3' align='center'>May 4th, 2019</Typography>
         <Typography variant='h4' align='center'>Waimãnalo Beach Park</Typography>
+        <Typography variant='h5' align='center'>9:00am HST</Typography>
         <Typography variant='body1' align='center'>Check back on the day of the big event for a link to watch a live stream.</Typography>
       </CardContent>
     </Card>

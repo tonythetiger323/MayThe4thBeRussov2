@@ -27,13 +27,14 @@ const ReceptionCard = (props: any) => {
         title='Sanborn Country Park'
       />
       <div style={{height: 352, width: '100%'}}>
-        <Map APIKey={{key: process.env.REACT_APP_GOOGLE_API_KEY}} center={{lat: 37.23, lng: -122.06}} zoom={11} lat={37.2354} lng={-122.0627} text={'🔘 Sanborn County Park'}
+        <Map center={{lat: 37.23, lng: -122.06}} zoom={11} lat={37.2354} lng={-122.0627} text={'🔘 Sanborn County Park'}
         />
       </div>
       <CardContent>
         <Typography variant='h3' align='center'>Reception</Typography>
         <Typography variant='h3' align='center'>June 1st, 2019</Typography>
         <Typography variant='h4' align='center'>Sanborn County Park</Typography>
+        <Typography variant='h5' align='center'>12:00pm - 4:00pm PST</Typography>
         <Typography variant='body1' align='center'>Lunch
 Many snacks will be provided.
 A taco truck will be catering and there will be a vegetarian option

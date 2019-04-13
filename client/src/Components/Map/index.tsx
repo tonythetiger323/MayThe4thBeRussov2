@@ -1,10 +1,11 @@
+require('dotenv').config()
 import React, { Component }  from 'react';
 import GoogleMapReact, { Coords } from 'google-map-react';
 
 const Marker = ({ text }: any) => {
   return(
   <div style={{
-    color: 'white',
+    color: 'black',
     background: 'transparent',
     padding: 'auto',
     display: 'inline-flex',
@@ -18,7 +19,6 @@ const Marker = ({ text }: any) => {
 }
 
 interface MapProps {
-  APIKey: any,
   center: Coords,
   zoom: number,
   lat: number,
@@ -34,7 +34,7 @@ class Map extends Component<MapProps, any>{
   render(){
     return(
       <GoogleMapReact
-        bootstrapURLKeys={this.props.APIKey}
+        bootstrapURLKeys={{key: process.env.REACT_APP_GOOGLE_API_KEY} as any}
         defaultCenter={this.props.center}
         defaultZoom={this.props.zoom}
       >

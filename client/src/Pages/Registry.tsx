@@ -1,9 +1,8 @@
-import * as React from 'react'
+import React from 'react'
+import RegistryCard from '../Components/RegistryCard'
 
-class Registry extends React.Component {
-  render() {
-    return <h1>Registry</h1>;
-  }
+const Registry = () => {
+  return <RegistryCard/>
 }
 
 export default Registry;
