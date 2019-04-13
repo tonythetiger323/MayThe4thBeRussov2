@@ -9,10 +9,12 @@ import { RsvpsModule } from './rsvps/rsvps.module';
 import { RsvpsService } from './rsvps/rsvps.service';
 import { AuthModule } from './auth/auth.module'
 import { AuthService } from './auth/auth.service'
+import { CommentsModule } from './comments/comments.module'
+import { CommentsService } from './comments/comments.service'
 
 
 @Module({
-  imports: [UsersModule, RsvpsModule, AuthModule, TypeOrmModule.forRoot({
+  imports: [UsersModule, RsvpsModule, CommentsModule, AuthModule, TypeOrmModule.forRoot({
     type: 'mysql',
     host: process.env.TYPEORM_HOST,
     port: 3306,
@@ -23,7 +25,7 @@ import { AuthService } from './auth/auth.service'
     synchronize: true
   })],
   controllers: [AppController],
-  providers: [UsersService, RsvpsService, AuthService]
+  providers: [UsersService, RsvpsService, CommentsService, AuthService]
 })
 
 export class AppModule {

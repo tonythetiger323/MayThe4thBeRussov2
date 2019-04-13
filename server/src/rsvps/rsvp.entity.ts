@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToOne, JoinColumn} from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 import { IsUUID, MaxLength, IsInt, IsString, IsAlpha, IsEmail, IsNotEmpty, Max, Min} from 'class-validator'
 
 @Entity()

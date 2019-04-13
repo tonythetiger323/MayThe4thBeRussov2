@@ -13,7 +13,12 @@ export default {
   },
 
   submitRsvp: (rsvpData: any) => {
-    console.log(`Axios os making a POST request to 'api/rsvps`)
+    console.log(`Axios is making a POST request to 'api/rsvps'`)
     return axios.post('/api/rsvps', rsvpData)
+  },
+
+  getComments: () => {
+    console.log(`Axios is making a get request to 'api/comments'`)
+    return axios.get('api/comments')
   }
 }

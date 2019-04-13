@@ -1,5 +1,5 @@
 import * as types from '../actions';
-import { LoginState, LoginAction } from '../../types'
+import { LoginState, LoginAction } from '../types'
 
 const defaultState: LoginState = {
   user: undefined
