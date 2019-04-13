@@ -1,5 +1,5 @@
 import * as types from './index'
-import API from '../../utils/API'
+// import API from '../../utils/API'
 
 export function retrieveCommentData(comments: string) {
   return {
