@@ -8,9 +8,9 @@ export function retrieveCommentData(comments: string) {
   };
 }
 
-export function fetchComments() {
-  return async dispatch => {
-    const comments = [];
-    await API.getComments()
-  }
-  
+// export function fetchComments() {
+//   return async dispatch => {
+//     const comments = [];
+//     await API.getComments()
+//   }
+// }  
