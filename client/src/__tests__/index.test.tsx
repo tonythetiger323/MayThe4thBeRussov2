@@ -1,9 +1,8 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { Provider } from 'react-redux'
 import { BrowserRouter as Router } from 'react-router-dom'
 import App from '../App'
-import configureStore from '../redux/store/configureStore'
+import { SnackbarProvider } from 'notistack'
 
 
 describe('index', () => {
@@ -11,13 +10,12 @@ describe('index', () => {
   let wrapper: any
   it('should render without crashing', () => {
     const div = document.createElement('div')
-    const store = configureStore()
     ReactDOM.render(
-      <Provider store={store}>
+      <SnackbarProvider>
       <Router>
         <App />
       </Router>
-      </Provider>,
+      </SnackbarProvider>,
       div
     )
     ReactDOM.unmountComponentAtNode(div)
