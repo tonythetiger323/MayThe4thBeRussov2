@@ -42,7 +42,7 @@ function Guestbook(props: any) {
               </Grid>
             </Grid>
           </Paper>
-      </Grid>
+       </Grid>
     </div>
   )
 }

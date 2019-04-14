@@ -10,8 +10,8 @@ export class MessagesController {
   @Post()
   async create(@Param() params, @Res() res: Response, @Body() messageData: Message): Promise<any> {
     console.log(`Post request made to '/api/messages'`);
-    if (!(messageData && messageData.name && messageData.email && messageData.message)) {
-      return res.status(HttpStatus.FORBIDDEN).json({ message: 'Name, email, and message are required'});
+    if (!(messageData && messageData.name && messageData.message)) {
+      return res.status(HttpStatus.FORBIDDEN).json({ message: 'Name and message are required'});
     };
 
     const message = await this.messagesService.create(messageData);

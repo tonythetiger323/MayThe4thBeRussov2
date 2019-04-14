@@ -13,11 +13,6 @@ export class Message {
   @IsNotEmpty()
   name: string;
 
-  @Column('varchar', {length: 255})
-  @IsEmail()
-  @IsNotEmpty()
-  email: string;
-
   @Column('varchar', { length: 255 })
   @IsAlphanumeric()
   @IsNotEmpty()

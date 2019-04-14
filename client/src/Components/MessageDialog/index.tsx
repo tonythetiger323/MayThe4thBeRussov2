@@ -12,13 +12,11 @@ import { withSnackbar } from 'notistack'
 
 const messageValidationSchema = Yup.object({
   name: Yup.string().required('Name is required'),
-  email: Yup.string().email('Enter a valid email').required('Email is required'),
-  message:  Yup.string().required('Message is required')
+  message: Yup.string().required('Message is required')
 })
 
 const initialValues = {
   name: '',
-  email: '',
   message: ''
 }
 
@@ -80,13 +78,6 @@ class MessageDialog extends React.Component<any, MessageDialogState> {
                     name='name'
                     label='Name'
                     type='text'
-                    component={ TextField }
-                  />
-                  <Field
-                    required
-                    name='email'
-                    label='Email'
-                    type='email'
                     component={ TextField }
                   />
                   <Field
