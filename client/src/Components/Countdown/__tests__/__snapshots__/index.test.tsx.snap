@@ -20,42 +20,50 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <WithStyles(Paper)
-        elevation={1}
+      "children": <WithStyles(Typography)
+        align="center"
+        variant="h5"
       >
         <span>
           <strong>
             00
           </strong>
+           
           <span>
             Days
           </span>
         </span>
+         
         <span>
           <strong>
             00
           </strong>
+           
           <span>
             Hours
           </span>
         </span>
+         
         <span>
           <strong>
             00
           </strong>
+           
           <span>
             Minutes
           </span>
         </span>
+         
         <span>
           <strong>
             00
           </strong>
+           
           <span>
             Seconds
           </span>
         </span>
-      </WithStyles(Paper)>,
+      </WithStyles(Typography)>,
     },
     "ref": null,
     "rendered": Object {
@@ -63,41 +71,49 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
+        "align": "center",
         "children": Array [
           <span>
             <strong>
               00
             </strong>
+             
             <span>
               Days
             </span>
           </span>,
+          " ",
           <span>
             <strong>
               00
             </strong>
+             
             <span>
               Hours
             </span>
           </span>,
+          " ",
           <span>
             <strong>
               00
             </strong>
+             
             <span>
               Minutes
             </span>
           </span>,
+          " ",
           <span>
             <strong>
               00
             </strong>
+             
             <span>
               Seconds
             </span>
           </span>,
         ],
-        "elevation": 1,
+        "variant": "h5",
       },
       "ref": null,
       "rendered": Array [
@@ -110,6 +126,7 @@ ShallowWrapper {
               <strong>
                 00
               </strong>,
+              " ",
               <span>
                 Days
               </span>,
@@ -128,6 +145,7 @@ ShallowWrapper {
               "rendered": "00",
               "type": "strong",
             },
+            " ",
             Object {
               "instance": null,
               "key": undefined,
@@ -142,6 +160,7 @@ ShallowWrapper {
           ],
           "type": "span",
         },
+        " ",
         Object {
           "instance": null,
           "key": undefined,
@@ -151,6 +170,7 @@ ShallowWrapper {
               <strong>
                 00
               </strong>,
+              " ",
               <span>
                 Hours
               </span>,
@@ -169,6 +189,7 @@ ShallowWrapper {
               "rendered": "00",
               "type": "strong",
             },
+            " ",
             Object {
               "instance": null,
               "key": undefined,
@@ -183,6 +204,7 @@ ShallowWrapper {
           ],
           "type": "span",
         },
+        " ",
         Object {
           "instance": null,
           "key": undefined,
@@ -192,6 +214,7 @@ ShallowWrapper {
               <strong>
                 00
               </strong>,
+              " ",
               <span>
                 Minutes
               </span>,
@@ -210,6 +233,7 @@ ShallowWrapper {
               "rendered": "00",
               "type": "strong",
             },
+            " ",
             Object {
               "instance": null,
               "key": undefined,
@@ -224,6 +248,7 @@ ShallowWrapper {
           ],
           "type": "span",
         },
+        " ",
         Object {
           "instance": null,
           "key": undefined,
@@ -233,6 +258,7 @@ ShallowWrapper {
               <strong>
                 00
               </strong>,
+              " ",
               <span>
                 Seconds
               </span>,
@@ -251,6 +277,7 @@ ShallowWrapper {
               "rendered": "00",
               "type": "strong",
             },
+            " ",
             Object {
               "instance": null,
               "key": undefined,
@@ -276,42 +303,50 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <WithStyles(Paper)
-          elevation={1}
+        "children": <WithStyles(Typography)
+          align="center"
+          variant="h5"
         >
           <span>
             <strong>
               00
             </strong>
+             
             <span>
               Days
             </span>
           </span>
+           
           <span>
             <strong>
               00
             </strong>
+             
             <span>
               Hours
             </span>
           </span>
+           
           <span>
             <strong>
               00
             </strong>
+             
             <span>
               Minutes
             </span>
           </span>
+           
           <span>
             <strong>
               00
             </strong>
+             
             <span>
               Seconds
             </span>
           </span>
-        </WithStyles(Paper)>,
+        </WithStyles(Typography)>,
       },
       "ref": null,
       "rendered": Object {
@@ -319,41 +354,49 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "align": "center",
           "children": Array [
             <span>
               <strong>
                 00
               </strong>
+               
               <span>
                 Days
               </span>
             </span>,
+            " ",
             <span>
               <strong>
                 00
               </strong>
+               
               <span>
                 Hours
               </span>
             </span>,
+            " ",
             <span>
               <strong>
                 00
               </strong>
+               
               <span>
                 Minutes
               </span>
             </span>,
+            " ",
             <span>
               <strong>
                 00
               </strong>
+               
               <span>
                 Seconds
               </span>
             </span>,
           ],
-          "elevation": 1,
+          "variant": "h5",
         },
         "ref": null,
         "rendered": Array [
@@ -366,6 +409,7 @@ ShallowWrapper {
                 <strong>
                   00
                 </strong>,
+                " ",
                 <span>
                   Days
                 </span>,
@@ -384,6 +428,7 @@ ShallowWrapper {
                 "rendered": "00",
                 "type": "strong",
               },
+              " ",
               Object {
                 "instance": null,
                 "key": undefined,
@@ -398,6 +443,7 @@ ShallowWrapper {
             ],
             "type": "span",
           },
+          " ",
           Object {
             "instance": null,
             "key": undefined,
@@ -407,6 +453,7 @@ ShallowWrapper {
                 <strong>
                   00
                 </strong>,
+                " ",
                 <span>
                   Hours
                 </span>,
@@ -425,6 +472,7 @@ ShallowWrapper {
                 "rendered": "00",
                 "type": "strong",
               },
+              " ",
               Object {
                 "instance": null,
                 "key": undefined,
@@ -439,6 +487,7 @@ ShallowWrapper {
             ],
             "type": "span",
           },
+          " ",
           Object {
             "instance": null,
             "key": undefined,
@@ -448,6 +497,7 @@ ShallowWrapper {
                 <strong>
                   00
                 </strong>,
+                " ",
                 <span>
                   Minutes
                 </span>,
@@ -466,6 +516,7 @@ ShallowWrapper {
                 "rendered": "00",
                 "type": "strong",
               },
+              " ",
               Object {
                 "instance": null,
                 "key": undefined,
@@ -480,6 +531,7 @@ ShallowWrapper {
             ],
             "type": "span",
           },
+          " ",
           Object {
             "instance": null,
             "key": undefined,
@@ -489,6 +541,7 @@ ShallowWrapper {
                 <strong>
                   00
                 </strong>,
+                " ",
                 <span>
                   Seconds
                 </span>,
@@ -507,6 +560,7 @@ ShallowWrapper {
                 "rendered": "00",
                 "type": "strong",
               },
+              " ",
               Object {
                 "instance": null,
                 "key": undefined,

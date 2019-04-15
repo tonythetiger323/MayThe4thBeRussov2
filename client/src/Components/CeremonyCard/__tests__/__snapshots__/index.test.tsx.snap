@@ -20,6 +20,7 @@ ShallowWrapper {
     "props": Object {
       "classes": Object {
         "card": "CeremonyCard-card-1",
+        "cardContent": "CeremonyCard-cardContent-3",
         "media": "CeremonyCard-media-2",
       },
     },
@@ -35,6 +36,7 @@ ShallowWrapper {
       "props": Object {
         "classes": Object {
           "card": "CeremonyCard-card-1",
+          "cardContent": "CeremonyCard-cardContent-3",
           "media": "CeremonyCard-media-2",
         },
       },

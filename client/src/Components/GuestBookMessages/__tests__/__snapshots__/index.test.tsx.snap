@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UnderConstruction Page should render correctly 1`] = `
+exports[`Guest Book Messages should render correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <WithStyles(UnderConstruction) />,
+  Symbol(enzyme.__unrendered__): <GuestBookMessages />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],
@@ -16,31 +16,27 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "function",
+    "nodeType": "host",
     "props": Object {
-      "classes": Object {
-        "card": "UnderConstruction-card-1",
-        "media": "UnderConstruction-media-2",
-      },
+      "children": Array [],
+      "className": "messages",
     },
     "ref": null,
-    "rendered": null,
-    "type": [Function],
+    "rendered": Array [],
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "function",
+      "nodeType": "host",
       "props": Object {
-        "classes": Object {
-          "card": "UnderConstruction-card-1",
-          "media": "UnderConstruction-media-2",
-        },
+        "children": Array [],
+        "className": "messages",
       },
       "ref": null,
-      "rendered": null,
-      "type": [Function],
+      "rendered": Array [],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
