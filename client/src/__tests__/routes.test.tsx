@@ -2,7 +2,7 @@ import * as React from 'react'
 import AppliedRoute from '../Components/AppliedRoute'
 import PageLayout from '../Layouts/PageLayout'
 import Index from '../Pages/Index'
-import UnderConstruction from '../Pages/UnderConstruction'
+import GuestBook from '../Pages/GuestBook'
 import NotFound from '../Pages/NotFound'
 import Rsvp from '../Pages/Rsvp'
 import { createShallow } from '@material-ui/core/test-utils/index'
@@ -47,13 +47,13 @@ describe('<Index/>', () => {
   })
 })
 
-describe('<UnderConstruction/>', () => {
+describe('<GuestBook/>', () => {
   beforeEach(() => {
     shallowMui = createShallow()
   })    
 
   it('should work', () => {
-    wrapper = shallowMui(<UnderConstruction />)
+    wrapper = shallowMui(<GuestBook />)
   })
 })
 

@@ -3,9 +3,7 @@ import { shallow } from 'enzyme'
 import App from '../App'
 import Routes from '../routes'
 import { createShallow } from '@material-ui/core/test-utils/index'
-import { MuiThemeProvider } from '@material-ui/core'
 import CssBaseline from '@material-ui/core/CssBaseline'
-import theme from '../theme/theme'
 
 let wrapper: any
 let shallowMui: any
