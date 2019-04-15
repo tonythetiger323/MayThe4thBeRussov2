@@ -5,6 +5,7 @@ import { Image, Transformation } from 'cloudinary-react'
 import Paper from '@material-ui/core/Paper'
 import MessageDialog from '../Components/MessageDialog'
 import { withStyles, Theme } from '@material-ui/core/styles'
+import GuestbookMessages from '../Components/GuestBookMessages';
 
 const styles = (theme: Theme) => ({
   root: {
@@ -14,7 +15,7 @@ const styles = (theme: Theme) => ({
   },
 });
 
-function Guestbook(props: any) {
+function GuestBook(props: any) {
   const { classes } = props;
 
   return(
@@ -42,9 +43,17 @@ function Guestbook(props: any) {
               </Grid>
             </Grid>
           </Paper>
+          <br/>
+          <Grid item>
+            <Typography variant='h4' style={{ fontFamily: 'Oswald' }} align='center'>Guest Book Messages</Typography>
+          </Grid>
+          <br/>
+          <Grid item>
+            <GuestbookMessages/>
+          </Grid>
        </Grid>
     </div>
   )
 }
 
-export default withStyles(styles)(Guestbook);
+export default withStyles(styles)(GuestBook);

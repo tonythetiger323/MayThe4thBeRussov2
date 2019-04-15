@@ -1,10 +1,10 @@
 import * as React from 'react'
 import { shallow } from 'enzyme'
-import Guestbook from '../Guestbook'
+import GuestBook from '../GuestBook'
 
-describe('Guestbook Page', () => {
+describe('Guest Book Page', () => {
   let wrapper: any
-  beforeEach(() => (wrapper = shallow(<Guestbook />)))
+  beforeEach(() => (wrapper = shallow(<GuestBook />)))
 
   it('should render correctly', () => {
     expect(wrapper).toMatchSnapshot()
