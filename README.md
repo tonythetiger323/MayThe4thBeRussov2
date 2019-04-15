@@ -16,7 +16,7 @@ The original MayThe4thBeRusso repository is for a project for my class which, I 
 [Jest](https://jestjs.io/), [Enzyme](https://airbnb.io/enzyme/),
 [Circle-CI](https://circleci.com/), [CodeClimate Quality](https://codeclimate.com/),
 [git](https://git-scm.com/), [GitHub](https://github.com),
-[WorkingCopy](https://workingcopyapp.com/), & [Editorial](https://omz-software.com/editorial/
+[WorkingCopy](https://workingcopyapp.com/), & [Editorial](https://omz-software.com/editorial/)
 
 ## Credit/Thanks
 A special thank you to my friend [Miguel Caballero](https://github.com/mcabs3) for his help and the greatest teacher in the world [Mark Thompson](https://www.marktechson.com).
