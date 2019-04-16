@@ -41,6 +41,10 @@ class MessageDialog extends React.Component<any, MessageDialogState> {
   };
 
   render() {
+    const reloadPage = () => {
+      window.location.reload();
+    }
+
     return (
       <div>
         <Grid container direction='column' alignItems='center'>
@@ -70,7 +74,7 @@ class MessageDialog extends React.Component<any, MessageDialogState> {
                   if(res.status === 200){this.props.enqueueSnackbar('Message Posted!', { variant: 'success', preventDuplicate: true, autoHideDuration: 5000 })} else {
                   {this.props.enqueueSnackbar('Message Failed to Post!', {variant: 'error', preventDuplicate: true, autoHideDuration: 5000})}
                   resetForm();
-                  window.location.reload();
+                  reloadPage();
                 }}}
               >
                 <Form>
