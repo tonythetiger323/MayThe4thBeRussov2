@@ -42,11 +42,11 @@ const CeremonyCard = (props: any) => {
           />
           </div>
           <CardContent className={classes.cardContent}>
-            <Typography variant='h3' align='center'>Ceremony</Typography>
-            <Typography variant='h3' align='center'>May 4th, 2019</Typography>
-            <Typography variant='h4' align='center'>Waimãnalo Beach Park</Typography>
-            <Typography variant='h5' align='center'>9:00am HST</Typography>
-            <Typography variant='body1' align='center'>Check back on the day of the big event for a link to watch a live stream.</Typography>
+            <Typography variant='h3' align='center' style={{ fontFamily: 'Oswald' }}>Ceremony</Typography>
+            <Typography variant='h3' align='center' style={{ fontFamily: 'Oswald' }}>May 4th, 2019</Typography>
+            <Typography variant='h4' align='center' style={{ fontFamily: 'Oswald' }}>Waimãnalo Beach Park</Typography>
+            <Typography variant='h5' align='center' style={{ fontFamily: 'Oswald' }}>9:00am HST</Typography>
+            <Typography variant='body1' align='center' style={{ fontFamily: 'Oswald' }}>Check back on the day of the big event for a link to watch a live stream.</Typography>
           </CardContent>
         </Card>
       </Default>
@@ -63,11 +63,11 @@ const CeremonyCard = (props: any) => {
           />
           </div>
           <CardContent className={classes.cardContent}>
-            <Typography variant='h3' align='center'>Ceremony</Typography>
-            <Typography variant='h3' align='center'>May 4th, 2019</Typography>
-            <Typography variant='h4' align='center'>Waimãnalo Beach Park</Typography>
-            <Typography variant='h5' align='center'>9:00am HST</Typography>
-            <Typography variant='body1' align='center'>Check back on the day of the big event for a link to watch a live stream.</Typography>
+            <Typography variant='h3' align='center' style={{ fontFamily: 'Oswald' }}>Ceremony</Typography>
+            <Typography variant='h3' align='center' style={{ fontFamily: 'Oswald' }}>May 4th, 2019</Typography>
+            <Typography variant='h4' align='center' style={{ fontFamily: 'Oswald' }}>Waimãnalo Beach Park</Typography>
+            <Typography variant='h5' align='center' style={{ fontFamily: 'Oswald' }}>9:00am HST</Typography>
+            <Typography variant='body1' align='center' style={{ fontFamily: 'Oswald' }}>Check back on the day of the big event for a link to watch a live stream.</Typography>
           </CardContent>
         </Card>
       </Mobile>

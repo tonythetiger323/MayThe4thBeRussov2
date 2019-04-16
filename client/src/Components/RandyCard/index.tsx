@@ -38,7 +38,7 @@ const RandyCard = (props: any): React.FunctionComponentElement<any> => {
           <div>
           <CardContent className={classes.content}>
             <Grid container direction='column'>
-              <Typography variant='body1'>
+              <Typography variant='body1' style={{ fontFamily: 'Oswald' }}>
                 Both as unique as the other, they didn't want to find someone in the traditional way. From the very first message that was sent they knew they would be together forever. I mean, who doesn’t love bacon and donuts?
 
                 Date after date they never got sick of each other. They both had a quirkiness about them that they both understood, food was a passion for both of them, and they both loved everything Disney related. 
@@ -66,7 +66,7 @@ const RandyCard = (props: any): React.FunctionComponentElement<any> => {
             </Image>
           </CardMedia>
           <CardContent className={classes.content}>
-            <Typography variant='body1'>
+            <Typography variant='body1' style={{ fontFamily: 'Oswald' }}>
               Both as unique as the other, they didn't want to find someone in the traditional way. From the very first message that was sent they knew they would be together forever. I mean, who doesn’t love bacon and donuts?
 
               Date after date they never got sick of each other. They both had a quirkiness about them that they both understood, food was a passion for both of them, and they both loved everything Disney related. 

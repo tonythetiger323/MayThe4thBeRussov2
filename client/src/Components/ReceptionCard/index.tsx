@@ -40,11 +40,11 @@ const ReceptionCard = (props: any) => {
           />
           </div>
           <CardContent>
-            <Typography variant='h3' align='center'>Reception</Typography>
-            <Typography variant='h3' align='center'>June 1st, 2019</Typography>
-            <Typography variant='h4' align='center'>Sanborn County Park</Typography>
-            <Typography variant='h5' align='center'>12:00pm - 4:00pm PST</Typography>
-            <Typography variant='body1' align='center'>Lunch
+            <Typography variant='h3' align='center' style={{ fontFamily: 'Oswald' }}>Reception</Typography>
+            <Typography variant='h3' align='center' style={{ fontFamily: 'Oswald' }}>June 1st, 2019</Typography>
+            <Typography variant='h4' align='center' style={{ fontFamily: 'Oswald' }}>Sanborn County Park</Typography>
+            <Typography variant='h5' align='center' style={{ fontFamily: 'Oswald' }}>12:00pm - 4:00pm PST</Typography>
+            <Typography variant='body1' align='center' style={{ fontFamily: 'Oswald' }}>Lunch
             Many snacks will be provided.
             A taco truck will be catering and there will be a vegetarian option
 
@@ -70,11 +70,11 @@ const ReceptionCard = (props: any) => {
           />
           </div>
           <CardContent>
-            <Typography variant='h3' align='center'>Reception</Typography>
-            <Typography variant='h3' align='center'>June 1st, 2019</Typography>
-            <Typography variant='h4' align='center'>Sanborn County Park</Typography>
-            <Typography variant='h5' align='center'>12:00pm - 4:00pm PST</Typography>
-            <Typography variant='body1' align='center'>Lunch
+            <Typography variant='h3' align='center' style={{ fontFamily: 'Oswald' }}>Reception</Typography>
+            <Typography variant='h3' align='center' style={{ fontFamily: 'Oswald' }}>June 1st, 2019</Typography>
+            <Typography variant='h4' align='center' style={{ fontFamily: 'Oswald' }}>Sanborn County Park</Typography>
+            <Typography variant='h5' align='center' style={{ fontFamily: 'Oswald' }}>12:00pm - 4:00pm PST</Typography>
+            <Typography variant='body1' align='center' style={{ fontFamily: 'Oswald' }}>Lunch
             Many snacks will be provided.
             A taco truck will be catering and there will be a vegetarian option
 

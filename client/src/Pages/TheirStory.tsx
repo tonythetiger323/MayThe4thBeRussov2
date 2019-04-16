@@ -30,9 +30,9 @@ const TheirStory = () => {
             <Grid item>
               <Card>
                 <CardContent>
-                  <Typography variant='body1' align='center'>If you didn't already guess it, Megan said yes. Megan and Randy will be getting married on May 4th, 2019 in Hawaii. They are so excited to tie the knot and start the next chapter of their life together. 
+                  <Typography variant='body1' align='center' style={{ fontFamily: 'Oswald' }}>If you didn't already guess it, Megan said yes. Megan and Randy will be getting married on May 4th, 2019 in Hawaii. They are so excited to tie the knot and start the next chapter of their life together. 
                   </Typography>
-                  <Typography variant='body1' align='center'>
+                  <Typography variant='body1' align='center' style={{ fontFamily: 'Oswald' }}>
                   Thank you for visiting our site.
                   </Typography>
                 </CardContent>
@@ -47,9 +47,9 @@ const TheirStory = () => {
           </Image>
           <Card>
             <CardContent>
-              <Typography variant='body1' align='center'>If you didn't already guess it, Megan said yes. Megan and Randy will be getting married on May 4th, 2019 in Hawaii. They are so excited to tie the knot and start the next chapter of their life together. 
+              <Typography variant='body1' align='center' style={{ fontFamily: 'Oswald' }}>If you didn't already guess it, Megan said yes. Megan and Randy will be getting married on May 4th, 2019 in Hawaii. They are so excited to tie the knot and start the next chapter of their life together. 
               </Typography>
-              <Typography variant='body1' align='center'>
+              <Typography variant='body1' align='center' style={{ fontFamily: 'Oswald' }}>
               Thank you for visiting our site.
               </Typography>
             </CardContent>
