@@ -14,7 +14,7 @@ const Default = (props: any) => <Responsive {...props} minWidth={668}/>
 const styles: any = {
   card: {
     width: 800,
-    height: 350,
+    height: 375,
     display: 'flex',
     flexDirection: 'row'
   },
@@ -43,10 +43,10 @@ const MeganCard = (props: any): React.FunctionComponentElement<any> => {
           </CardMedia>
           <div>
           <CardContent className={classes.content}>
-            <Grid container direction='column'>
-              <Typography variant='body1'>Megan was born and raised in San Jose California. Randy was born and raised in Plymouth  Michigan, transplanted to Chicago, and finally wound up in  San Jose California for a new job opportunity. If not for   technology they may never have found one another, but as it turns out, luck was on their side.
+            <Grid container direction='column' alignItems='center' justify='flex-start'>
+              <Typography variant='body1' style={{ fontFamily: 'Oswald' }}><p>Megan was born and raised in San Jose California. Randy was born and raised in Plymouth  Michigan, transplanted to Chicago, and finally wound up in  San Jose California for a new job opportunity. If not for   technology they may never have found one another, but as it turns out, luck was on their side.</p>
 
-              Their love story began through a tiny little message from Randy,“Hey! You seem super great. I love how you describe yourself and what you have to say. Also, is that a maple bacon donut? I’d love to get to know you if you are interested :&#41;” Back in January 2017. To which Megan replied “Hey! You seem great too! That was actually a chocolate donut with bacon on top. I added the bacon myself :&#41; Yeah, I’d like to get to know you too!” 
+              <p>Their love story began through a tiny little message from Randy,“Hey! You seem super great. I love how you describe yourself and what you have to say. Also, is that a maple bacon donut? I’d love to get to know you if you are interested :&#41;” Back in January 2017. To which Megan replied “Hey! You seem great too! That was actually a chocolate donut with bacon on top. I added the bacon myself :&#41; Yeah, I’d like to get to know you too!”</p>
               </Typography>
             </Grid>
           </CardContent>
@@ -62,9 +62,9 @@ const MeganCard = (props: any): React.FunctionComponentElement<any> => {
           </Image>
         </CardMedia>
         <CardContent>
-          <Typography variant='body1' style={{ fontFamily: 'Oswald' }}>Megan was born and raised in San Jose California. Randy was born and raised in Plymouth  Michigan, transplanted to Chicago, and finally wound up in  San Jose California for a new job opportunity. If not for   technology they may never have found one another, but as it turns out, luck was on their side.
+          <Typography variant='body1' style={{ fontFamily: 'Oswald' }}><p>Megan was born and raised in San Jose California. Randy was born and raised in Plymouth  Michigan, transplanted to Chicago, and finally wound up in  San Jose California for a new job opportunity. If not for   technology they may never have found one another, but as it turns out, luck was on their side.</p>
 
-          Their love story began through a tiny little message from Randy,“Hey! You seem super great. I love how you describe yourself and what you have to say. Also, is that a maple bacon donut? I’d love to get to know you if you are interested :&#41;” Back in January 2017. To which Megan replied “Hey! You seem great too! That was actually a chocolate donut with bacon on top. I added the bacon myself :&#41; Yeah, I’d like to get to know you too!” 
+          <p>Their love story began through a tiny little message from Randy,“Hey! You seem super great. I love how you describe yourself and what you have to say. Also, is that a maple bacon donut? I’d love to get to know you if you are interested :&#41;” Back in January 2017. To which Megan replied “Hey! You seem great too! That was actually a chocolate donut with bacon on top. I added the bacon myself :&#41; Yeah, I’d like to get to know you too!”</p>
           </Typography>
         </CardContent>
       </Card>

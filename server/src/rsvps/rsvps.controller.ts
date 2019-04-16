@@ -1,4 +1,4 @@
-import { Controller, Post, Res, Body, HttpStatus, Param } from '@nestjs/common';
+import { Controller, Post, Res, Body, HttpStatus, Param, Get } from '@nestjs/common';
 import { RsvpsService } from './rsvps.service'
 import { Rsvp } from './rsvp.entity'
 import { Response } from 'express'
@@ -14,5 +14,12 @@ export class RsvpsController {
     };
     const rsvp = await this.rsvpsService.create(rsvpData);
     return res.status(HttpStatus.OK).json(rsvp)
+  }
+
+  @Get()
+  async findAll(@Res() res: Response, @Body() rsvpData: Rsvp): Promise<any> {
+    console.log(`Get request made to 'api/rsvp'`)
+    const rsvps = await this.rsvpsService.findAll();
+    return res.status(HttpStatus.OK).json(rsvps)
   }
 }

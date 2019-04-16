@@ -14,4 +14,8 @@ export class RsvpsService {
     const newRsvp = await this.rsvpRepository.save(rsvp);
     return newRsvp;
   }
+
+  async findAll(): Promise<Rsvp[]> {
+    return await this.rsvpRepository.find()
+  }
 }

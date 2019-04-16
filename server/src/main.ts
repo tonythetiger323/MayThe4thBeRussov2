@@ -36,6 +36,7 @@ if (!isProd) {
 async function bootstrap() {
   const app = await NestFactory.create(AppModule)
 
+  app.enableCors();
   app.use(bodyParser.json())
   app.use(cookieParser())
   app.use(favicon(publicFaviconPath))

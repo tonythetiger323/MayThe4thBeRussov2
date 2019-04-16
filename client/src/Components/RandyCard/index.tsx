@@ -13,7 +13,7 @@ const Default = (props: any) => <Responsive {...props} minWidth={898}/>
 
 const styles: any = {
   card: {
-    width: 925,
+    width: 1000,
     height: 350,
     display: 'flex',
     flexDirection: 'row'
@@ -37,13 +37,13 @@ const RandyCard = (props: any): React.FunctionComponentElement<any> => {
         <Card className={classes.card}>
           <div>
           <CardContent className={classes.content}>
-            <Grid container direction='column'>
-              <Typography variant='body1' style={{ fontFamily: 'Oswald' }}>
-                Both as unique as the other, they didn't want to find someone in the traditional way. From the very first message that was sent they knew they would be together forever. I mean, who doesn’t love bacon and donuts?
+            <Grid container direction='column' justify='flex-start' alignItems='center' alignContent='center'>
+              <Typography variant='body1' style={{ fontFamily: 'Oswald' }}><p>
+                Both as unique as the other, they didn't want to find someone in the traditional way. From the very first message that was sent they knew they would be together forever. I mean, who doesn’t love bacon and donuts?</p>
 
-                Date after date they never got sick of each other. They both had a quirkiness about them that they both understood, food was a passion for both of them, and they both loved everything Disney related. 
+                <p>Date after date they never got sick of each other. They both had a quirkiness about them that they both understood, food was a passion for both of them, and they both loved everything Disney related.</p>
 
-                Randy knew that Disney had to be a part of their engagement. In January of 2018 Randy decided to invite a few close friends and immediate family to Disneyland to surprise Megan. After planning for many months the day arrived. When they arrived at Disneyland Megan was surprised to see everyone there. He pulled it off and she had no clue. In traditional Disney fashion, when you first get into the park you take a picture in front of the castle. Well, this picture turned into the proposal that neither would never forget.
+                <p>Randy knew that Disney had to be a part of their engagement. In January of 2018 Randy decided to invite a few close friends and immediate family to Disneyland to surprise Megan. After planning for many months the day arrived. When they arrived at Disneyland Megan was surprised to see everyone there. He pulled it off and she had no clue. In traditional Disney fashion, when you first get into the park you take a picture in front of the castle. Well, this picture turned into the proposal that neither would never forget.</p>
               </Typography>
             </Grid>
           </CardContent>
