@@ -12,7 +12,6 @@ import Responsive from 'react-responsive'
 const Mobile = (props: any) => <Responsive {...props} maxWidth={667} />
 const Default = (props: any) => <Responsive {...props} minWidth={668}/>
 
-
 const styles = {
   card: {
     maxWidth: '65%',
