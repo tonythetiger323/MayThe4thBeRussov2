@@ -9,8 +9,8 @@ class Reception extends React.Component {
       <div>
         <Countdown date={'Jun 1, 2019 18:00:00 GMT-7:00'} />
         <br/>
-        <Grid container direction='column' alignContent='center'>
-        <ReceptionCard />
+        <Grid container direction='column' alignItems='center'>
+          <ReceptionCard />
         </Grid>
       </div>
     )

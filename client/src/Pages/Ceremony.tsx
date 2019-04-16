@@ -12,7 +12,7 @@ class Ceremony extends React.Component {
         <Grid container direction='column' alignContent='center'>
           <CeremonyCard />
         </Grid>
-        </div>
+      </div>
     )
   }
 }

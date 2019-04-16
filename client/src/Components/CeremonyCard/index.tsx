@@ -13,13 +13,18 @@ const Default = (props: any) => <Responsive {...props} minWidth={668}/>
 
 const styles = {
   card: {
-    width: '65%'
+    width: '100%'
   },
   cardMobile: {
     width: '100%'
   },
   media: {
-    height: 352
+    width: 900,
+    height: 450
+  },
+  mediaMobile: {
+    width: 375,
+    height: 240
   },
   cardContent: {
     alignText: 'center'
@@ -37,7 +42,7 @@ const CeremonyCard = (props: any) => {
           image='https://res.cloudinary.com/tonythetiger323/image/upload/v1555122501/MayThe4thBeRusso/Ceremony%20Page/waima%CC%83nalo_beach_park_HDR.jpg'
           title='Waimãnalo Beach Park'
           />
-          <div style={{height: 352, width: '100%'}}>
+          <div style={{height: 450, width: '100%'}}>
           <Map center={{lat: 21.33, lng: -157.70}} zoom={11} lat={21.336780} lng={-157.701000} text={'🔘 Waimãnalo Beach Park'}
           />
           </div>
@@ -54,11 +59,11 @@ const CeremonyCard = (props: any) => {
       <Mobile>
         <Card className={classes.cardMobile}>
           <CardMedia
-          className={classes.media}
-          image='https://res.cloudinary.com/tonythetiger323/image/upload/v1555122501/MayThe4thBeRusso/Ceremony%20Page/waima%CC%83nalo_beach_park_HDR.jpg'
+          className={classes.mediaMobile}
+          image='https://res.cloudinary.com/tonythetiger323/image/upload/c_scale,w_375/v1555122501/MayThe4thBeRusso/Ceremony%20Page/waima%CC%83nalo_beach_park_HDR.jpg'
           title='Waimãnalo Beach Park'
           />
-          <div style={{height: 352, width: '100%'}}>
+          <div style={{height: 240, width: '100%'}}>
           <Map center={{lat: 21.33, lng: -157.70}} zoom={11} lat={21.336780} lng={-157.701000} text={'🔘 Waimãnalo Beach Park'}
           />
           </div>

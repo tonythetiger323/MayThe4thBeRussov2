@@ -14,14 +14,22 @@ const Default = (props: any) => <Responsive {...props} minWidth={668}/>
 
 const styles = {
   card: {
-    maxWidth: '65%',
+    width: '100%',
   },
   cardMobile: {
     width: '100%'
   },
   media: {
-    height: 352,
+    width: 900,
+    height: 450
   },
+  mediaMobile: {
+    width: 375,
+    height: 200
+  },
+  cardContent: {
+    alignText: 'center'
+  }
 };
 
 const ReceptionCard = (props: any) => {
@@ -32,27 +40,27 @@ const ReceptionCard = (props: any) => {
         <Card className={classes.card}>
           <CardMedia
           className={classes.media}
-          image='https://res.cloudinary.com/tonythetiger323/image/upload/c_scale,w_625/v1550583106/MayThe4thBeRusso/Reception%20Page/690984.jpg'
+          image='https://res.cloudinary.com/tonythetiger323/image/upload/v1555403575/MayThe4thBeRusso/Reception Page/Sanborn2.jpg'
           title='Sanborn Country Park'
           />
-          <div style={{height: 352, width: '100%'}}>
+          <div style={{height: 450, width: '100%'}}>
           <Map center={{lat: 37.23, lng: -122.06}} zoom={11} lat={37.2354} lng={-122.0627} text={'🔘 Sanborn County Park'}
           />
           </div>
-          <CardContent>
+          <CardContent className={classes.cardContent}>
             <Typography variant='h3' align='center' style={{ fontFamily: 'Oswald' }}>Reception</Typography>
             <Typography variant='h3' align='center' style={{ fontFamily: 'Oswald' }}>June 1st, 2019</Typography>
             <Typography variant='h4' align='center' style={{ fontFamily: 'Oswald' }}>Sanborn County Park</Typography>
             <Typography variant='h5' align='center' style={{ fontFamily: 'Oswald' }}>12:00pm - 4:00pm PST</Typography>
-            <Typography variant='body1' align='center' style={{ fontFamily: 'Oswald' }}>Lunch
-            Many snacks will be provided.
-            A taco truck will be catering and there will be a vegetarian option
+            <Typography variant='body1' align='center' style={{ fontFamily: 'Oswald' }}><p>Lunch:</p>
+            <p>Many snacks will be provided.
+            A taco truck will be catering and there will be a vegetarian option.</p>
 
-            Dessert
-            An ice cream truck will be catering dessert.
+            <p>Dessert:</p>
+            <p>An ice cream truck will be catering dessert.</p>
 
-            Entertainment
-            Games and music will be available for fun. To RSVP click <NavbarLink to='/rsvp'>here</NavbarLink>
+            <p>Entertainment:</p>
+            <p>Games and music will be available for fun. To RSVP click <NavbarLink to='/rsvp'>here</NavbarLink></p>
             </Typography>
           </CardContent>
         </Card>
@@ -61,11 +69,11 @@ const ReceptionCard = (props: any) => {
       <Mobile>
         <Card className={classes.cardMobile}>
           <CardMedia
-          className={classes.media}
-          image='https://res.cloudinary.com/tonythetiger323/image/upload/c_scale,w_625/v1550583106/MayThe4thBeRusso/Reception%20Page/690984.jpg'
+          className={classes.mediaMobile}
+          image='https://res.cloudinary.com/tonythetiger323/image/upload/v1555403575/MayThe4thBeRusso/Reception Page/Sanborn2.jpg'
           title='Sanborn Country Park'
           />
-          <div style={{height: 352, width: '100%'}}>
+          <div style={{height: 200, width: '100%'}}>
           <Map center={{lat: 37.23, lng: -122.06}} zoom={11} lat={37.2354} lng={-122.0627} text={'🔘 Sanborn County Park'}
           />
           </div>
@@ -74,15 +82,15 @@ const ReceptionCard = (props: any) => {
             <Typography variant='h3' align='center' style={{ fontFamily: 'Oswald' }}>June 1st, 2019</Typography>
             <Typography variant='h4' align='center' style={{ fontFamily: 'Oswald' }}>Sanborn County Park</Typography>
             <Typography variant='h5' align='center' style={{ fontFamily: 'Oswald' }}>12:00pm - 4:00pm PST</Typography>
-            <Typography variant='body1' align='center' style={{ fontFamily: 'Oswald' }}>Lunch
-            Many snacks will be provided.
-            A taco truck will be catering and there will be a vegetarian option
+            <Typography variant='body1' align='center' style={{ fontFamily: 'Oswald' }}><p>Lunch:</p>
+            <p>Many snacks will be provided.
+            A taco truck will be catering and there will be a vegetarian option.</p>
 
-            Dessert
-            An ice cream truck will be catering dessert.
+            <p>Dessert:</p>
+            <p>An ice cream truck will be catering dessert.</p>
 
-            Entertainment
-            Games and music will be available for fun. To RSVP click <NavbarLink to='/rsvp'>here</NavbarLink>
+            <p>Entertainment:</p>
+            <p>Games and music will be available for fun. To RSVP click <NavbarLink to='/rsvp'>here</NavbarLink></p>
             </Typography>
           </CardContent>
         </Card>
