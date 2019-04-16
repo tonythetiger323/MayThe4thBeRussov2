@@ -73,7 +73,7 @@ export class PhotoStepper extends React.Component<any, PhotoStepperState> {
 
     return (
       <Grid container direction='row' justify='center' alignItems='center'>
-        <Grid item xs={12} sm={12} md={8}>
+        <Grid item xs={12} sm={10} md={8} lg={6} xl={4}>
           <div className={classes.root}>
             <AutoPlaySwipeableViews
               axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
