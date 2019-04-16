@@ -35,7 +35,7 @@ const photoSteps: PhotoStepInterface[] = [
   {
     label: 'Color, standing on tree',
     imgPath:
-      'https://res.cloudinary.com/tonythetiger323/image/upload/ar_16:9,c_fill,g_auto,e_sharpen/v1550345725/MayThe4thBeRusso/Index%20Page%20Stepper%20Photos/IMG_0004.jpg'
+      'https://res.cloudinary.com/tonythetiger323/image/upload/c_fill,h_425,w_640/v1555407686/MayThe4thBeRusso/Index%20Page%20Stepper%20Photos/IMG_0004.jpg'
   }
 ]
 
@@ -46,7 +46,7 @@ const styles: any = (theme: Theme) => ({
   },
   img: {
     borderRadius: '25px',
-    maxHeight: 500,
+    height: 425,
     width: '100%',
     position: 'relative',
     overflow: 'hidden',
