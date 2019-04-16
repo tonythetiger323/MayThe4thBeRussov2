@@ -1,5 +1,10 @@
 import * as React from 'react'
 import Typography from '@material-ui/core/Typography'
+import Responsive from 'react-responsive'
+
+const Mobile = (props: any) => <Responsive {...props} maxWidth={667} />
+const Default = (props: any) => <Responsive {...props} minWidth={668}/>
+
 interface CountdownProps {
   readonly date: string;
 }
@@ -68,24 +73,47 @@ class Countdown extends React.Component<CountdownProps, CountdownState> {
 
     return (
       <div>
-        <Typography variant='h5' align='center'>
-           <span>
-             <strong>{this.addLeadingZeros(countDown.days)}</strong>&nbsp;
-             <span>{countDown.days === 1 ? 'Day' : 'Days'}</span>
-           </span>&nbsp;
-           <span>
-             <strong>{this.addLeadingZeros(countDown.hours)}</strong>&nbsp;
-             <span>Hours</span>
-           </span>&nbsp;
-           <span>
-             <strong>{this.addLeadingZeros(countDown.minutes)}</strong>&nbsp;
-             <span>Minutes</span>
-           </span>&nbsp;
-           <span>
-             <strong>{this.addLeadingZeros(countDown.seconds)}</strong>&nbsp;
-             <span>Seconds</span>
-           </span>
-        </Typography>
+        <Default>
+          <Typography variant='h5' align='center'>
+            <span>
+              <strong>{this.addLeadingZeros(countDown.days)}</strong>&nbsp;
+              <span>{countDown.days === 1 ? 'Day' : 'Days'}</span>
+            </span>&nbsp;
+            <span>
+              <strong>{this.addLeadingZeros(countDown.hours)}</strong>&nbsp;
+              <span>Hours</span>
+            </span>&nbsp;
+            <span>
+              <strong>{this.addLeadingZeros(countDown.minutes)}</strong>&nbsp;
+              <span>Minutes</span>
+            </span>&nbsp;
+            <span>
+              <strong>{this.addLeadingZeros(countDown.seconds)}</strong>&nbsp;
+              <span>Seconds</span>
+            </span>
+          </Typography>
+        </Default>
+
+        <Mobile>
+          <Typography variant='h6' align='center'>
+            <span>
+              <strong>{this.addLeadingZeros(countDown.days)}</strong>&nbsp;
+              <span>{countDown.days === 1 ? 'Day' : 'Days'}</span>
+            </span>&nbsp;
+            <span>
+              <strong>{this.addLeadingZeros(countDown.hours)}</strong>&nbsp;
+              <span>Hours</span>
+            </span>&nbsp;
+            <span>
+              <strong>{this.addLeadingZeros(countDown.minutes)}</strong>&nbsp;
+              <span>Minutes</span>
+            </span>&nbsp;
+            <span>
+              <strong>{this.addLeadingZeros(countDown.seconds)}</strong>&nbsp;
+              <span>Seconds</span>
+            </span>
+          </Typography>
+        </Mobile>
       </div>
     );
   }

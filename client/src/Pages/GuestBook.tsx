@@ -6,6 +6,10 @@ import Paper from '@material-ui/core/Paper'
 import MessageDialog from '../Components/MessageDialog'
 import { withStyles, Theme } from '@material-ui/core/styles'
 import GuestbookMessages from '../Components/GuestBookMessages';
+import Responsive from 'react-responsive'
+
+const Mobile = (props: any) => <Responsive {...props} maxWidth={667} />
+const Default = (props: any) => <Responsive {...props} minWidth={668}/>
 
 const styles = (theme: Theme) => ({
   root: {
@@ -26,9 +30,16 @@ function GuestBook(props: any) {
         </Grid>
         <br/>
         <Grid item>
-          <Image cloudName='tonythetiger323' publicId='MayThe4thBeRusso/Other Photos/Together/FullSizeRender.jpg' >
+          <Default>
+            <Image cloudName='tonythetiger323' publicId='MayThe4thBeRusso/Other Photos/Together/FullSizeRender.jpg' >
             <Transformation width='550' crop='scale' />
-          </Image>
+            </Image>
+          </Default>
+          <Mobile>
+            <Image cloudName='tonythetiger323' publicId='MayThe4thBeRusso/Other Photos/Together/FullSizeRender.jpg' >
+            <Transformation width='375' crop='scale' />
+            </Image>
+          </Mobile>
         </Grid>
         <br/>
           <Paper style={{ opacity: 0.6 }} className={classes.root}>
