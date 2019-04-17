@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import configureStore from './redux/store/configureStore'
+import configureStore, { history } from './redux/store/configureStore'
 import { Provider } from 'react-redux';
+import { ConnectedRouter} from 'connected-react-router'
 import { SnackbarProvider } from 'notistack';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
@@ -12,11 +13,13 @@ const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
-    <SnackbarProvider>
-      <Router>
-        <App />
-      </Router>
-    </SnackbarProvider>
+    <ConnectedRouter history={history}>
+      <SnackbarProvider>
+        <Router>
+          <App />
+        </Router>
+      </SnackbarProvider>
+    </ConnectedRouter>
   </Provider>,
   document.getElementById('root')
 );
