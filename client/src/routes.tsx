@@ -11,6 +11,7 @@ import Rsvp from './Pages/Rsvp'
 import Registry from './Pages/Registry'
 import GuestBook from './Pages/GuestBook'
 import Login from './Pages/Login'
+import RsvpDashboard from './Pages/RsvpDashboard';
 
 // component that will handle HTML routing
 export default () => {
@@ -25,6 +26,7 @@ export default () => {
         <AppliedRoute exact path='/guestbook' component={GuestBook} />
         <AppliedRoute exact path='/rsvp' component={Rsvp} />
         <AppliedRoute exact path='/login' component={Login}/>
+        <AppliedRoute exact path='/RsvpDashboard' component={RsvpDashboard}/>
         <Route component={NotFound} />
       </Switch>
     </PageLayout>

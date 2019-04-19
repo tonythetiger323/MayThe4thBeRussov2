@@ -53,7 +53,6 @@ class RsvpTable extends React.Component<any, RsvpTableState> {
         <Table>
           <TableHead className={classes.tableHead}>
             <TableRow>
-              <TableCell>Id</TableCell>
               <TableCell>First Name</TableCell>
               <TableCell>Last Name</TableCell>
               <TableCell>Email</TableCell>
@@ -65,7 +64,6 @@ class RsvpTable extends React.Component<any, RsvpTableState> {
           <TableBody>
             {rsvps.map(row => (
               <TableRow key={row.id}>
-                <TableCell>{row.id}</TableCell>
                 <TableCell>{row.firstName}</TableCell>
                 <TableCell>{row.lastName}</TableCell>
                 <TableCell>{row.email}</TableCell>
