@@ -12,6 +12,7 @@ class PageLayout extends React.Component {
         <Parallax
           blur={1}
           bgImage={require('./images/MayThe4thBeRusso_Background Image_sean-o-406693-unsplash.jpg')}
+          bgImageStyle={{height: '100%', width: '100%'}}
           bgImageAlt={'Hawaiian Beach'}
           strength={100}
         >
