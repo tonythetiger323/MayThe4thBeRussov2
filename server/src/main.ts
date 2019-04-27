@@ -45,7 +45,7 @@ async function bootstrap() {
     session({
       secret: 'the force',
       resave: true,
-      saveUnitialized: true,
+      saveUnitialized: false,
       proxy: true
     })
   )
