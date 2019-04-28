@@ -23,7 +23,8 @@
     "object-literal-sort-keys": false,
     "no-console": false,
     "only-arrow-functions": false,
-    "jsx-no-lambda": false
+    "jsx-no-lambda": false,
+    "import/first": false
   },
   "linterOptions": {
     "exclude": [
