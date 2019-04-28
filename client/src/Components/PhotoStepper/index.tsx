@@ -46,7 +46,7 @@ const styles: any = (theme: Theme) => ({
   },
   img: {
     borderRadius: '25px',
-    height: 425,
+    height: '100%',
     width: '100%',
     position: 'relative',
     overflow: 'hidden',

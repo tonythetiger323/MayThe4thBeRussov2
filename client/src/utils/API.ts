@@ -23,7 +23,12 @@ export default {
   },
 
   submitMessage: (messageData: any) => {
-    console.log(`Axios is make a POST request to 'api/messages'`)
+    console.log(`Axios is making a POST request to 'api/messages'`)
     return axios.post('/api/messages', messageData)
+  },
+
+  getRsvps: () => {
+    console.log(`Axios is making a GET request to 'api/rsvps'`)
+    return axios.get('/api/rsvps')
   }
 }

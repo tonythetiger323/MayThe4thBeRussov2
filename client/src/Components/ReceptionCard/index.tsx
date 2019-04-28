@@ -24,7 +24,7 @@ const styles = {
     height: 450
   },
   mediaMobile: {
-    width: 375,
+    width: '100%',
     height: 200
   },
   cardContent: {
@@ -70,7 +70,7 @@ const ReceptionCard = (props: any) => {
         <Card className={classes.cardMobile}>
           <CardMedia
           className={classes.mediaMobile}
-          image='https://res.cloudinary.com/tonythetiger323/image/upload/v1555403575/MayThe4thBeRusso/Reception Page/Sanborn2.jpg'
+          image='https://res.cloudinary.com/tonythetiger323/image/upload/c_scale,w_414/v1555122501/MayThe4thBeRusso/Ceremony%20Page/waima%CC%83nalo_beach_park_HDR.jpg'
           title='Sanborn Country Park'
           />
           <div style={{height: 200, width: '100%'}}>
