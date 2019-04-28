@@ -11,8 +11,7 @@ The original MayThe4thBeRusso repository is for a project for my class which, I 
 [TypeScript](https://www.typescriptlang.org), [React](https://reactjs.org), [Nestjs](https://nestjs.com/), [MySQL](https://www.mysql.com/),
 [TypeORM](https://typeorm.io/),
 [Jest](https://jestjs.io/), [Enzyme](https://airbnb.io/enzyme/),
-[Circle-CI](https://circleci.com/), [CodeClimate Quality](https://codeclimate.com/),
-[git](https://git-scm.com/), [GitHub](https://github.com),
+[Circle-CI](https://circleci.com/), [git](https://git-scm.com/), [GitHub](https://github.com),
 [WorkingCopy](https://workingcopyapp.com/), & [Editorial](https://omz-software.com/editorial/)
 
 ## Credit/Thanks
