@@ -10,6 +10,7 @@ import { TextField } from 'material-ui-formik-components';
 import API from '../../utils/API'
 import { connect } from 'react-redux';
 import { changeIsAuthenticated } from '../../redux/actions/index'
+import { useSnackbar } from 'notistack'
 
 const mapDispatchToProps = (dispatch: any, ownProps?: any) => {
   return {
@@ -41,8 +42,9 @@ interface LoginCardProps{
 }
 
 class LoginCard extends React.Component<LoginCardProps, any> {
-  
+
   render(){
+    const { enqueueSnackbar } = useSnackbar();
     return(
       <Card>
         <CardHeader>Login</CardHeader>
@@ -50,13 +52,17 @@ class LoginCard extends React.Component<LoginCardProps, any> {
             initialValues={initialValues}
             validationSchema={loginValidationSchema}
             validateOnChange
-            onSubmit={async(values) => {
+            onSubmit={async(values, { resetForm }) => {
               console.log(`Axios is making a request to 'api/rsvps'`);
               const res = await API.loginUser(values);
               console.log(res)
               if(res.status === 200 ){
+                enqueueSnackbar('Login Successful', { variant: 'success', preventDuplicate: true, autoHideDuration: 5000 })
                 this.props.changeIsAuthenticated(res.data.email);
+                } else {
+                  enqueueSnackbar('Login Failed', { variant: 'error', preventDuplicate: true, autoHideDuration: 5000 })
                 }
+                resetForm()
             }}
           >
             <Form>
