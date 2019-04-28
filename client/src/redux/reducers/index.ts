@@ -1,10 +1,17 @@
-import { combineReducers } from 'redux';
-import { connectRouter } from 'connected-react-router';
-import login from './loginReducer';
+import { CHANGE_IS_AUTHENTICATED } from '../constants/action-types'
 
-const rootReducer = (history: any) => combineReducers({
-  router: connectRouter(history),
-  login
-});
+const initialState = {
+  users: []
+}
 
-export default rootReducer;
+export const rootReducer: any = (state: any = initialState, action: any) => {
+  switch (action.type) {
+    case CHANGE_IS_AUTHENTICATED:
+      console.log(action.payload)
+      return Object.assign({}, state, {
+        users: state.users.concat(action.payload)
+      });
+    default:
+      return state;
+  }
+}

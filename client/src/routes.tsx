@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import AppliedRoute from './Components/AppliedRoute'
+import ProtectedRoute from './Components/ProtectedRoute'
 import PageLayout from './Layouts/PageLayout'
 import Index from './Pages/Index'
 import TheirStory from './Pages/TheirStory'
@@ -26,7 +27,7 @@ export default () => {
         <AppliedRoute exact path='/guestbook' component={GuestBook} />
         <AppliedRoute exact path='/rsvp' component={Rsvp} />
         <AppliedRoute exact path='/login' component={Login}/>
-        <AppliedRoute exact path='/RsvpDashboard' component={RsvpDashboard}/>
+        <ProtectedRoute exact path='/RsvpDashboard' component={RsvpDashboard}/>
         <Route component={NotFound} />
       </Switch>
     </PageLayout>
