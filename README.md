@@ -1,6 +1,6 @@
 # MayThe4thBeRusso v 2.0
 
-[![CircleCI](https://circleci.com/gh/tonythetiger323/MayThe4thBeRussov2.svg?style=svg)](https://circleci.com/gh/tonythetiger323/MayThe4thBeRussov2)
+[![CircleCI](https://circleci.com/gh/tonythetiger323/MayThe4thBeRussov2.svg?style=svg)](https://circleci.com/gh/tonythetiger323/MayThe4thBeRussov2) [![Greenkeeper badge](https://badges.greenkeeper.io/tonythetiger323/MayThe4thBeRussov2.svg)](https://greenkeeper.io/)
 
 The original MayThe4thBeRusso repository is for a project for my class which, I have now completed and graduated from. MayThe4thBeRussov2 is now the real development of the actual wedding website that I am making for my best friend, Randy Russo and his beautiful and amazing fiance, Megan Bailey. I couldn't be prouder or happier to be able to create this site for them as their wedding gift.
 
