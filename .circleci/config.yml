@@ -20,10 +20,7 @@ jobs:
             chmod +x ./cc-test-reporter
       - run:
           name: Create test-results folder
-          command: |
-            cd client
-            mkdir test-results
-            chmod +x ./test-results
+          command: mkdir test-results
       - save_cache:
           paths:
             - /client/node_modules
