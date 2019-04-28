@@ -29,6 +29,7 @@ const Footer: React.FunctionComponent<FooterProps> = (props: FooterProps) => {
               &copy; {new Date().getFullYear()} Copyright:{' '}
               <Button style={{fontSize: 'x-small'}} href='https://www.tonygreeley.com' component={Link as any}>Tony Greeley</Button>
               <NavbarLink style={{fontSize: 'x-small'}} to='/login'>Login</NavbarLink>
+              <NavbarLink style={{fontSize: 'x-small'}} to='/rsvpdashboard'>Dashboard</NavbarLink>
           </span>
         </Grid>
       </Grid>

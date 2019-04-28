@@ -11,7 +11,7 @@ import API from '../../utils/API'
 import { connect } from 'react-redux';
 import { changeIsAuthenticated } from '../../redux/actions/index'
 
-const mapDispatchToProps = (dispatch: any) => {
+const mapDispatchToProps = (dispatch: any, ownProps?: any) => {
   return {
     changeIsAuthenticated: (payload: string) => dispatch(
       changeIsAuthenticated(payload)
@@ -55,8 +55,8 @@ class LoginCard extends React.Component<LoginCardProps, any> {
               const res = await API.loginUser(values);
               console.log(res)
               if(res.status === 200 ){
-                this.props.changeIsAuthenticated(res.data.email)
-              }
+                this.props.changeIsAuthenticated(res.data.email);
+                }
             }}
           >
             <Form>

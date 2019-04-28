@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { Route, Redirect, withRouter } from 'react-router-dom';
 
-const ProtectedRoute = ({ component: C, ...rest }: any) => (
+const ProtectedRoute = ({ users, component: C, ...rest }: any) => (
   <Route { ...rest } render={props => (
-    rest.users ? (
+    users.length > 0 ? (
       <C {...props} />
     ) : (
       <Redirect to={{
