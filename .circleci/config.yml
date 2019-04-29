@@ -12,15 +12,6 @@ jobs:
       - run:
           name: Setup Dependencies
           command: cd client && npm install
-      - run:
-          name: Setup Code Climate test-reporter
-          command: |
-            cd client
-            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-            chmod +x ./cc-test-reporter
-      - run:
-          name: Create test-results folder
-          command: mkdir test-results
       - save_cache:
           paths:
             - /client/node_modules
@@ -29,10 +20,8 @@ jobs:
           name: Run Test and Coverage
           command: |
             cd client
-            ./cc-test-reporter before-build
             npm run test:ci
-            ./cc-test-reporter after-build --exit-code $?
-      - store_test_results:
+            - store_test_results:
           path: test-results
       - run:
           name: Compile react build
