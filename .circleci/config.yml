@@ -21,8 +21,6 @@ jobs:
           command: |
             cd client
             npm run test:ci
-            - store_test_results:
-          path: test-results
       - run:
           name: Compile react build
           command: cd client && npm run build
