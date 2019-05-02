@@ -78,7 +78,7 @@ const CeremonyCard = (props: any) => {
             <Typography variant='h3' align='center' style={{ fontFamily: 'Oswald' }}>May 4th, 2019</Typography>
             <Typography variant='h4' align='center' style={{ fontFamily: 'Oswald' }}>Waimãnalo Beach Park</Typography>
             <Typography variant='h5' align='center' style={{ fontFamily: 'Oswald' }}>9:00am HST</Typography>
-            <Typography variant='body1' align='center' style={{ fontFamily: 'Oswald' }}>Check back on the day of the big event for a link to watch a live stream.</Typography>
+            <Typography variant='body1' align='center' style={{ fontFamily: 'Oswald' }}>Come back on the day of the big event and head to <Link href='https://www.facebook.com/randy.russo.12'>Randy's Facebook Page</Link> to watch the ceremony on Facebook live.</Typography>
           </CardContent>
         </Card>
       </Mobile>
