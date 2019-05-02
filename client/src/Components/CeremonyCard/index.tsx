@@ -7,6 +7,7 @@ import Map from '../Map'
 import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
 import Responsive from 'react-responsive'
+import Link from '@material-ui/core/Link'
 
 const Mobile = (props: any) => <Responsive {...props} maxWidth={667} />
 const Default = (props: any) => <Responsive {...props} minWidth={668}/>
@@ -18,7 +19,7 @@ const styles = (theme: any) => ({
   cardMobile: {
     width: '100%'
   },
-  
+
   media: {
     width: 900,
     height: 450,
@@ -56,7 +57,8 @@ const CeremonyCard = (props: any) => {
             <Typography variant='h3' align='center' style={{ fontFamily: 'Oswald' }}>May 4th, 2019</Typography>
             <Typography variant='h4' align='center' style={{ fontFamily: 'Oswald' }}>Waimãnalo Beach Park</Typography>
             <Typography variant='h5' align='center' style={{ fontFamily: 'Oswald' }}>9:00am HST</Typography>
-            <Typography variant='body1' align='center' style={{ fontFamily: 'Oswald' }}>Check back on the day of the big event for a link to watch a live stream.</Typography>
+            <Typography variant='body1' align='center' style={{ fontFamily: 'Oswald' }}>Check back May 4th and follow the link below to Randy's Facebook where the ceremony will be live streamed!</Typography>
+            <Link TypographyClasses='body1' style={{fontFamily: 'Oswald' }}href='https://www.facebook.com/randy.russo.12'/>
           </CardContent>
         </Card>
       </Default>
