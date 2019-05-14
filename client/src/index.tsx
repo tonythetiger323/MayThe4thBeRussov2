@@ -9,14 +9,22 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import * as Sentry from '@sentry/browser';
+import ErrorBoundary from './Components/ErrorBoundary';
+
+Sentry.init({
+  dsn: process.env.REACT_APP_SENTRY_DSN
+});
 
 ReactDOM.render(
   <Provider store={store}>
-    <SnackbarProvider>
-      <Router>
-        <App />
-      </Router>
-    </SnackbarProvider>
+    <ErrorBoundary>
+      <SnackbarProvider>
+        <Router>
+          <App />
+        </Router>
+      </SnackbarProvider>
+    </ErrorBoundary>
   </Provider>,
   document.getElementById('root')
 );
