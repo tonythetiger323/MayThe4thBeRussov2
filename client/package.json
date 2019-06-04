@@ -68,7 +68,7 @@
     "@types/webpack": "^4.4.27",
     "@types/yup": "^0.26.12",
     "coveralls": "^3.0.3",
-    "enzyme": "3.9.0",
+    "enzyme": "3.10.0",
     "enzyme-adapter-react-16": "^1.11.2",
     "enzyme-to-json": "^3.3.5",
     "jest-junit": "^6.3.0",
