@@ -26,42 +26,42 @@ interface MessageDialogState {
 
 class MessageDialog extends React.Component<any, MessageDialogState> {
   constructor(props: any) {
-    super(props);
+    super(props)
     this.state = {
       open: false
-      };
+    }
   }
 
   handleClickOpen = () => {
-    this.setState({ open: true });
-  };
+    this.setState({ open: true })
+  }
 
   handleClose = () => {
-    this.setState({ open: false });
-  };
+    this.setState({ open: false })
+  }
 
   render() {
     const reloadPage = () => {
-      window.location.reload();
+      window.location.reload()
     }
 
     return (
       <div>
-        <Grid container direction='column' alignItems='center'>
+        <Grid container direction="column" alignItems="center">
           <Button
-            style={{fontFamily: 'Oswald'}}
-            variant='outlined'
-            size='small'
+            style={{ fontFamily: 'Oswald' }}
+            variant="outlined"
+            size="small"
             onClick={this.handleClickOpen}
           >
-          Post a Message
+            Post a Message
           </Button>
           <Dialog
             open={this.state.open}
             onClose={this.handleClose}
-            aria-labelledby='login-form-dialog-title'
+            aria-labelledby="login-form-dialog-title"
           >
-            <DialogTitle id='login-form-dialog-title'>
+            <DialogTitle id="login-form-dialog-title">
               Post a Message
             </DialogTitle>
             <DialogContent>
@@ -71,30 +71,41 @@ class MessageDialog extends React.Component<any, MessageDialogState> {
                 validateOnChange
                 onSubmit={async (values, { resetForm }) => {
                   const res = await API.submitMessage(values)
-                  if(res.status === 200){this.props.enqueueSnackbar('Message Posted!', { variant: 'success', preventDuplicate: true, autoHideDuration: 5000 })} else {
-                  {this.props.enqueueSnackbar('Message Failed to Post!', {variant: 'error', preventDuplicate: true, autoHideDuration: 5000})}
-                  resetForm();
-                  reloadPage();
-                }}}
+                  if (res.status === 200) {
+                    this.props.enqueueSnackbar('Message Posted!', {
+                      variant: 'success',
+                      preventDuplicate: true,
+                      autoHideDuration: 5000
+                    })
+                  } else {
+                    this.props.enqueueSnackbar('Message Failed to Post!', {
+                      variant: 'error',
+                      preventDuplicate: true,
+                      autoHideDuration: 5000
+                    })
+                    resetForm()
+                    reloadPage()
+                  }
+                }}
               >
                 <Form>
                   <Field
                     required
-                    name='name'
-                    label='Name'
-                    type='text'
-                    component={ TextField }
+                    name="name"
+                    label="Name"
+                    type="text"
+                    component={TextField}
                   />
                   <Field
                     required
-                    name='message'
-                    label='Message'
+                    name="message"
+                    label="Message"
                     multiline
-                    rowsMax='5'
-                    component={ TextField }
+                    rowsMax="5"
+                    component={TextField}
                   />
                   <Button onClick={this.handleClose}>Cancel</Button>
-                  <Button onClick={this.handleClose} type='submit'>
+                  <Button onClick={this.handleClose} type="submit">
                     Submit
                   </Button>
                 </Form>
@@ -103,7 +114,7 @@ class MessageDialog extends React.Component<any, MessageDialogState> {
           </Dialog>
         </Grid>
       </div>
-    );
+    )
   }
 }
 

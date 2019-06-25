@@ -1,30 +1,30 @@
-import React from 'react';
-import * as Sentry from '@sentry/browser';
+import React from 'react'
+import * as Sentry from '@sentry/browser'
 
 interface ErrorBoundaryState {
-  hasError: boolean,
-  error: string | undefined,
+  hasError: boolean
+  error: string | undefined
   eventId: string | undefined
 }
 
 class ErrorBoundary extends React.Component<any, ErrorBoundaryState> {
   constructor(props: any) {
-    super(props);
-    this.state = { hasError: false, error: undefined, eventId: undefined };
+    super(props)
+    this.state = { hasError: false, error: undefined, eventId: undefined }
   }
 
   static getDerivedStateFromError(error: any) {
     // Update state so the next render will show the fallback UI.
-    return { hasError: true };
+    return { hasError: true }
   }
 
   componentDidCatch(error: any, info: any) {
     // You can also log the error to an error reporting service
-    this.setState({ error });
+    this.setState({ error })
     Sentry.withScope(scope => {
-      scope.setExtras(info);
-      const eventId = Sentry.captureException(error);
-      this.setState({ eventId });
+      scope.setExtras(info)
+      const eventId = Sentry.captureException(error)
+      this.setState({ eventId })
     })
   }
 
@@ -33,15 +33,21 @@ class ErrorBoundary extends React.Component<any, ErrorBoundaryState> {
       // You can render any custom fallback UI
       return (
         <div>
-        <h1>Something went wrong.</h1>
-        <a onClick={() => Sentry.showReportDialog({ eventId: this.state.eventId })}>Report Feedback</a>
+          <h1>Something went wrong.</h1>
+          //* eslint-disable-next-line *//
+          <a
+            onClick={() =>
+              Sentry.showReportDialog({ eventId: this.state.eventId })
+            }
+          >
+            Report Feedback
+          </a>
         </div>
-      );
+      )
     } else {
       return this.props.children
     }
-
   }
 }
 
-export default ErrorBoundary;
+export default ErrorBoundary
