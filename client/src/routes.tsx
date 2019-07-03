@@ -12,22 +12,24 @@ import Rsvp from './Pages/Rsvp'
 import Registry from './Pages/Registry'
 import GuestBook from './Pages/GuestBook'
 import Login from './Pages/Login'
-import RsvpDashboard from './Pages/RsvpDashboard';
+import RsvpDashboard from './Pages/RsvpDashboard'
+import { ImplicitCallback } from '@okta/okta-react'
 
 // component that will handle HTML routing
 export default () => {
   return (
     <PageLayout>
       <Switch>
-        <AppliedRoute exact path='/' component={Index} />
-        <AppliedRoute exact path='/theirstory' component={TheirStory} />
-        <AppliedRoute exact path='/ceremony' component={Ceremony} />
-        <AppliedRoute exact path='/reception' component={Reception} />
-        <AppliedRoute exact path='/registry' component={Registry} />
-        <AppliedRoute exact path='/guestbook' component={GuestBook} />
-        <AppliedRoute exact path='/rsvp' component={Rsvp} />
-        <AppliedRoute exact path='/login' component={Login}/>
-        <ProtectedRoute exact path='/RsvpDashboard' component={RsvpDashboard}/>
+        <AppliedRoute exact path="/" component={Index} />
+        <AppliedRoute path="/implicit/callback" component={ImplicitCallback} />
+        <AppliedRoute exact path="/theirstory" component={TheirStory} />
+        <AppliedRoute exact path="/ceremony" component={Ceremony} />
+        <AppliedRoute exact path="/reception" component={Reception} />
+        <AppliedRoute exact path="/registry" component={Registry} />
+        <AppliedRoute exact path="/guestbook" component={GuestBook} />
+        <AppliedRoute exact path="/rsvp" component={Rsvp} />
+        <AppliedRoute exact path="/login" component={Login} />
+        <ProtectedRoute exact path="/RsvpDashboard" component={RsvpDashboard} />
         <Route component={NotFound} />
       </Switch>
     </PageLayout>
