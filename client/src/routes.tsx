@@ -13,7 +13,6 @@ import Registry from './Pages/Registry'
 import GuestBook from './Pages/GuestBook'
 import Login from './Pages/Login'
 import RsvpDashboard from './Pages/RsvpDashboard'
-import { ImplicitCallback } from '@okta/okta-react'
 
 // component that will handle HTML routing
 export default () => {
@@ -21,7 +20,6 @@ export default () => {
     <PageLayout>
       <Switch>
         <AppliedRoute exact path="/" component={Index} />
-        <AppliedRoute path="/implicit/callback" component={ImplicitCallback} />
         <AppliedRoute exact path="/theirstory" component={TheirStory} />
         <AppliedRoute exact path="/ceremony" component={Ceremony} />
         <AppliedRoute exact path="/reception" component={Reception} />

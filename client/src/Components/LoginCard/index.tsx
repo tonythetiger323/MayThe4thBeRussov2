@@ -7,13 +7,13 @@ import CardContent from '@material-ui/core/CardContent'
 import Button from '@material-ui/core/Button'
 import { Formik, Form, Field } from 'formik'
 import { TextField } from 'material-ui-formik-components'
-import API from '../../utils/API'
-import { useSnackbar } from 'notistack'
+// import { useSnackbar } from 'notistack'
+// import API from '../../utils/API'
+import { connect } from 'react-redux'
+import { loginUser } from '../../redux/actions'
 
 const loginValidationSchema = Yup.object({
-  email: Yup.string()
-    .email('Enter a valid email')
-    .required('Email is required'),
+  username: Yup.string().required('Email is required'),
   password: Yup.string()
     .matches(
       /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}$/,
@@ -23,70 +23,73 @@ const loginValidationSchema = Yup.object({
 })
 
 const initialValues = {
-  email: '',
+  username: '',
   password: ''
 }
 
-interface LoginCardProps {
-  changeIsAuthenticated: any
+const LoginCard = (props: any) => {
+  // const { enqueueSnackbar } = useSnackbar()
+  return (
+    <Card>
+      <CardHeader>Login</CardHeader>
+      <Formik
+        initialValues={initialValues}
+        validationSchema={loginValidationSchema}
+        validateOnChange
+        onSubmit={props.loginUser}
+        // onSubmit={async (values, { resetForm }) => {
+        //   console.log(`Axios is making a request to 'api/auth/login'`)
+        //   const res = await API.loginUser(values)
+        //   console.log(res)
+        //   if (res.status === 201) {
+        //     enqueueSnackbar('Login Successful', {
+        //       variant: 'success',
+        //       preventDuplicate: true,
+        //       autoHideDuration: 5000
+        //     })
+        //     props.updateAuth(values.username)
+        //   } else {
+        //     enqueueSnackbar('Login Failed', {
+        //       variant: 'error',
+        //       preventDuplicate: true,
+        //       autoHideDuration: 5000
+        //     })
+        //   }
+        //   resetForm()
+        // }}
+      >
+        <Form>
+          <CardContent>
+            <Field
+              required
+              name="username"
+              label="Username"
+              type="text"
+              component={TextField}
+            />
+            <Field
+              required
+              name="password"
+              label="Password"
+              type="password"
+              component={TextField}
+            />
+            <CardActions>
+              <Button type="submit">Login</Button>
+            </CardActions>
+          </CardContent>
+        </Form>
+      </Formik>
+    </Card>
+  )
 }
 
-class LoginCard extends React.Component<LoginCardProps, any> {
-  render() {
-    const { enqueueSnackbar } = useSnackbar()
-    return (
-      <Card>
-        <CardHeader>Login</CardHeader>
-        <Formik
-          initialValues={initialValues}
-          validationSchema={loginValidationSchema}
-          validateOnChange
-          onSubmit={async (values, { resetForm }) => {
-            console.log(`Axios is making a request to 'api/rsvps'`)
-            const res = await API.loginUser(values)
-            console.log(res)
-            if (res.status === 200) {
-              enqueueSnackbar('Login Successful', {
-                variant: 'success',
-                preventDuplicate: true,
-                autoHideDuration: 5000
-              })
-              this.props.changeIsAuthenticated(res.data.email)
-            } else {
-              enqueueSnackbar('Login Failed', {
-                variant: 'error',
-                preventDuplicate: true,
-                autoHideDuration: 5000
-              })
-            }
-            resetForm()
-          }}
-        >
-          <Form>
-            <CardContent>
-              <Field
-                required
-                name="email"
-                label="Email"
-                type="email"
-                component={TextField}
-              />
-              <Field
-                required
-                name="password"
-                label="Password"
-                type="password"
-                component={TextField}
-              />
-              <CardActions>
-                <Button type="submit">Login</Button>
-              </CardActions>
-            </CardContent>
-          </Form>
-        </Formik>
-      </Card>
-    )
-  }
-}
+const mapStateToProps = (state: any) => ({
+  isAuthenticated: state.isAuthenticated,
+  user: state.user
+})
 
-export default LoginCard
+export default connect(
+  mapStateToProps,
+  { loginUser }
+)(LoginCard)
