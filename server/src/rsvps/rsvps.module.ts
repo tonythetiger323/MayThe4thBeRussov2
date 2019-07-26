@@ -1,14 +1,12 @@
 import { Module } from '@nestjs/common';
-import { TypeOrmModule } from '@nestjs/typeorm'
-import { UsersModule } from '../users/users.module'
-import { Rsvp } from './rsvp.entity'
-import { RsvpsController } from './rsvps.controller';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { Rsvp } from './rsvp.entity';
 import { RsvpsService } from './rsvps.service';
-import { UsersService } from '../users/users.service'
+import { RsvpsController } from './rsvps.controller';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([Rsvp]), UsersModule],
-  controllers: [RsvpsController],
-  providers: [RsvpsService, UsersService]
+  imports: [TypeOrmModule.forFeature([Rsvp])],
+  providers: [RsvpsService],
+  controllers: [RsvpsController]
 })
 export class RsvpsModule {}

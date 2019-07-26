@@ -1,43 +1,25 @@
-import { Controller, Get, Post, Body, Put, Param, Delete, HttpStatus, Res } from '@nestjs/common';
+import { Controller, Post, Res, Body, HttpStatus } from '@nestjs/common';
 import { UsersService } from './users.service';
-import { User } from './user.entity';
 import { Response } from 'express';
+import { User } from './user.entity';
 
-@Controller('api/users')
+@Controller('users')
 export class UsersController {
   constructor(private usersService: UsersService) {}
 
-  @Get()
-  index(): Promise<User[]> {
-    return this.usersService.findAll()
-  }
-
   @Post()
-  async create(@Res() res: Response, @Body() userData: User): Promise<any> {
-    console.log(`Request made to '/api/user/'`);
-    if (!(userData && userData.email && userData.password)) {
-      return res.status(HttpStatus.FORBIDDEN).json({ message: 'Email and password are required' });
+  async createUser(@Res() res: Response, @Body() userData: User): Promise<any> {
+    if(!(userData && userData.username && userData.password)) {
+      return res.status(HttpStatus.FORBIDDEN).json({ message: 'Email and password are required!'});
     };
 
-    let user = await this.usersService.getUserByEmail(userData.email);
+    let user = await this.usersService.findOne(userData.username);
 
     if (user) {
-      return res.status(HttpStatus.FORBIDDEN).json({ message: 'Email exists' });
+      return res.status(HttpStatus.FORBIDDEN).json({ message: 'Username exists!'});
     } else {
-      user = await this.usersService.create(userData);
+      user = await this.usersService.createUser(userData);
       return res.status(HttpStatus.OK).json(user);
-    };
-  }
-
-  @Put(':id/update')
-  async update(@Param('id') id, @Body() userData: User): Promise<any> {
-    userData.id = String(id);
-    console.log(`Update user with id ${userData.id}`);
-    return this.usersService.update(userData);
-  }
-
-  @Delete(':id/delete')
-  async delete(@Param('id') id): Promise<any> {
-    return this.usersService.delete(id);
+    }
   }
 }

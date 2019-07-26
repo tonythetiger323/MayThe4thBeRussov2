@@ -3,7 +3,7 @@ import { MessagesService } from './messages.service';
 import { Message } from './message.entity'
 import { Response } from 'express'
 
-@Controller('api/messages')
+@Controller('messages')
 export class MessagesController {
   constructor( private messagesService: MessagesService) {}
 
@@ -13,16 +13,15 @@ export class MessagesController {
     if (!(messageData && messageData.name && messageData.message)) {
       return res.status(HttpStatus.FORBIDDEN).json({ message: 'Name and message are required'});
     };
-
+  
     const message = await this.messagesService.create(messageData);
     return res.status(HttpStatus.OK).json(message)
   }
-
+  
   @Get()
   async findAll(@Res() res: Response, @Body() messageData: Message): Promise<any> {
     console.log(`Get request made to 'api/messages'`)
     const messages = await this.messagesService.findAll();
     return res.status(HttpStatus.OK).json(messages)
-  }
-
+  } 
 }

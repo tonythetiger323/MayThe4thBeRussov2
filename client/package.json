@@ -64,7 +64,6 @@
     "@types/react-test-renderer": "^16.8.1",
     "@types/redux": "^3.6.0",
     "@types/redux-devtools": "^3.0.46",
-    "@types/redux-saga": "^0.10.5",
     "@types/webpack": "^4.4.27",
     "@types/yup": "^0.26.12",
     "coveralls": "^3.0.3",
@@ -78,7 +77,6 @@
     "redux-devtools": "^3.5.0",
     "redux-devtools-extension": "^2.13.8",
     "redux-mock-store": "^1.5.3",
-    "redux-saga-devtools": "^0.3.0",
     "remark-cli": "^6.0.1",
     "remark-lint": "^6.0.4",
     "remark-preset-lint-recommended": "^3.0.2",
@@ -93,13 +91,11 @@
   "dependencies": {
     "@material-ui/core": "^3.9.2",
     "@material-ui/icons": "^3.0.2",
-    "@okta/okta-react": "^1.2.0",
     "@sentry/browser": "^5.2.1",
     "@types/google-map-react": "^0.23.11",
     "axios": "^0.18.0",
     "classnames": "^2.2.6",
     "cloudinary-react": "^1.1.0",
-    "connected-react-router": "^6.4.0",
     "formik": "^1.5.1",
     "google-map-react": "^1.1.4",
     "history": "^4.9.0",
@@ -120,7 +116,6 @@
     "react-swipeable-views": "^0.13.1",
     "react-swipeable-views-utils": "^0.13.1",
     "redux": "^4.0.1",
-    "redux-saga": "^1.0.2",
     "typescript": "^3.4.1",
     "yup": "^0.27.0"
   }

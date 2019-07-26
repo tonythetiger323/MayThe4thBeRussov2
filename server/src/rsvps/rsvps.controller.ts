@@ -1,9 +1,9 @@
-import { Controller, Post, Res, Body, HttpStatus, Param, Get } from '@nestjs/common';
-import { RsvpsService } from './rsvps.service'
-import { Rsvp } from './rsvp.entity'
-import { Response } from 'express'
+import { Controller, Post, Res, Body, HttpStatus, Param, Get  } from '@nestjs/common';
+import { RsvpsService } from './rsvps.service';
+import { Rsvp } from './rsvp.entity';
+import { Response } from 'express';
 
-@Controller('api/rsvps')
+@Controller('rsvps')
 export class RsvpsController {
   constructor( private rsvpsService: RsvpsService) {}
 
@@ -15,7 +15,7 @@ export class RsvpsController {
     const rsvp = await this.rsvpsService.create(rsvpData);
     return res.status(HttpStatus.OK).json(rsvp)
   }
-
+  
   @Get()
   async findAll(@Res() res: Response, @Body() rsvpData: Rsvp): Promise<any> {
     console.log(`Get request made to 'api/rsvp'`)

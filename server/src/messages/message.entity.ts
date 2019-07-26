@@ -1,12 +1,12 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
-import { IsUUID, IsAlpha, IsNotEmpty, IsEmail, IsAlphanumeric } from 'class-validator';
+import { IsInt, IsAlpha, IsNotEmpty, IsEmail, IsAlphanumeric, IsIP } from 'class-validator';
 
 @Entity()
 export class Message {
 
-  @PrimaryGeneratedColumn('uuid')
-  @IsUUID()
-  id: string;
+  @PrimaryGeneratedColumn()
+  @IsInt()
+  id: number;
 
   @Column('varchar', { length: 255 })
   @IsAlpha()

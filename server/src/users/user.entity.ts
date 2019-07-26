@@ -1,18 +1,20 @@
-import { Entity, Column, PrimaryGeneratedColumn, OneToOne} from 'typeorm';
-import { IsEmail, Matches, IsUUID } from 'class-validator';
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { IsUUID, IsAlpha, IsNotEmpty, Matches } from 'class-validator';
 
 @Entity()
 export class User {
+  
   @PrimaryGeneratedColumn('uuid')
   @IsUUID()
-  id: string
+  id: string;
 
-  @Column('varchar', {length: 255})
-  @IsEmail()
-  email: string
+  @Column()
+  @IsAlpha()
+  @IsNotEmpty()
+  username: string;
 
-  @Column('varchar', {length: 255})
-  @Matches((/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}$/))
-  password: string
-
-  }
+  @Column()
+  @Matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}$/)
+  @IsNotEmpty()
+  password: string;
+}
