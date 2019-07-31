@@ -1,75 +1,17 @@
-import {
-  LOGIN_REQUEST,
-  LOGIN_SUCCESS,
-  LOGIN_FAILURE,
-  LOGOUT_REQUEST,
-  LOGOUT_SUCCESS
-} from '../constants'
-import API from '../../utils/API'
+import { LOGIN_USER, LOGOUT_USER } from '../constants'
 
-const requestLogin = (userData: any) => {
+export const loginUser = (username: any) => {
   return {
-    type: LOGIN_REQUEST,
-    isFetching: true,
-    isAuthenticated: false,
-    userData
-  }
-}
-
-const receiveLogin = (user: any) => {
-  return {
-    type: LOGIN_SUCCESS,
-    isFetching: false,
+    type: LOGIN_USER,
     isAuthenticated: true,
-    user: user.user,
-    accessToken: user.access_token
+    user: username
   }
 }
 
-const loginError = () => {
+export const logoutUser = () => {
   return {
-    type: LOGIN_FAILURE,
-    isFetching: false,
-    isAuthenticated: false
-  }
-}
-
-export function loginUser(userData: any) {
-  return async (dispatch: any) => {
-    dispatch(requestLogin(userData))
-
-    try {
-      const res = await API.loginUser(userData)
-      console.log(res)
-      sessionStorage.setItem('access_token', res.data.access_token)
-      dispatch(receiveLogin(res.data))
-    } catch (error) {
-      dispatch(loginError())
-      console.log(error)
-    }
-  }
-}
-
-const requestLogout = () => {
-  return {
-    type: LOGOUT_REQUEST,
-    isFetching: true,
-    isAuthenticated: true
-  }
-}
-
-const receiveLogout = () => {
-  return {
-    type: LOGOUT_SUCCESS,
-    isFetching: false,
-    isAuthenticated: false
-  }
-}
-
-export function logoutUser() {
-  return (dispatch: any) => {
-    dispatch(requestLogout())
-    sessionStorage.removeItem('access_token')
-    dispatch(receiveLogout)
+    type: LOGOUT_USER,
+    isAuthenticated: false,
+    user: null
   }
 }

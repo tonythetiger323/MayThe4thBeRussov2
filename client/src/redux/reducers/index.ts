@@ -1,37 +1,22 @@
-import {
-  LOGIN_REQUEST,
-  LOGIN_SUCCESS,
-  LOGIN_FAILURE,
-  LOGOUT_SUCCESS
-} from '../constants'
+import { LOGIN_USER, LOGOUT_USER } from '../constants'
 
 const initialState = {
-  isFetching: false,
-  isAuthenticated: localStorage.getItem('access_token') ? true : false
+  isAuthenticated: false,
+  user: null
 }
 
 export default function rootReducer(state = initialState, action: any) {
+  console.log(action)
   switch (action.type) {
-    case LOGIN_REQUEST:
+    case LOGIN_USER:
       return Object.assign({}, state, {
-        isFetching: true,
+        isAuthenticated: true,
+        user: action.user
+      })
+    case LOGOUT_USER:
+      return Object.assign({}, state, {
         isAuthenticated: false,
-        user: action.userData
-      })
-    case LOGIN_SUCCESS:
-      return Object.assign({}, state, {
-        isFetching: false,
-        isAuthenticated: true
-      })
-    case LOGIN_FAILURE:
-      return Object.assign({}, state, {
-        isFetching: false,
-        isAuthenticated: false
-      })
-    case LOGOUT_SUCCESS:
-      return Object.assign({}, state, {
-        isFetching: true,
-        isAuthenticated: false
+        user: null
       })
     default:
       return state

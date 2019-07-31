@@ -7,10 +7,11 @@ import CardContent from '@material-ui/core/CardContent'
 import Button from '@material-ui/core/Button'
 import { Formik, Form, Field } from 'formik'
 import { TextField } from 'material-ui-formik-components'
-// import { useSnackbar } from 'notistack'
-// import API from '../../utils/API'
+import { useSnackbar } from 'notistack'
+import API from '../../utils/API'
 import { connect } from 'react-redux'
 import { loginUser } from '../../redux/actions'
+import history from '../../history'
 
 const loginValidationSchema = Yup.object({
   username: Yup.string().required('Email is required'),
@@ -28,7 +29,7 @@ const initialValues = {
 }
 
 const LoginCard = (props: any) => {
-  // const { enqueueSnackbar } = useSnackbar()
+  const { enqueueSnackbar } = useSnackbar()
   return (
     <Card>
       <CardHeader>Login</CardHeader>
@@ -36,27 +37,29 @@ const LoginCard = (props: any) => {
         initialValues={initialValues}
         validationSchema={loginValidationSchema}
         validateOnChange
-        onSubmit={props.loginUser}
-        // onSubmit={async (values, { resetForm }) => {
-        //   console.log(`Axios is making a request to 'api/auth/login'`)
-        //   const res = await API.loginUser(values)
-        //   console.log(res)
-        //   if (res.status === 201) {
-        //     enqueueSnackbar('Login Successful', {
-        //       variant: 'success',
-        //       preventDuplicate: true,
-        //       autoHideDuration: 5000
-        //     })
-        //     props.updateAuth(values.username)
-        //   } else {
-        //     enqueueSnackbar('Login Failed', {
-        //       variant: 'error',
-        //       preventDuplicate: true,
-        //       autoHideDuration: 5000
-        //     })
-        //   }
-        //   resetForm()
-        // }}
+        onSubmit={async (values, { resetForm }) => {
+          console.log(`Axios is making a request to 'api/auth/login'`)
+          const res = await API.loginUser(values)
+          console.log(res)
+          if (res.status === 201) {
+            enqueueSnackbar('Login Successful', {
+              variant: 'success',
+              preventDuplicate: true,
+              autoHideDuration: 5000
+            })
+
+            props.loginUser(res.data.user)
+            localStorage.setItem('access_token', res.data.access_token)
+            history.push('/rsvpdashboard')
+          } else {
+            enqueueSnackbar('Login Failed', {
+              variant: 'error',
+              preventDuplicate: true,
+              autoHideDuration: 5000
+            })
+          }
+          resetForm()
+        }}
       >
         <Form>
           <CardContent>

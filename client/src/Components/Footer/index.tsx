@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button'
 import NavbarLink from '../NavbarLink'
 import { connect } from 'react-redux'
 import { logoutUser } from '../../redux/actions'
+import history from '../../history'
 
 const styles = (theme: any) => ({
   root: {
@@ -45,7 +46,12 @@ const Footer: React.FunctionComponent<FooterProps> = (props: FooterProps) => {
             )}
             {isAuthenticated && (
               <div>
-                <Button style={{ fontSize: 'x-amil.' }} onClick={logoutUser}>
+                <Button
+                  style={{ fontSize: 'x-small' }}
+                  onClick={logoutUser()
+                    .then(localStorage.removeItem('access_token'))
+                    .then(history.push('/index'))}
+                >
                   Logout
                 </Button>
                 <NavbarLink style={{ fontSize: 'x-small' }} to="/rsvpdashboard">
