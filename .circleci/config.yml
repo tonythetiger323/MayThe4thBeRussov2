@@ -20,13 +20,6 @@ jobs:
           paths:
             - ~/.cache/yarn
           key: yarn-packages-{{ checksum "./client/yarn.lock" }}
-
-      - run:
-          name: Make directory to store test results
-          command: mkdir test-results
-      - run:
-          name: Make directory to store test results from jest
-          command: mkdir test-results/jest
       - run: # run tests
           name: Run Test and Coverage
           command: |
