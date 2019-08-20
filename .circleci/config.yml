@@ -22,14 +22,14 @@ jobs:
           key: yarn-packages-{{ checksum "./client/yarn.lock" }}
       - run:
           name: Make coverage directory for test results
-          command: cd client && mkdir coverage
+          command: cd client && mkdir client-test-results
       - run: # run tests
           name: Run Test and Coverage
           command: |
             cd client
             yarn run test:ci
       - store_test_results:
-          path: ~/client/coverage
+          path: ~/client/client-test-results
       - run:
           name: Compile react build
           command: cd client && yarn run build

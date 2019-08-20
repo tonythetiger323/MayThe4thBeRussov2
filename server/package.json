@@ -43,8 +43,30 @@
     "test:e2e": "nyc jest --config ./test/jest-e2e.json"
   },
   "heroku-run-build-script": true,
+  "jest": {
+    "displayName": "Server",
+    "rootDir": "./",
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "./coverage",
+    "testEnvironment": "node",
+    "reporters": [
+      "default",
+      "jest-junit"
+    ],
+    "testResultsProcessor": "jest-junit"
+  },
   "jest-junit": {
-    "JEST_JUNIT_OUTPUT": "./test-results/jest"
+    "suiteName": "Server tests",
+    "outputDirectory": "./server-test-results",
+    "outputName": "./server-test-results.xml"
   },
   "dependencies": {
     "@nestjs/common": "^6.0.0",
