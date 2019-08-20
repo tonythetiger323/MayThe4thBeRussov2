@@ -7,7 +7,6 @@ import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
 import Responsive from 'react-responsive'
 import Link from '@material-ui/core/Link'
-require('dotenv').config()
 
 const Mobile = (props: any) => <Responsive {...props} maxWidth={667} />
 const Default = (props: any) => <Responsive {...props} minWidth={668} />

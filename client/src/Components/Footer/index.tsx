@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { withStyles } from '@material-ui/core/styles'
+import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import Link from '@material-ui/core/Link'
 import Button from '@material-ui/core/Button'
@@ -8,23 +8,25 @@ import { connect } from 'react-redux'
 import { logoutUser } from '../../redux/actions'
 import history from '../../history'
 
-const styles = (theme: any) => ({
-  root: {
-    fontFamily: 'Oxygen',
-    ...theme.mixins.gutters(),
-    paddingTop: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit * 2
-  }
-})
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      fontFamily: 'Oxygen',
+      ...theme.mixins.gutters(),
+      paddingTop: theme.spacing(2),
+      paddingBottom: theme.spacing(2)
+    }
+  })
+)
 
 interface FooterProps {
-  classes: any
   isAuthenticated: boolean
   logoutUser: any
 }
 
 const Footer: React.FunctionComponent<FooterProps> = (props: FooterProps) => {
-  const { classes, isAuthenticated, logoutUser } = props
+  const classes = useStyles()
+  const { isAuthenticated, logoutUser } = props
 
   return (
     <div className={classes.root}>
@@ -70,8 +72,7 @@ const mapStateToProps = (state: any) => ({
   isAuthenticated: state.isAuthenticated,
   user: state.user
 })
-const StyledFooter = withStyles(styles)(Footer)
 export default connect(
   mapStateToProps,
   { logoutUser }
-)(StyledFooter)
+)(Footer)

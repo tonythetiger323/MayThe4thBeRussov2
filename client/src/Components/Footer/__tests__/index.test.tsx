@@ -7,7 +7,8 @@ import Paper from '@material-ui/core/Paper'
 let wrapper: any
 let shallowMui: any
 describe('Footer Component', () => {
-  beforeEach(() => (wrapper = shallow(<Footer />)))
+  const props = { isAuthenticated: false, logoutUser: '', user: 'test' }
+  beforeEach(() => (wrapper = shallow(<Footer {...props} />)))
 
   it('should render correctly', () => {
     expect(wrapper).toMatchSnapshot()

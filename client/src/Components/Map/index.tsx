@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import GoogleMapReact, { Coords } from 'google-map-react'
-require('dotenv').config()
 
 const Marker = ({ text }: any) => {
   return (

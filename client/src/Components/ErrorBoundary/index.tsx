@@ -35,13 +35,13 @@ class ErrorBoundary extends React.Component<any, ErrorBoundaryState> {
         <div>
           <h1>Something went wrong.</h1>
           //* eslint-disable-next-line *//
-          <a
+          <button
             onClick={() =>
               Sentry.showReportDialog({ eventId: this.state.eventId })
             }
           >
             Report Feedback
-          </a>
+          </button>
         </div>
       )
     } else {

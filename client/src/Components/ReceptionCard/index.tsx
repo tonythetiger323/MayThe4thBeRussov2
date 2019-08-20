@@ -7,7 +7,6 @@ import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
 import NavbarLink from '../NavbarLink'
 import Responsive from 'react-responsive'
-require('dotenv').config()
 
 const Mobile = (props: any) => <Responsive {...props} maxWidth={667} />
 const Default = (props: any) => <Responsive {...props} minWidth={668} />
@@ -49,7 +48,7 @@ const ReceptionCard = (props: any) => {
               zoom={11}
               lat={37.2354}
               lng={-122.0627}
-              text={'🔘 Sanborn County Park'}
+              text={'Sanborn County Park'}
             />
           </div>
           <CardContent className={classes.cardContent}>

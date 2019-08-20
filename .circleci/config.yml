@@ -5,22 +5,26 @@ jobs:
       - image: circleci/node:10
     steps:
       - checkout
+      - run:
+          name: Install yarn package manager
+          command: curl -o- -L https://yarnpkg.com/install.sh | bash
       - restore_cache: # special step to restore the dependency cache
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
+            - yarn-packages-{{ checksum "yarn.lock" }}
+            - yarn-packages-
       - run:
-          name: Setup Dependencies
-          command: cd client && npm install
+          name: Install Dependencies
+          command: cd client && yarn install --frozen-lockfile
       - save_cache:
+          name: Save Yarn Package Cache
           paths:
-            - /client/node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+            - ~/.cache/yarn
+          key: yarn-packages-{{ checksum "yarn.lock" }}
       - run: # run tests
           name: Run Test and Coverage
           command: |
             cd client
-            npm run test:ci
+            yarn run test:ci
       - run:
           name: Compile react build
-          command: cd client && npm run build
+          command: cd client && yarn run build
