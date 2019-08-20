@@ -19,7 +19,7 @@ module.exports = {
       }
     ]
   ],
-  setupFiles: ['client/src/setupTests.ts'],
+  setupFiles: ['/src/setupTests.ts'],
   snapshotSerializers: ['enzyme-to-json'],
   testEnvironment: 'jsdom',
   testMatch: [
