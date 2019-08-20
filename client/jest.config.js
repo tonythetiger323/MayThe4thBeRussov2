@@ -20,8 +20,8 @@ module.exports = {
     ]
   ],
   testResultsProcessor: 'jest-junit',
-  setupFiles: ['./client/src/setupTests.ts'],
-  snapshotSerialziers: ['enzyme-to-json'],
+  setupFiles: ['./src/setupTests.ts'],
+  snapshotSerializers: ['enzyme-to-json'],
   testEnvironment: 'jsdom',
   testMatch: [
     '**/__tests__/**/*.js?(x)',
@@ -31,6 +31,6 @@ module.exports = {
   ],
   testPathIgnorePatterns: ['\\\\node_modules\\\\', '\\\\build\\\\'],
   testURL: 'http://localhost',
-  transfomIgnorePatterns: ['./src/node_modules/', './src/build/'],
+  transformIgnorePatterns: ['./src/node_modules/', './src/build/'],
   verbose: false
 }
