@@ -8,7 +8,17 @@ module.exports = {
   ],
   coverageDirectory: 'coverage',
   moduleFileExtensions: ['js', 'json', 'jsx', 'ts', 'tsx'],
-  reporters: ['default', 'jest-junit'],
+  reporters: [
+    'default',
+    [
+      'jest-junit',
+      {
+        suiteName: 'Client tests',
+        outputDirectory: '../test-results/jest',
+        outputName: './junit.xml'
+      }
+    ]
+  ],
   testResultsProcessor: 'jest-junit',
   setupFiles: ['./client/src/setupTests.ts'],
   snapshotSerialziers: ['enzyme-to-json'],
