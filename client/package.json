@@ -132,10 +132,5 @@
       "yarn run lint:fix",
       "git add"
     ]
-  },
-  "jest-junit": {
-    "suiteName": "jest tests",
-    "outputDirectory": "./test-results/jest",
-    "outputName": "client-test-results.xml"
   }
 }

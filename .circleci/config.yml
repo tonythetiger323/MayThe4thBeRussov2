@@ -1,6 +1,7 @@
 version: 2
 jobs:
   build:
+    working_directory: ~/client
     docker:
       - image: circleci/node:10
     steps:
@@ -10,26 +11,27 @@ jobs:
           command: curl -o- -L https://yarnpkg.com/install.sh | bash
       - restore_cache: # special step to restore the dependency cache
           keys:
-            - yarn-packages-{{ checksum "./client/yarn.lock" }}
+            - yarn-packages-{{ checksum "./yarn.lock" }}
             - yarn-packages-
       - run:
           name: Install Dependencies
-          command: cd client && yarn install --frozen-lockfile
+          command: yarn install --frozen-lockfile
       - save_cache:
           name: Save Yarn Package Cache
           paths:
-            - ~/.cache/yarn
-          key: yarn-packages-{{ checksum "./client/yarn.lock" }}
+            - ~/client/.cache/yarn
+          key: yarn-packages-{{ checksum "./yarn.lock" }}
       - run: # run tests
           name: Run Test and Coverage
           environment:
             JEST_SUITE_NAME: jest tests
-            JEST_JUNIT_OUTPUT: test-results/jest/client-test-results.xml
+            JEST_JUNIT_OUTPUT_DIR: ./test-results/junit/jest/
+            JEST_JUNIT_OUTPUT_NAME: client-test-results.xml
           command: |
-            cd client
+            mkdir -p ./test-results/junit/jest
             yarn run test:ci
       - store_test_results:
-          path: test-results/jest
+          path: ./test-results/junit/jest
       - run:
           name: Compile react build
-          command: cd client && yarn run build
+          command: yarn run build
