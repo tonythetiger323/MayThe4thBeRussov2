@@ -30,7 +30,7 @@
     "eject": "react-scripts eject",
     "test": "react-scripts test",
     "test:coverage": "react-scripts test --coverage",
-    "test:ci": "react-scripts test --coverage -u",
+    "test:ci": "react-scripts test --ci --testResultsProcessor=\"jest-junit\"",
     "test:local": "yarn snyk test && react-scripts test -u --coverage",
     "test:watch": "jest --watch",
     "type-check": "tsc",
