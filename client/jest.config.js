@@ -15,12 +15,11 @@ module.exports = {
       {
         suiteName: 'Client tests',
         outputDirectory: '../test-results/jest',
-        outputName: './junit.xml'
+        outputName: './client-test-results.xml'
       }
     ]
   ],
-  testResultsProcessor: 'jest-junit',
-  setupFiles: ['./src/setupTests.ts'],
+  setupFiles: ['client/src/setupTests.ts'],
   snapshotSerializers: ['enzyme-to-json'],
   testEnvironment: 'jsdom',
   testMatch: [
