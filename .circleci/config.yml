@@ -22,7 +22,8 @@ jobs:
           key: yarn-packages-{{ checksum "./client/yarn.lock" }}
       - run: # run tests
           name: Run Test and Coverage
-          environment: JEST_JUNIT_OUTPUT: test-results/jest/client-test-results.xml
+          environment:
+            JEST_JUNIT_OUTPUT: test-results/jest/client-test-results.xml
           command: |
             cd client
             yarn run test:ci
