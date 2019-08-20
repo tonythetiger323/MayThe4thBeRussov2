@@ -6,7 +6,7 @@ class Reception extends React.Component {
   render() {
     return (
       <div>
-        <Grid container direction="column" alignItems="center">
+        <Grid container direction='column' alignItems='center'>
           <ReceptionCard />
         </Grid>
       </div>

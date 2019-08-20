@@ -39,8 +39,8 @@ const ReceptionCard = (props: any) => {
         <Card className={classes.card}>
           <CardMedia
             className={classes.media}
-            image="https://res.cloudinary.com/tonythetiger323/image/upload/v1555403575/MayThe4thBeRusso/Reception Page/Sanborn2.jpg"
-            title="Sanborn Country Park"
+            image='https://res.cloudinary.com/tonythetiger323/image/upload/v1555403575/MayThe4thBeRusso/Reception Page/Sanborn2.jpg'
+            title='Sanborn Country Park'
           />
           <div style={{ height: 450, width: '100%' }}>
             <Map
@@ -53,36 +53,36 @@ const ReceptionCard = (props: any) => {
           </div>
           <CardContent className={classes.cardContent}>
             <Typography
-              variant="h3"
-              align="center"
+              variant='h3'
+              align='center'
               style={{ fontFamily: 'Oswald' }}
             >
               Reception
             </Typography>
             <Typography
-              variant="h3"
-              align="center"
+              variant='h3'
+              align='center'
               style={{ fontFamily: 'Oswald' }}
             >
               June 1st, 2019
             </Typography>
             <Typography
-              variant="h4"
-              align="center"
+              variant='h4'
+              align='center'
               style={{ fontFamily: 'Oswald' }}
             >
               Sanborn County Park
             </Typography>
             <Typography
-              variant="h5"
-              align="center"
+              variant='h5'
+              align='center'
               style={{ fontFamily: 'Oswald' }}
             >
               12:00pm - 4:00pm PST
             </Typography>
             <Typography
-              variant="body1"
-              align="center"
+              variant='body1'
+              align='center'
               style={{ fontFamily: 'Oswald' }}
             >
               <p>Lunch:</p>
@@ -97,7 +97,7 @@ const ReceptionCard = (props: any) => {
               <p>Entertainment:</p>
               <p>
                 Games and music will be available for fun. To RSVP click{' '}
-                <NavbarLink to="/rsvp">here</NavbarLink>
+                <NavbarLink to='/rsvp'>here</NavbarLink>
               </p>
             </Typography>
           </CardContent>
@@ -108,8 +108,8 @@ const ReceptionCard = (props: any) => {
         <Card className={classes.cardMobile}>
           <CardMedia
             className={classes.mediaMobile}
-            image="https://res.cloudinary.com/tonythetiger323/image/upload/c_scale,w_414/v1555122501/MayThe4thBeRusso/Ceremony%20Page/waima%CC%83nalo_beach_park_HDR.jpg"
-            title="Sanborn Country Park"
+            image='https://res.cloudinary.com/tonythetiger323/image/upload/c_scale,w_414/v1555122501/MayThe4thBeRusso/Ceremony%20Page/waima%CC%83nalo_beach_park_HDR.jpg'
+            title='Sanborn Country Park'
           />
           <div style={{ height: 200, width: '100%' }}>
             <Map
@@ -122,36 +122,36 @@ const ReceptionCard = (props: any) => {
           </div>
           <CardContent>
             <Typography
-              variant="h3"
-              align="center"
+              variant='h3'
+              align='center'
               style={{ fontFamily: 'Oswald' }}
             >
               Reception
             </Typography>
             <Typography
-              variant="h3"
-              align="center"
+              variant='h3'
+              align='center'
               style={{ fontFamily: 'Oswald' }}
             >
               June 1st, 2019
             </Typography>
             <Typography
-              variant="h4"
-              align="center"
+              variant='h4'
+              align='center'
               style={{ fontFamily: 'Oswald' }}
             >
               Sanborn County Park
             </Typography>
             <Typography
-              variant="h5"
-              align="center"
+              variant='h5'
+              align='center'
               style={{ fontFamily: 'Oswald' }}
             >
               12:00pm - 4:00pm PST
             </Typography>
             <Typography
-              variant="body1"
-              align="center"
+              variant='body1'
+              align='center'
               style={{ fontFamily: 'Oswald' }}
             >
               <p>Lunch:</p>
@@ -166,7 +166,7 @@ const ReceptionCard = (props: any) => {
               <p>Entertainment:</p>
               <p>
                 Games and music will be available for fun. To RSVP click{' '}
-                <NavbarLink to="/rsvp">here</NavbarLink>
+                <NavbarLink to='/rsvp'>here</NavbarLink>
               </p>
             </Typography>
           </CardContent>

@@ -8,7 +8,7 @@ import { Parallax } from 'react-parallax'
 class PageLayout extends React.Component {
   render() {
     return (
-      <div className="app-container">
+      <div className='app-container'>
         <Parallax
           blur={1}
           bgImage={require('./images/MayThe4thBeRusso_Background Image_sean-o-406693-unsplash.jpg')}
@@ -17,16 +17,16 @@ class PageLayout extends React.Component {
           strength={100}
         >
           <header>
-            <Typography variant="h3" align="center">
+            <Typography variant='h3' align='center'>
               Megan &amp; Randy
             </Typography>
-            <Typography variant="h5" align="center">
+            <Typography variant='h5' align='center'>
               May 4th 2019
             </Typography>
           </header>
           <br />
           <nav>
-            <Grid container alignItems="center" justify="space-around">
+            <Grid container alignItems='center' justify='space-around'>
               <Grid item>
                 <Navbar />
               </Grid>

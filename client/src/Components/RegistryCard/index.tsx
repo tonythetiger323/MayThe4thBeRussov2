@@ -11,54 +11,54 @@ const RegistryCard = () => {
       <CardContent>
         <br />
         <Typography
-          variant="h4"
-          align="center"
+          variant='h4'
+          align='center'
           style={{ fontFamily: 'Oswald' }}
         >
           Registry
         </Typography>
         <br />
         <br />
-        <Divider variant="middle" />
+        <Divider variant='middle' />
         <br />
         <br />
         <Typography
-          variant="h5"
-          align="center"
+          variant='h5'
+          align='center'
           style={{ fontFamily: 'Oswald' }}
         >
           Honeyfund
         </Typography>
         <br />
         <br />
-        <Typography variant="body1" align="center">
+        <Typography variant='body1' align='center'>
           <Link
-            href="https://www.honeyfund.com/wedding/MayThe4thBeRusso"
-            underline="none"
-            color="inherit"
+            href='https://www.honeyfund.com/wedding/MayThe4thBeRusso'
+            underline='none'
+            color='inherit'
           >
             View Registry
           </Link>
         </Typography>
         <br />
         <br />
-        <Divider variant="middle" />
+        <Divider variant='middle' />
         <br />
         <br />
         <Typography
-          variant="h5"
-          align="center"
+          variant='h5'
+          align='center'
           style={{ fontFamily: 'Oswald' }}
         >
           Bed Bath &amp; Beyond
         </Typography>
         <br />
         <br />
-        <Typography variant="body1" align="center">
+        <Typography variant='body1' align='center'>
           <Link
-            href="https://www.bedbathandbeyond.com/store/giftregistry/viewregistryguest/547312717?eventType=Wedding"
-            underline="none"
-            color="inherit"
+            href='https://www.bedbathandbeyond.com/store/giftregistry/viewregistryguest/547312717?eventType=Wedding'
+            underline='none'
+            color='inherit'
           >
             View Registry
           </Link>

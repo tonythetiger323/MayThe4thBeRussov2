@@ -26,23 +26,24 @@ interface FooterProps {
 
 const Footer: React.FunctionComponent<FooterProps> = (props: FooterProps) => {
   const classes = useStyles()
+  // tslint:disable-next-line: no-shadowed-variable
   const { isAuthenticated, logoutUser } = props
 
   return (
     <div className={classes.root}>
-      <Grid container justify="center">
+      <Grid container justify='center'>
         <Grid item>
           <span style={{ fontSize: 'small' }}>
             &copy; {new Date().getFullYear()} Copyright:{' '}
             <Button
               style={{ fontSize: 'x-small' }}
-              href="https://www.tonygreeley.com"
+              href='https://www.tonygreeley.com'
               component={Link as any}
             >
               Tony Greeley
             </Button>
             {!isAuthenticated && (
-              <NavbarLink style={{ fontSize: 'x-small' }} to="/login">
+              <NavbarLink style={{ fontSize: 'x-small' }} to='/login'>
                 Login
               </NavbarLink>
             )}
@@ -56,7 +57,7 @@ const Footer: React.FunctionComponent<FooterProps> = (props: FooterProps) => {
                 >
                   Logout
                 </Button>
-                <NavbarLink style={{ fontSize: 'x-small' }} to="/rsvpdashboard">
+                <NavbarLink style={{ fontSize: 'x-small' }} to='/rsvpdashboard'>
                   Dashboard
                 </NavbarLink>
               </div>

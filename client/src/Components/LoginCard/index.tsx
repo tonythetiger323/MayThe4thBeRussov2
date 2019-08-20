@@ -65,20 +65,20 @@ const LoginCard = (props: any) => {
           <CardContent>
             <Field
               required
-              name="username"
-              label="Username"
-              type="text"
+              name='username'
+              label='Username'
+              type='text'
               component={TextField}
             />
             <Field
               required
-              name="password"
-              label="Password"
-              type="password"
+              name='password'
+              label='Password'
+              type='password'
               component={TextField}
             />
             <CardActions>
-              <Button type="submit">Login</Button>
+              <Button type='submit'>Login</Button>
             </CardActions>
           </CardContent>
         </Form>

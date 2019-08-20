@@ -19,15 +19,15 @@ export default () => {
   return (
     <PageLayout>
       <Switch>
-        <AppliedRoute exact path="/" component={Index} />
-        <AppliedRoute exact path="/theirstory" component={TheirStory} />
-        <AppliedRoute exact path="/ceremony" component={Ceremony} />
-        <AppliedRoute exact path="/reception" component={Reception} />
-        <AppliedRoute exact path="/registry" component={Registry} />
-        <AppliedRoute exact path="/guestbook" component={GuestBook} />
-        <AppliedRoute exact path="/rsvp" component={Rsvp} />
-        <AppliedRoute exact path="/login" component={Login} />
-        <Route exact path="/RsvpDashboard" component={reqAuth(RsvpDashboard)} />
+        <AppliedRoute exact path='/' component={Index} />
+        <AppliedRoute exact path='/theirstory' component={TheirStory} />
+        <AppliedRoute exact path='/ceremony' component={Ceremony} />
+        <AppliedRoute exact path='/reception' component={Reception} />
+        <AppliedRoute exact path='/registry' component={Registry} />
+        <AppliedRoute exact path='/guestbook' component={GuestBook} />
+        <AppliedRoute exact path='/rsvp' component={Rsvp} />
+        <AppliedRoute exact path='/login' component={Login} />
+        <Route exact path='/RsvpDashboard' component={reqAuth(RsvpDashboard)} />
         <Route component={NotFound} />
       </Switch>
     </PageLayout>

@@ -26,13 +26,13 @@ function GuestBook(props: any) {
     <div>
       <Grid
         container
-        direction="column"
-        alignItems="center"
-        alignContent="center"
-        justify="center"
+        direction='column'
+        alignItems='center'
+        alignContent='center'
+        justify='center'
       >
         <Grid item>
-          <Typography variant="h4" align="center">
+          <Typography variant='h4' align='center'>
             Guest Book
           </Typography>
         </Grid>
@@ -40,18 +40,18 @@ function GuestBook(props: any) {
         <Grid item>
           <Default>
             <Image
-              cloudName="tonythetiger323"
-              publicId="MayThe4thBeRusso/Other Photos/Together/FullSizeRender.jpg"
+              cloudName='tonythetiger323'
+              publicId='MayThe4thBeRusso/Other Photos/Together/FullSizeRender.jpg'
             >
-              <Transformation width="550" crop="scale" />
+              <Transformation width='550' crop='scale' />
             </Image>
           </Default>
           <Mobile>
             <Image
-              cloudName="tonythetiger323"
-              publicId="MayThe4thBeRusso/Other Photos/Together/FullSizeRender.jpg"
+              cloudName='tonythetiger323'
+              publicId='MayThe4thBeRusso/Other Photos/Together/FullSizeRender.jpg'
             >
-              <Transformation width="375" crop="scale" />
+              <Transformation width='375' crop='scale' />
             </Image>
           </Mobile>
         </Grid>
@@ -59,16 +59,16 @@ function GuestBook(props: any) {
         <Paper style={{ opacity: 0.6 }} className={classes.root}>
           <Grid
             container
-            direction="column"
-            alignItems="center"
-            alignContent="center"
-            justify="center"
+            direction='column'
+            alignItems='center'
+            alignContent='center'
+            justify='center'
           >
             <Grid item>
               <Typography
                 style={{ fontFamily: 'Oswald' }}
-                variant="h6"
-                align="center"
+                variant='h6'
+                align='center'
               >
                 Help us remember this very special time in our lives by leaving
                 us a note! Thank you so much for celebrating with us!
@@ -83,9 +83,9 @@ function GuestBook(props: any) {
         <br />
         <Grid item>
           <Typography
-            variant="h4"
+            variant='h4'
             style={{ fontFamily: 'Oswald' }}
-            align="center"
+            align='center'
           >
             Guest Book Messages
           </Typography>

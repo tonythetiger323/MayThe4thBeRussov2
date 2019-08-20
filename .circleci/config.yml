@@ -10,7 +10,7 @@ jobs:
           command: curl -o- -L https://yarnpkg.com/install.sh | bash
       - restore_cache: # special step to restore the dependency cache
           keys:
-            - yarn-packages-{{ checksum "yarn.lock" }}
+            - yarn-packages-{{ checksum "./client/yarn.lock" }}
             - yarn-packages-
       - run:
           name: Install Dependencies
@@ -19,7 +19,7 @@ jobs:
           name: Save Yarn Package Cache
           paths:
             - ~/.cache/yarn
-          key: yarn-packages-{{ checksum "yarn.lock" }}
+          key: yarn-packages-{{ checksum "./client/yarn.lock" }}
       - run: # run tests
           name: Run Test and Coverage
           command: |

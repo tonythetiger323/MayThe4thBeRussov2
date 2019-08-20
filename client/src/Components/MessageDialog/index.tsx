@@ -47,11 +47,11 @@ class MessageDialog extends React.Component<any, MessageDialogState> {
 
     return (
       <div>
-        <Grid container direction="column" alignItems="center">
+        <Grid container direction='column' alignItems='center'>
           <Button
             style={{ fontFamily: 'Oswald' }}
-            variant="outlined"
-            size="small"
+            variant='outlined'
+            size='small'
             onClick={this.handleClickOpen}
           >
             Post a Message
@@ -59,9 +59,9 @@ class MessageDialog extends React.Component<any, MessageDialogState> {
           <Dialog
             open={this.state.open}
             onClose={this.handleClose}
-            aria-labelledby="login-form-dialog-title"
+            aria-labelledby='login-form-dialog-title'
           >
-            <DialogTitle id="login-form-dialog-title">
+            <DialogTitle id='login-form-dialog-title'>
               Post a Message
             </DialogTitle>
             <DialogContent>
@@ -91,21 +91,21 @@ class MessageDialog extends React.Component<any, MessageDialogState> {
                 <Form>
                   <Field
                     required
-                    name="name"
-                    label="Name"
-                    type="text"
+                    name='name'
+                    label='Name'
+                    type='text'
                     component={TextField}
                   />
                   <Field
                     required
-                    name="message"
-                    label="Message"
+                    name='message'
+                    label='Message'
                     multiline
-                    rowsMax="5"
+                    rowsMax='5'
                     component={TextField}
                   />
                   <Button onClick={this.handleClose}>Cancel</Button>
-                  <Button onClick={this.handleClose} type="submit">
+                  <Button onClick={this.handleClose} type='submit'>
                     Submit
                   </Button>
                 </Form>

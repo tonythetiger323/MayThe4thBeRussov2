@@ -44,8 +44,8 @@ const CeremonyCard = (props: any) => {
         <Card className={classes.card}>
           <CardMedia
             className={classes.media}
-            image="https://res.cloudinary.com/tonythetiger323/image/upload/v1555122501/MayThe4thBeRusso/Ceremony%20Page/waima%CC%83nalo_beach_park_HDR.jpg"
-            title="Waimãnalo Beach Park"
+            image='https://res.cloudinary.com/tonythetiger323/image/upload/v1555122501/MayThe4thBeRusso/Ceremony%20Page/waima%CC%83nalo_beach_park_HDR.jpg'
+            title='Waimãnalo Beach Park'
           />
           <div style={{ height: 450, width: '100%' }}>
             <Map
@@ -58,40 +58,40 @@ const CeremonyCard = (props: any) => {
           </div>
           <CardContent className={classes.cardContent}>
             <Typography
-              variant="h3"
-              align="center"
+              variant='h3'
+              align='center'
               style={{ fontFamily: 'Oswald' }}
             >
               Ceremony
             </Typography>
             <Typography
-              variant="h3"
-              align="center"
+              variant='h3'
+              align='center'
               style={{ fontFamily: 'Oswald' }}
             >
               May 4th, 2019
             </Typography>
             <Typography
-              variant="h4"
-              align="center"
+              variant='h4'
+              align='center'
               style={{ fontFamily: 'Oswald' }}
             >
               Waimãnalo Beach Park
             </Typography>
             <Typography
-              variant="h5"
-              align="center"
+              variant='h5'
+              align='center'
               style={{ fontFamily: 'Oswald' }}
             >
               9:00am HST
             </Typography>
             <Typography
-              variant="body1"
-              align="center"
+              variant='body1'
+              align='center'
               style={{ fontFamily: 'Oswald' }}
             >
               Check back May 4th and follow this{' '}
-              <Link href="https://www.facebook.com/randy.russo.12">
+              <Link href='https://www.facebook.com/randy.russo.12'>
                 {' '}
                 link below to Randy's Facebook page{' '}
               </Link>
@@ -105,8 +105,8 @@ const CeremonyCard = (props: any) => {
         <Card className={classes.cardMobile}>
           <CardMedia
             className={classes.mediaMobile}
-            image="https://res.cloudinary.com/tonythetiger323/image/upload/c_scale,w_375/v1555122501/MayThe4thBeRusso/Ceremony%20Page/waima%CC%83nalo_beach_park_HDR.jpg"
-            title="Waimãnalo Beach Park"
+            image='https://res.cloudinary.com/tonythetiger323/image/upload/c_scale,w_375/v1555122501/MayThe4thBeRusso/Ceremony%20Page/waima%CC%83nalo_beach_park_HDR.jpg'
+            title='Waimãnalo Beach Park'
           />
           <div style={{ height: 240, width: '100%' }}>
             <Map
@@ -119,40 +119,40 @@ const CeremonyCard = (props: any) => {
           </div>
           <CardContent className={classes.cardContent}>
             <Typography
-              variant="h3"
-              align="center"
+              variant='h3'
+              align='center'
               style={{ fontFamily: 'Oswald' }}
             >
               Ceremony
             </Typography>
             <Typography
-              variant="h3"
-              align="center"
+              variant='h3'
+              align='center'
               style={{ fontFamily: 'Oswald' }}
             >
               May 4th, 2019
             </Typography>
             <Typography
-              variant="h4"
-              align="center"
+              variant='h4'
+              align='center'
               style={{ fontFamily: 'Oswald' }}
             >
               Waimãnalo Beach Park
             </Typography>
             <Typography
-              variant="h5"
-              align="center"
+              variant='h5'
+              align='center'
               style={{ fontFamily: 'Oswald' }}
             >
               9:00am HST
             </Typography>
             <Typography
-              variant="body1"
-              align="center"
+              variant='body1'
+              align='center'
               style={{ fontFamily: 'Oswald' }}
             >
               Come back on the day of the big event and head to{' '}
-              <Link href="https://www.facebook.com/randy.russo.12">
+              <Link href='https://www.facebook.com/randy.russo.12'>
                 Randy's Facebook Page
               </Link>{' '}
               to watch the ceremony on Facebook live.
