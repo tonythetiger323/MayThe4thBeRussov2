@@ -27,8 +27,8 @@ jobs:
             JEST_JUNIT_OUTPUT_DIR: ./test-results/junit/jest/
             JEST_JUNIT_OUTPUT_NAME: client-test-results.xml
           command: |
-            cd client
             mkdir -p ./test-results/junit/jest
+            cd client
             yarn run test:ci
       - store_test_results:
           path: ./test-results/junit/jest
