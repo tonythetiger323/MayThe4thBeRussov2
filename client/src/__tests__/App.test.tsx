@@ -5,30 +5,26 @@ import Routes from '../routes'
 import { createShallow } from '@material-ui/core/test-utils/index'
 import CssBaseline from '@material-ui/core/CssBaseline'
 
-let wrapper: any
-let shallowMui: any
-
 describe('App', () => {
-  beforeEach(() => (wrapper = shallow(<App />)))
+  let app = shallow(<App />)
+
   it('should render a <div />', () => {
-    expect(wrapper.find('div').length).toEqual(1)
+    expect(app.find('div').length).toEqual(1)
   })
 
   it('should render the Routes Component', () => {
-    expect(wrapper.containsMatchingElement(<Routes />)).toEqual(true)
+    expect(app.containsMatchingElement(<Routes />)).toEqual(true)
   })
 
   it('should render correctly', () => {
-    expect(wrapper).toMatchSnapshot()
-  })
-})
-
-describe('<CssBaseline />', () => {
-  beforeAll(() => {
-    shallowMui = createShallow()
+    expect(app).toMatchSnapshot()
   })
 
-  it('should work', () => {
-    wrapper = shallowMui(<CssBaseline />)
+  describe('CssBaseline', () => {
+    const shallowMui = createShallow()
+
+    it('should work', () => {
+      app = shallowMui(<CssBaseline />)
+    })
   })
 })

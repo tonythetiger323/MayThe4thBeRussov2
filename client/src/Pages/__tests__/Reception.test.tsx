@@ -3,10 +3,9 @@ import { shallow } from 'enzyme'
 import Reception from '../Reception'
 
 describe('Reception Page', () => {
-  let wrapper: any
-  beforeEach(() => (wrapper = shallow(<Reception />)))
+  const reception = shallow(<Reception />)
 
   it('should render correctly', () => {
-    expect(wrapper).toMatchSnapshot()
+    expect(reception).toMatchSnapshot()
   })
 })

@@ -3,10 +3,9 @@ import { shallow } from 'enzyme'
 import Registry from '../Registry'
 
 describe('Registry Page', () => {
-  let wrapper: any
-  beforeEach(() => (wrapper = shallow(<Registry />)))
+  const registry = shallow(<Registry />)
 
   it('should render correctly', () => {
-    expect(wrapper).toMatchSnapshot()
+    expect(registry).toMatchSnapshot()
   })
 })

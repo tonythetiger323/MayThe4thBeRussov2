@@ -3,10 +3,9 @@ import { shallow } from 'enzyme'
 import Index from '../Index'
 
 describe('Index/Home Page', () => {
-  let wrapper: any
-  beforeEach(() => (wrapper = shallow(<Index />)))
+  const index = shallow(<Index />)
 
   it('should render correctly', () => {
-    expect(wrapper).toMatchSnapshot()
+    expect(index).toMatchSnapshot()
   })
 })

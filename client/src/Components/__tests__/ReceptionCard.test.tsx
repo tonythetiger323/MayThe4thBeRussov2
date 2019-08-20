@@ -1,12 +1,11 @@
 import * as React from 'react'
 import { shallow } from 'enzyme'
-import ReceptionCard from '..'
+import ReceptionCard from '../ReceptionCard'
 
 describe('ReceptionCard Component', () => {
-  let wrapper: any
-  beforeEach(() => (wrapper = shallow(<ReceptionCard />)))
+  const receptionCard = shallow(<ReceptionCard />)
 
   it('should render correctly', () => {
-    expect(wrapper).toMatchSnapshot()
+    expect(receptionCard).toMatchSnapshot()
   })
 })

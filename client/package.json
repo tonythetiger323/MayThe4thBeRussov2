@@ -30,7 +30,7 @@
     "eject": "react-scripts eject",
     "test": "react-scripts test",
     "test:coverage": "react-scripts test --coverage",
-    "test:ci": "react-scripts test -- --ci -u --reporters=default --reporters=jest-junit",
+    "test:ci": "react-scripts test --ci -u --reporters=default --reporters=jest-junit",
     "test:local": "yarn snyk test && react-scripts test -u --coverage",
     "test:watch": "jest --watch",
     "type-check": "tsc",
@@ -132,5 +132,10 @@
       "yarn run lint:fix",
       "git add"
     ]
+  },
+  "jest-junit": {
+    "suiteName": "jest tests",
+    "outputDirectory": "./test-results/jest",
+    "outputName": "client-test-results.xml"
   }
 }

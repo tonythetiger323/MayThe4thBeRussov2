@@ -3,10 +3,9 @@ import { shallow } from 'enzyme'
 import GuestBook from '../GuestBook'
 
 describe('Guest Book Page', () => {
-  let wrapper: any
-  beforeEach(() => (wrapper = shallow(<GuestBook />)))
+  const guestBook = shallow(<GuestBook />)
 
   it('should render correctly', () => {
-    expect(wrapper).toMatchSnapshot()
+    expect(guestBook).toMatchSnapshot()
   })
 })
