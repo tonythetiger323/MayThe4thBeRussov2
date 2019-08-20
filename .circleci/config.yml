@@ -29,7 +29,7 @@ jobs:
             cd client
             yarn run test:ci
       - store_test_results:
-        path: ~/client/coverage
+          path: ~/client/coverage
       - run:
           name: Compile react build
           command: cd client && yarn run build
