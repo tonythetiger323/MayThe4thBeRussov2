@@ -29,7 +29,7 @@
     "build:clean": "rm -rf build/",
     "eject": "react-scripts eject",
     "test": "react-scripts test",
-    "test:coverage": "react-scripts-test --coverage",
+    "test:coverage": "react-scripts test --coverage",
     "test:ci": "react-scripts test --coverage -u",
     "test:local": "yarn snyk test && react-scripts test -u --coverage",
     "test:watch": "jest --watch",
