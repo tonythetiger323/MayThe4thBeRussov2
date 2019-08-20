@@ -22,7 +22,9 @@ jobs:
           key: yarn-packages-{{ checksum "./client/yarn.lock" }}
       - run:
           name: Make coverage directory for test results
-          command: cd client && mkdir client-test-results
+          command: /
+            cd client
+            mkdir client-test-results
       - run: # run tests
           name: Run Test and Coverage
           command: |
