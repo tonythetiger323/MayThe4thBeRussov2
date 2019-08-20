@@ -4,7 +4,6 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import App from '../App'
 import { SnackbarProvider } from 'notistack'
 
-
 describe('index', () => {
   // tslint:disable-next-line: prefer-const
   let wrapper: any
@@ -12,9 +11,9 @@ describe('index', () => {
     const div = document.createElement('div')
     ReactDOM.render(
       <SnackbarProvider>
-      <Router>
-        <App />
-      </Router>
+        <Router>
+          <App />
+        </Router>
       </SnackbarProvider>,
       div
     )
