@@ -91,7 +91,7 @@
     "rimraf": "^3.0.0",
     "rxjs": "^6.3.3",
     "serve-favicon": "^2.5.0",
-    "typeorm": "^0.2.15",
+    "typeorm": "^0.2.21",
     "typescript": "^3.4.1"
   },
   "devDependencies": {
