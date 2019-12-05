@@ -69,7 +69,7 @@
     "outputName": "./server-test-results.xml"
   },
   "dependencies": {
-    "@nestjs/common": "^6.0.0",
+    "@nestjs/common": "^6.10.7",
     "@nestjs/core": "^6.0.0",
     "@nestjs/jwt": "^6.1.1",
     "@nestjs/passport": "^6.0.0",
