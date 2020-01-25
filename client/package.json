@@ -61,7 +61,7 @@
     "@types/react-router-dom": "^5.1.1",
     "@types/react-swipeable-views": "^0.13.0",
     "@types/webpack": "^4.39.0",
-    "@types/yup": "^0.26.22",
+    "@types/yup": "^0.26.28",
     "acorn": "^7.0.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
