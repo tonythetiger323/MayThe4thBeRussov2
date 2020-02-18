@@ -1461,10 +1461,10 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
-"@types/google-map-react@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@types/google-map-react/-/google-map-react-1.1.0.tgz#35c65a49040a67a54849e7cb33fa377cba32a225"
-  integrity sha512-9fhSj5ZLagFRN2PrLTTJYmJJGocyePODqgahNmzZ32gcq/XYPmOxtxtmjRALdSeLTo8a0vOkhzF6cGggK+oE0g==
+"@types/google-map-react@^1.1.5":
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/@types/google-map-react/-/google-map-react-1.1.5.tgz#6fc83620ea3b927aa1c4b8654ff9e151364c7786"
+  integrity sha512-PbpOQucrBYhCDLz/Xodtm2NZlkIY/paieEXSMheS3CKcLg5pvzowB5aY6cmj+7uY99j+qzYfO2IIUgraoDaBaQ==
   dependencies:
     "@types/react" "*"
 
@@ -1571,7 +1571,6 @@
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/@types/react-router-dom/-/react-router-dom-5.1.1.tgz#77a2dae8ba6ff1df51d27517f7646127a51a1a3e"
   integrity sha512-yXqWGaehta/cdmjvEQfCbHFX6l1c7QHuE5n2OfhcJ33ufbt55xhAKqQ0BmT24YM3s7OKwrrUUgY3FaSzO7be3Q==
-
   dependencies:
     "@types/history" "*"
     "@types/react" "*"
