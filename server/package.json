@@ -40,7 +40,9 @@
     "test:watch": "nyc jest --watch",
     "test:cov": "nyc jest --coverage --detectOpenHandles",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "nyc jest --config ./test/jest-e2e.json"
+    "test:e2e": "nyc jest --config ./test/jest-e2e.json",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "heroku-run-build-script": true,
   "jest": {
@@ -92,7 +94,8 @@
     "rxjs": "^6.3.3",
     "serve-favicon": "^2.5.0",
     "typeorm": "^0.2.15",
-    "typescript": "^3.4.1"
+    "typescript": "^3.4.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@nestjs/testing": "^6.0.0",
@@ -110,5 +113,6 @@
     "tsconfig-paths": "^3.7.0",
     "tslib": "^1.9.3",
     "tslint": "5.18.0"
-  }
+  },
+  "snyk": true
 }
