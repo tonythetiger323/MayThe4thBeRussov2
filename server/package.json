@@ -40,7 +40,9 @@
     "test:watch": "nyc jest --watch",
     "test:cov": "nyc jest --coverage --detectOpenHandles",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "nyc jest --config ./test/jest-e2e.json"
+    "test:e2e": "nyc jest --config ./test/jest-e2e.json",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "heroku-run-build-script": true,
   "jest": {
@@ -69,30 +71,31 @@
     "outputName": "./server-test-results.xml"
   },
   "dependencies": {
-    "@nestjs/common": "^6.0.0",
-    "@nestjs/core": "^6.0.0",
-    "@nestjs/jwt": "^6.1.1",
+    "@nestjs/common": "^8.0.7",
+    "@nestjs/core": "^9.0.5",
+    "@nestjs/jwt": "^10.0.0",
     "@nestjs/passport": "^6.0.0",
-    "@nestjs/platform-express": "^6.0.0",
+    "@nestjs/platform-express": "^8.4.0",
     "@nestjs/typeorm": "^6.0.0",
-    "bcrypt": "^3.0.6",
-    "body-parser": "^1.18.3",
-    "class-validator": "^0.10.0",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.2",
+    "class-validator": "^0.14.0",
     "cookie-parser": "^1.4.4",
     "dotenv": "^8.0.0",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-session": "^1.15.6",
     "mysql": "^2.16.0",
-    "nodemon": "^1.18.10",
-    "passport": "^0.4.0",
-    "passport-jwt": "^4.0.0",
+    "nodemon": "^2.0.17",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1",
     "passport-local": "^1.0.0",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^3.0.0",
     "rxjs": "^6.3.3",
     "serve-favicon": "^2.5.0",
-    "typeorm": "^0.2.15",
-    "typescript": "^3.4.1"
+    "typeorm": "^0.3.14",
+    "typescript": "^3.4.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@nestjs/testing": "^6.0.0",
@@ -100,15 +103,16 @@
     "@types/jest": "^24.0.11",
     "@types/node": "^12.0.0",
     "@types/supertest": "^2.0.7",
-    "jest": "^24.7.1",
+    "jest": "^25.0.0",
     "jest-junit": "^9.0.0",
-    "nyc": "^14.0.0",
+    "nyc": "^15.0.0",
     "prettier": "^1.15.3",
     "supertest": "^4.0.2",
-    "ts-jest": "^24.0.2",
+    "ts-jest": "^25.3.0",
     "ts-node": "^8.1.0",
     "tsconfig-paths": "^3.7.0",
     "tslib": "^1.9.3",
     "tslint": "5.18.0"
-  }
+  },
+  "snyk": true
 }
