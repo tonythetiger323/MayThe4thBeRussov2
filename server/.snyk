@@ -5,10 +5,10 @@ ignore: {}
 patch:
   SNYK-JS-LODASH-567746:
     - nyc > istanbul-lib-instrument > @babel/traverse > lodash:
-        patched: '2022-10-05T19:37:02.892Z'
+        patched: '2022-10-07T20:20:45.493Z'
     - jest > jest-cli > jest-config > @babel/core > lodash:
-        patched: '2022-10-05T19:37:02.892Z'
+        patched: '2022-10-07T20:20:45.493Z'
     - jest > jest-cli > jest-config > @babel/core > @babel/traverse > lodash:
-        patched: '2022-10-05T19:37:02.892Z'
+        patched: '2022-10-07T20:20:45.493Z'
     - jest > jest-cli > jest-config > jest-environment-jsdom > jsdom > request-promise-native > request-promise-core > lodash:
-        patched: '2022-10-05T19:37:02.892Z'
+        patched: '2022-10-07T20:20:45.493Z'
