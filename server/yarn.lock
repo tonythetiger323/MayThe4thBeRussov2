@@ -365,6 +365,11 @@
     consola "^2.3.0"
     node-fetch "^2.3.0"
 
+"@snyk/protect@latest":
+  version "1.1183.0"
+  resolved "https://registry.yarnpkg.com/@snyk/protect/-/protect-1.1183.0.tgz#7ba16cf3b9ef5104560be8927ba1414d8d3dea6c"
+  integrity sha512-z3zlPrKTcIW3T0jbNn04QUefg4CJpuLXJMOKkIKp6skg2/uGUNcRxS+SgHKjP6swN2e3yugJx44hAramvG72DA==
+
 "@types/babel__core@^7.1.0":
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.2.tgz#608c74f55928033fce18b99b213c16be4b3d114f"
@@ -5658,9 +5663,9 @@ write-file-atomic@^2.0.0, write-file-atomic@^2.4.2:
     signal-exit "^3.0.2"
 
 ws@^5.2.0:
-  version "5.2.2"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-5.2.2.tgz#dffef14866b8e8dc9133582514d1befaf96e980f"
-  integrity sha512-jaHFD6PFv6UgoIVda6qZllptQsMlDEJkTQcybzzXDYM1XO9Y8em691FGMPmM46WGyLU4z9KMgQN+qrux/nhlHA==
+  version "5.2.3"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-5.2.3.tgz#05541053414921bc29c63bee14b8b0dd50b07b3d"
+  integrity sha512-jZArVERrMsKUatIdnLzqvcfydI85dvd/Fp1u/VOpfdDWQ4c9qWXe+VIeAbQ5FrDwciAkr+lzofXLz3Kuf26AOA==
   dependencies:
     async-limiter "~1.0.0"
 
